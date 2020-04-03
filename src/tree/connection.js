@@ -9,7 +9,7 @@ const Connection = ({ connection }) => {
       x2={c.target.y}
       y2={c.target.x}
       stroke="gray"
-      stroke-dasharray="2 2"
+      strokeDasharray="2 2"
     />
   );
 };

@@ -51,13 +51,16 @@ export default class Container extends React.PureComponent {
         ))}
         {this.props.connections.map(connection => (
           <Connection
-            key={connection.target.data[this.props.keyProp]}
+            key={`c_${connection.source.data[this.props.keyProp]}${
+              connection.target.data[this.props.keyProp]
+            }`}
             connection={connection}
           />
         ))}
         {this.props.nodes.map(node => (
           <Node
             key={node.data[this.props.keyProp]}
+            {...node.data}
             keyProp={this.props.keyProp}
             labelProp={this.props.labelProp}
             offset={this.props.nodeOffset}
@@ -70,7 +73,6 @@ export default class Container extends React.PureComponent {
             }}
             gProps={{ ...this.props.gProps, ...node.data.gProps }}
             textProps={{ ...this.props.textProps, ...node.data.textProps }}
-            {...node.data}
           />
         ))}
       </svg>

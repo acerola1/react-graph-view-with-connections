@@ -9,6 +9,11 @@
   stroke-width: 1.5px;
 }
 
+.node.hovered circle,
+.node.selected circle {
+  stroke-width: 3.5px;
+}
+
 .node text {
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,7 +24,8 @@
   fill: #282828;
 }
 
-.node:hover text {
+.node.hovered text,
+.node.selected text {
   stroke: #282828;
   stroke-width: 1;
   paint-order: stroke;

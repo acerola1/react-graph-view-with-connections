@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme =>
 const TreeContainer = () => {
   const classes = useStyles();
   const [selectedId, setSelectedId] = React.useState();
+  const [hoverId, setHoverId] = React.useState();
 
   const getData = () => {
     const root = sample["f43a4844-2cad-4071-815c-34b48d1664de"];
@@ -31,6 +32,16 @@ const TreeContainer = () => {
       type: node.type,
       connectedTo: node.connectedTo,
       circleProps: { style: { fill: getColorByType(node.type) } }
+    };
+    let className = "node";
+    if (selectedId && selectedId === node.Id) {
+      className = className + " selected";
+    }
+    if (hoverId && hoverId === node.Id) {
+      className = className + " hovered";
+    }
+    newNode.gProps = {
+      className
     };
     if (node.children) {
       newNode.children = node.children.map(childKey =>
@@ -85,16 +96,22 @@ const TreeContainer = () => {
       <Tree
         data={getData()}
         nodeRadius={9}
-        labelProp={"type"}
+        labelProp={"name"}
         keyProp="id"
         margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
         height={600}
-        width={1200}
+        width={800}
         gProps={{
-          className: "node",
           onClick: (e, node) => {
             e.stopPropagation();
             setSelectedId(node);
+          },
+          onMouseOver: (e, node) => {
+            setHoverId(node);
+          },
+          onMouseOut: (e, node) => {
+            e.stopPropagation();
+            setHoverId();
           }
         }}
         textProps={{ x: -20, y: 20 }}
