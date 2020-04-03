@@ -1,0 +1,50 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.node circle {
+  fill: #f3f3ff;
+  stroke: #2593b8;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: rgb(241, 241, 241);
+  stroke: white;
+  stroke-width: 4;
+  paint-order: stroke;
+  fill: #282828;
+}
+
+.node:hover text {
+  stroke: #282828;
+  stroke-width: 1;
+  paint-order: stroke;
+  fill: #282828;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node.searchIncluded text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.node.searchExcluded text {
+  opacity: 0.6;
+}
+
+path.link {
+  fill: none;
+  stroke: #2593b8;
+  stroke-width: 1.5px;
+}
+
+body {
+  overflow: hidden;
+}
