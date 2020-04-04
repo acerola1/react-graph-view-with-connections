@@ -3,10 +3,9 @@ import { easeQuadOut } from "d3-ease";
 import { hierarchy, tree } from "d3-hierarchy";
 import PropTypes from "prop-types";
 import React from "react";
-import Animated from "./animated";
+import Container from "./container";
 
 const propTypes = {
-  connVisible: PropTypes.bool.isRequired,
   data: PropTypes.object.isRequired,
   animated: PropTypes.bool.isRequired,
   children: PropTypes.node,
@@ -80,34 +79,18 @@ export default class Tree extends React.PureComponent {
     const nodeMap = {};
     nodes.forEach(node => (nodeMap[node.data.id] = node));
 
-    const createConnections = (node, nodeMap, hoverNodeId) => {
-      return node
-        .filter(n => n.data.connectedTo)
-        .map(n => {
-          return n.data.connectedTo.map(toId => {
-            const hovered = hoverNodeId === n.data.id || hoverNodeId === toId;
-            return { source: n, target: nodeMap[toId], hovered };
-          });
-        })
-        .flat();
-    };
-
-    const connections = !this.props.connVisible
-      ? []
-      : createConnections(nodes, nodeMap, this.props.hoverNodeId);
-
     return (
-      <Animated
+      <Container
         animated={this.props.animated}
-        duration={this.props.duration}
-        easing={this.props.easing}
         getChildren={this.props.getChildren}
         height={this.props.height}
         keyProp={this.props.keyProp}
         labelProp={this.props.labelProp}
         links={links}
         nodes={nodes}
-        connections={connections}
+        connections={this.props.connections.filter(
+          c => nodeMap[c.source] && nodeMap[c.target]
+        )}
         nodeOffset={this.props.nodeOffset}
         nodeRadius={this.props.nodeRadius}
         pathFunc={this.props.pathFunc}
@@ -118,9 +101,10 @@ export default class Tree extends React.PureComponent {
         pathProps={{ className: "link", ...this.props.pathProps }}
         svgProps={this.props.svgProps}
         textProps={this.props.textProps}
+        nodeMap={nodeMap}
       >
         {this.props.children}
-      </Animated>
+      </Container>
     );
   }
 }

@@ -1,13 +1,13 @@
 import React from "react";
 
-const Connection = ({ connection }) => {
+const Connection = ({ connection, nodeMap }) => {
   const c = connection;
   return (
     <line
-      x1={c.source.y}
-      y1={c.source.x}
-      x2={c.target.y}
-      y2={c.target.x}
+      x1={nodeMap[c.source].y}
+      y1={nodeMap[c.source].x}
+      x2={nodeMap[c.target].y}
+      y2={nodeMap[c.target].x}
       className={"connection" + (connection.hovered ? " hovered" : "")}
     />
   );

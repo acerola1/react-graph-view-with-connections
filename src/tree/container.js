@@ -51,10 +51,9 @@ export default class Container extends React.PureComponent {
         ))}
         {this.props.connections.map(connection => (
           <Connection
-            key={`c_${connection.source.data[this.props.keyProp]}${
-              connection.target.data[this.props.keyProp]
-            }`}
+            key={`c_${connection.source}_${connection.target}`}
             connection={connection}
+            nodeMap={this.props.nodeMap}
           />
         ))}
         {this.props.nodes.map(node => (
