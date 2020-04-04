@@ -78,34 +78,24 @@ export default class Tree extends React.PureComponent {
 
     const nodeMap = {};
     nodes.forEach(node => (nodeMap[node.data.id] = node));
-    const createConnections = (node, nodeMap) => {
+
+    const createConnections = (node, nodeMap, hoverNodeId) => {
       return node
         .filter(n => n.data.connectedTo)
         .map(n => {
-          return n.data.connectedTo.map(toId => ({
-            source: n,
-            target: nodeMap[toId]
-          }));
+          return n.data.connectedTo.map(toId => {
+            const hovered = hoverNodeId === n.data.id || hoverNodeId === toId;
+            return { source: n, target: nodeMap[toId], hovered };
+          });
         })
         .flat();
     };
 
-    const connections = createConnections(nodes, nodeMap);
-
-    /*[
-      { source: nodes[1], target: nodes[6] },
-      { source: nodes[3], target: nodes[6] },
-      { source: nodes[7], target: nodes[6] },
-      { source: nodes[4], target: nodes[6] },
-      { source: nodes[9], target: nodes[25] },
-      { source: nodes[2], target: nodes[18] },
-      { source: nodes[1], target: nodes[20] },
-      { source: nodes[14], target: nodes[21] },
-      { source: nodes[15], target: nodes[23] },
-      { source: nodes[11], target: nodes[2] },
-      { source: nodes[13], target: nodes[4] },
-      { source: nodes[5], target: nodes[16] }
-    ];*/
+    const connections = createConnections(
+      nodes,
+      nodeMap,
+      this.props.hoverNodeId
+    );
 
     return (
       <Animated

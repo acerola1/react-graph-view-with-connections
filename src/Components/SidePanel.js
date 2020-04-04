@@ -6,7 +6,10 @@ import Divider from "@material-ui/core/Divider";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
+import CloseIcon from "@material-ui/icons/Close";
+
 import Property from "./Property";
 
 const useStyles = makeStyles(theme =>
@@ -30,15 +33,30 @@ const useStyles = makeStyles(theme =>
   })
 );
 
-const SidePanel = ({ selectedId, model }) => {
+const SidePanel = ({ selectedId, model, panelVisible, setPanelVisible }) => {
   const classes = useStyles();
   const selected = selectedId && model[selectedId];
 
+  const connectedTo = selectedId && model[selectedId].connectedTo;
+
   return (
-    <Slide direction="left" in={selectedId} mountOnEnter unmountOnExit>
+    <Slide direction="left" in={panelVisible} mountOnEnter unmountOnExit>
       <Paper elevation={4} className={classes.paper}>
         <div className={classes.properties}>
           <Grid container spacing={1} justify="flex-end">
+            <Grid
+              style={{ position: "absolute", top: "-5px", right: "25px" }}
+              item
+              xs={1}
+            >
+              <IconButton
+                onClick={() => setPanelVisible(false)}
+                aria-label="close"
+                color="primary"
+              >
+                <CloseIcon />
+              </IconButton>
+            </Grid>
             <Grid item xs={12}>
               <Typography variant="h5" gutterBottom>
                 {selected && selected.name}
@@ -54,12 +72,31 @@ const SidePanel = ({ selectedId, model }) => {
                 <Property name={key} value={selected.attributes[key]} />
               ))}
 
+            {connectedTo && (
+              <>
+                <Grid item xs={12}>
+                  <Typography
+                    variant="caption"
+                    color="textSecondary"
+                    align="left"
+                    component="p"
+                  >
+                    {"connected to:"}
+                  </Typography>
+                </Grid>
+                {}
+              </>
+            )}
             {selected && selected.dashboardUrl && (
               <>
                 <Grid item xs={12}>
                   <Divider />
                 </Grid>
-                <Grid style={{ marginTop: "15px" }} item xs={12}>
+                <Grid
+                  style={{ marginTop: "15px", marginBottom: "15px" }}
+                  item
+                  xs={12}
+                >
                   <Link href="#">Kubernetes Dashboard</Link>
                 </Grid>
               </>

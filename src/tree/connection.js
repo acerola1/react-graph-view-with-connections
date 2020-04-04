@@ -8,8 +8,7 @@ const Connection = ({ connection }) => {
       y1={c.source.x}
       x2={c.target.y}
       y2={c.target.x}
-      stroke="gray"
-      strokeDasharray="2 2"
+      className={"connection" + (connection.hovered ? " hovered" : "")}
     />
   );
 };

@@ -3,6 +3,12 @@
   text-align: center;
 }
 
+@keyframes dash {
+  to {
+    stroke-dashoffset: 72;
+  }
+}
+
 .node circle {
   fill: #f3f3ff;
   stroke: #2593b8;
@@ -53,4 +59,15 @@ path.link {
 
 body {
   overflow: hidden;
+}
+
+.connection {
+  stroke-dasharray: 4 4;
+  stroke: gray;
+  animation: dash 5s linear infinite;
+}
+
+.connection.hovered {
+  stroke-dasharray: 8 4;
+  stroke-width: 2px;
 }

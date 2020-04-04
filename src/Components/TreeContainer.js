@@ -19,6 +19,7 @@ const TreeContainer = () => {
   const classes = useStyles();
   const [selectedId, setSelectedId] = React.useState();
   const [hoverId, setHoverId] = React.useState();
+  const [panelVisible, setPanelVisible] = React.useState(false);
 
   const getData = () => {
     const root = sample["f43a4844-2cad-4071-815c-34b48d1664de"];
@@ -100,11 +101,12 @@ const TreeContainer = () => {
         keyProp="id"
         margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
         height={600}
-        width={800}
+        width={1200}
         gProps={{
           onClick: (e, node) => {
             e.stopPropagation();
             setSelectedId(node);
+            setPanelVisible(true);
           },
           onMouseOver: (e, node) => {
             setHoverId(node);
@@ -115,10 +117,21 @@ const TreeContainer = () => {
           }
         }}
         textProps={{ x: -20, y: 20 }}
-        svgProps={{ onClick: () => setSelectedId(undefined) }}
+        svgProps={{
+          onClick: () => {
+            setSelectedId(undefined);
+            setPanelVisible(false);
+          }
+        }}
         steps={30}
+        hoverNodeId={hoverId ? hoverId : selectedId}
       />
-      <SidePanel selectedId={selectedId} model={sample} />
+      <SidePanel
+        setPanelVisible={setPanelVisible}
+        panelVisible={panelVisible}
+        selectedId={selectedId}
+        model={sample}
+      />
     </div>
   );
 };
