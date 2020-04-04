@@ -6,6 +6,7 @@ import React from "react";
 import Animated from "./animated";
 
 const propTypes = {
+  connVisible: PropTypes.bool.isRequired,
   data: PropTypes.object.isRequired,
   animated: PropTypes.bool.isRequired,
   children: PropTypes.node,
@@ -91,11 +92,9 @@ export default class Tree extends React.PureComponent {
         .flat();
     };
 
-    const connections = createConnections(
-      nodes,
-      nodeMap,
-      this.props.hoverNodeId
-    );
+    const connections = !this.props.connVisible
+      ? []
+      : createConnections(nodes, nodeMap, this.props.hoverNodeId);
 
     return (
       <Animated

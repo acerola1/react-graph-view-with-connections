@@ -19,16 +19,21 @@ const useStyles = makeStyles(theme =>
       position: "absolute",
       height: "100%",
       right: 5,
+      top: 0,
       width: "300px",
       display: "flex",
       flexDirection: "column"
+    },
+    title: {
+      textAlign: "center"
     },
     properties: {
       margin: "20px",
       flex: "1 1"
     },
     button: {
-      margin: "20px"
+      margin: "20px",
+      textAlign: "right"
     }
   })
 );
@@ -57,7 +62,7 @@ const SidePanel = ({ selectedId, model, panelVisible, setPanelVisible }) => {
                 <CloseIcon />
               </IconButton>
             </Grid>
-            <Grid item xs={12}>
+            <Grid className={classes.title} item xs={12}>
               <Typography variant="h5" gutterBottom>
                 {selected && selected.name}
               </Typography>

@@ -1,5 +1,6 @@
 import React from "react";
 import Tree from "../tree/tree";
+import Card from "@material-ui/core/Card";
 
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import sample from "../sample2.json";
@@ -15,7 +16,7 @@ const useStyles = makeStyles(theme =>
   })
 );
 
-const TreeContainer = () => {
+const TreeContainer = ({ connVisible }) => {
   const classes = useStyles();
   const [selectedId, setSelectedId] = React.useState();
   const [hoverId, setHoverId] = React.useState();
@@ -94,38 +95,41 @@ const TreeContainer = () => {
 
   return (
     <div className={classes.root}>
-      <Tree
-        data={getData()}
-        nodeRadius={9}
-        labelProp={"name"}
-        keyProp="id"
-        margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
-        height={600}
-        width={1200}
-        gProps={{
-          onClick: (e, node) => {
-            e.stopPropagation();
-            setSelectedId(node);
-            setPanelVisible(true);
-          },
-          onMouseOver: (e, node) => {
-            setHoverId(node);
-          },
-          onMouseOut: (e, node) => {
-            e.stopPropagation();
-            setHoverId();
-          }
-        }}
-        textProps={{ x: -20, y: 20 }}
-        svgProps={{
-          onClick: () => {
-            setSelectedId(undefined);
-            setPanelVisible(false);
-          }
-        }}
-        steps={30}
-        hoverNodeId={hoverId ? hoverId : selectedId}
-      />
+      <Card>
+        <Tree
+          connVisible={connVisible}
+          data={getData()}
+          nodeRadius={9}
+          labelProp={"name"}
+          keyProp="id"
+          margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
+          height={600}
+          width={1200}
+          gProps={{
+            onClick: (e, node) => {
+              e.stopPropagation();
+              setSelectedId(node);
+              setPanelVisible(true);
+            },
+            onMouseOver: (e, node) => {
+              setHoverId(node);
+            },
+            onMouseOut: (e, node) => {
+              e.stopPropagation();
+              setHoverId();
+            }
+          }}
+          textProps={{ x: -20, y: 20 }}
+          svgProps={{
+            onClick: () => {
+              //setSelectedId(undefined);
+              setPanelVisible(false);
+            }
+          }}
+          steps={30}
+          hoverNodeId={hoverId ? hoverId : selectedId}
+        />
+      </Card>
       <SidePanel
         setPanelVisible={setPanelVisible}
         panelVisible={panelVisible}
