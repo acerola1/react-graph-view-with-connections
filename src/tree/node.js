@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { animated } from "react-spring";
 import wrapHandlers from "./wrapHandlers";
 
 const propTypes = {
@@ -24,20 +23,19 @@ const Node = props => {
   const wrappedGProps = wrapHandlers(props.gProps, props[props.keyProp]);
 
   const wrappedTextProps = wrapHandlers(props.textProps, props[props.keyProp]);
-  const { xy, ...rest } = props.transitionProps;
+
   return (
-    <animated.g
+    <g
       {...wrappedGProps}
       style={{
-        transform: xy.interpolate((x, y) => `translate(${y}px, ${x}px)`),
-        ...rest
+        transform: `translate(${props.y}px, ${props.x}px)`
       }}
     >
       <circle {...wrappedCircleProps} r={props.radius} />
       <text {...wrappedTextProps} dx={props.radius + 0.5} dy={props.offset}>
         {props[props.labelProp]}
       </text>
-    </animated.g>
+    </g>
   );
 };
 

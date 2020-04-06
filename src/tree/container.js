@@ -25,14 +25,14 @@ const propTypes = {
 };
 
 const Container = props => {
-  const nodeTransition = useTransition(props.nodes, d => d.data.id, {
+  /*const nodeTransition = useTransition(props.nodes, d => d.data.id, {
     from: { opacity: 0 },
     leave: { opacity: 0 },
     enter: ({ x, y }) => ({ xy: [x, y], opacity: 1 }),
     update: ({ x, y }) => ({ xy: [x, y] })
-  });
+  });*/
 
-  const connectionTransition = useTransition(
+  /*const connectionTransition = useTransition(
     props.connections,
     d => `c_${d.source.data.id}_${d.target.data.id}`,
     {
@@ -46,7 +46,7 @@ const Container = props => {
         endpoints: [source.x, source.y, target.x, target.y]
       })
     }
-  );
+  );*/
 
   return (
     <svg {...props.svgProps} height={props.height} width={props.width}>
@@ -68,7 +68,14 @@ const Container = props => {
           }}
         />
       ))}
-      {connectionTransition.map(
+      {props.connections.map(connection => (
+        <Connection
+          key={`c_${connection.source.data.id}_${connection.target.data.id}`}
+          connection={connection}
+          nodeMap={props.nodeMap}
+        />
+      ))}
+      {/*connectionTransition.map(
         ({ item: connection, props: connectionProps, key }) => (
           <Connection
             key={key}
@@ -77,11 +84,10 @@ const Container = props => {
             nodeMap={props.nodeMap}
           />
         )
-      )}
-      {nodeTransition.map(({ item: node, props: transitionProps }) => (
+        )*/}
+      {props.nodes.map(node => (
         <Node
           key={node.data[props.keyProp]}
-          transitionProps={transitionProps}
           {...node.data}
           keyProp={props.keyProp}
           labelProp={props.labelProp}
@@ -97,11 +103,10 @@ const Container = props => {
           textProps={{ ...props.textProps, ...node.data.textProps }}
         />
       ))}
-
-      {/*props.nodes.map(node => (
+      {/*nodeTransition.map(({ item: node, props: transitionProps }) => (
         <Node
           key={node.data[props.keyProp]}
-          transitionProps={props}
+          transitionProps={transitionProps}
           {...node.data}
           keyProp={props.keyProp}
           labelProp={props.labelProp}

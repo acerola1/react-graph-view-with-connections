@@ -1,15 +1,12 @@
 import React from "react";
-import { animated } from "react-spring";
 
-const Connection = ({ connection, connectionProps }) => {
-  const { endpoints, ...rest } = connectionProps;
+const Connection = ({ connection }) => {
   return (
-    <animated.line
-      style={{ ...rest }}
-      x1={endpoints.interpolate((x1, y1, x2, y2) => y1)}
-      y1={endpoints.interpolate((x1, y1, x2, y2) => x1)}
-      x2={endpoints.interpolate((x1, y1, x2, y2) => y2)}
-      y2={endpoints.interpolate((x1, y1, x2, y2) => x2)}
+    <line
+      x1={connection.source.y}
+      y1={connection.source.x}
+      x2={connection.target.y}
+      y2={connection.target.x}
       className={"connection" + (connection.hovered ? " hovered" : "")}
     />
   );
