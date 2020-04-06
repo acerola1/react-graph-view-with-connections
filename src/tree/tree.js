@@ -88,9 +88,13 @@ export default class Tree extends React.PureComponent {
         labelProp={this.props.labelProp}
         links={links}
         nodes={nodes}
-        connections={this.props.connections.filter(
-          c => nodeMap[c.source] && nodeMap[c.target]
-        )}
+        connections={this.props.connections
+          .filter(c => nodeMap[c.source] && nodeMap[c.target])
+          .map(c => {
+            c.source = nodeMap[c.source];
+            c.target = nodeMap[c.target];
+            return c;
+          })}
         nodeOffset={this.props.nodeOffset}
         nodeRadius={this.props.nodeRadius}
         pathFunc={this.props.pathFunc}

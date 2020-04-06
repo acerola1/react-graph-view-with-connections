@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { animated } from "react-spring";
 import wrapHandlers from "./wrapHandlers";
 
 const propTypes = {
@@ -14,40 +15,31 @@ const propTypes = {
   textProps: PropTypes.object.isRequired
 };
 
-export default class Node extends React.PureComponent {
-  getTransform() {
-    return `translate(${this.props.y}, ${this.props.x})`;
-  }
+const Node = props => {
+  const wrappedCircleProps = wrapHandlers(
+    props.circleProps,
+    props[props.keyProp]
+  );
 
-  render() {
-    const wrappedCircleProps = wrapHandlers(
-      this.props.circleProps,
-      this.props[this.props.keyProp]
-    );
+  const wrappedGProps = wrapHandlers(props.gProps, props[props.keyProp]);
 
-    const wrappedGProps = wrapHandlers(
-      this.props.gProps,
-      this.props[this.props.keyProp]
-    );
-
-    const wrappedTextProps = wrapHandlers(
-      this.props.textProps,
-      this.props[this.props.keyProp]
-    );
-
-    return (
-      <g {...wrappedGProps} transform={this.getTransform()}>
-        <circle {...wrappedCircleProps} r={this.props.radius} />
-        <text
-          {...wrappedTextProps}
-          dx={this.props.radius + 0.5}
-          dy={this.props.offset}
-        >
-          {this.props[this.props.labelProp]}
-        </text>
-      </g>
-    );
-  }
-}
+  const wrappedTextProps = wrapHandlers(props.textProps, props[props.keyProp]);
+  const { xy, ...rest } = props.transitionProps;
+  return (
+    <animated.g
+      {...wrappedGProps}
+      style={{
+        transform: xy.interpolate((x, y) => `translate(${y}px, ${x}px)`),
+        ...rest
+      }}
+    >
+      <circle {...wrappedCircleProps} r={props.radius} />
+      <text {...wrappedTextProps} dx={props.radius + 0.5} dy={props.offset}>
+        {props[props.labelProp]}
+      </text>
+    </animated.g>
+  );
+};
 
 Node.propTypes = propTypes;
+export default Node;
