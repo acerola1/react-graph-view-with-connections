@@ -158,8 +158,8 @@ const TreeContainer = ({ connVisible }) => {
       .filter(n => n.connectedTo)
       .map(n => {
         return n.connectedTo.map(toId => {
-          const hovered = hoverNodeId === n.Id || hoverNodeId === toId;
-          return { source: n.Id, target: toId, hovered };
+          const hovered = hoverNodeId === n.id || hoverNodeId === toId;
+          return { source: n.id, target: toId, hovered };
         });
       })
       .flat();
@@ -171,11 +171,10 @@ const TreeContainer = ({ connVisible }) => {
         <Card>
           {model && (
             <Tree
-              connections={
-                connVisible
-                  ? createConnections(sample, hoverId ? hoverId : selectedId)
-                  : []
-              }
+              connections={createConnections(
+                sample,
+                hoverId ? hoverId : selectedId
+              )}
               data={model}
               nodeRadius={9}
               labelProp={"name"}
@@ -186,6 +185,7 @@ const TreeContainer = ({ connVisible }) => {
               nodeWidth={130}
               height={600}
               width={1200}
+              connVisible={connVisible}
               gProps={{
                 onClick: (e, node) => {
                   e.stopPropagation();

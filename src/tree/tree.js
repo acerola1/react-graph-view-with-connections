@@ -119,6 +119,7 @@ export default class Tree extends React.PureComponent {
         svgProps={this.props.svgProps}
         textProps={this.props.textProps}
         nodeMap={nodeMap}
+        connVisible={this.props.connVisible}
       >
         {this.props.children}
       </Container>

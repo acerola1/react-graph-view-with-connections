@@ -78,6 +78,7 @@ const Container = props => {
           key={`c_${connection.source.data.id}_${connection.target.data.id}`}
           connection={connection}
           nodeMap={props.nodeMap}
+          connVisible={props.connVisible}
         />
       ))}
       {/*connectionTransition.map(

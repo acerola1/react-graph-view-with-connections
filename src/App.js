@@ -29,7 +29,7 @@ export default function App() {
             inputProps={{ "aria-label": "primary checkbox" }}
           />
         }
-        label="Show Connections"
+        label="Show All Connections"
       />
       <TreeContainer connVisible={connVisible} />
     </div>
