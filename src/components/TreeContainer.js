@@ -1,9 +1,10 @@
 import React from "react";
 import Tree from "../tree/tree";
 import Card from "@material-ui/core/Card";
+import axios from "axios";
 
 import { makeStyles, createStyles } from "@material-ui/core/styles";
-import sample from "../sample1.json";
+import sample from "../sample3.json";
 import SidePanel from "./SidePanel";
 import PopupMenu from "./PopupMenu";
 
@@ -34,17 +35,29 @@ const TreeContainer = ({ connVisible }) => {
     anchorEl: undefined
   });
   const [closedNodes, setClosedNodes] = React.useState([]);
-  const data = React.useRef();
+  const [data, setData] = React.useState();
 
   // initial load
   React.useEffect(() => {
-    const initialData = sample;
-    data.current = addDummyRoot(initialData);
+    let initialData = "";
+    axios
+      .get("/data")
+      .then(function(response) {
+        if (typeof response.data === "object") {
+          initialData = response.data;
+        } else {
+          return Promise.reject();
+        }
+      })
+      .catch(() => (initialData = sample))
+      .then(() => {
+        setData(addDummyRoot(initialData));
+      });
   }, []);
   // model creation
   React.useEffect(() => {
-    data.current && setModel(getData(data.current));
-  }, [selectedId, hoverId, closedNodes, data.current]);
+    data && setModel(getData(data));
+  }, [selectedId, hoverId, closedNodes, data]);
 
   const addDummyRoot = initialData => {
     const children = [];
@@ -57,7 +70,7 @@ const TreeContainer = ({ connVisible }) => {
     });
 
     const dummyRoot = {
-      Id: "dummy-root",
+      id: "dummy-root",
       name: "dummy-root",
       type: "dummy-root",
       children
@@ -76,22 +89,22 @@ const TreeContainer = ({ connVisible }) => {
   const fillNode = node => {
     let newNode = {
       name: node.name,
-      id: node.Id,
+      id: node.id,
       type: node.type,
       connectedTo: node.connectedTo,
       circleProps: { style: { fill: getColorByType(node.type) } }
     };
     let className = "node";
-    if (selectedId && selectedId === node.Id) {
+    if (selectedId && selectedId === node.id) {
       className = className + " selected";
     }
-    if (hoverId && hoverId === node.Id) {
+    if (hoverId && hoverId === node.id) {
       className = className + " hovered";
     }
     newNode.gProps = {
       className
     };
-    if (!closedNodes.includes(node.Id) && node.children) {
+    if (!closedNodes.includes(node.id) && node.children) {
       newNode.children = node.children.map(childKey =>
         fillNode(sample[childKey])
       );

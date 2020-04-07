@@ -1,6 +1,6 @@
 {
   "0010028c-f737-4bb2-bcab-ea3df09a7d9a": {
-    "Id": "0010028c-f737-4bb2-bcab-ea3df09a7d9a",
+    "id": "0010028c-f737-4bb2-bcab-ea3df09a7d9a",
     "type": "Pod",
     "name": "metrics-server-6754dbc9df-nss8f",
     "parent": "6163a861-172d-4355-b65c-cc2db52de2a1",
@@ -11,7 +11,7 @@
     }
   },
   "0010028c-f737-4bb2-bcab-ea3df09a7d9ametrics-server": {
-    "Id": "0010028c-f737-4bb2-bcab-ea3df09a7d9ametrics-server",
+    "id": "0010028c-f737-4bb2-bcab-ea3df09a7d9ametrics-server",
     "type": "Container",
     "name": "metrics-server",
     "parent": "0010028c-f737-4bb2-bcab-ea3df09a7d9a",
@@ -23,7 +23,7 @@
     }
   },
   "02ca596b-3df1-41ba-8703-6018308520b4": {
-    "Id": "02ca596b-3df1-41ba-8703-6018308520b4",
+    "id": "02ca596b-3df1-41ba-8703-6018308520b4",
     "type": "Pod",
     "name": "test-nds-deployment-7fbf79cc56-vx2q9",
     "parent": "e8b023eb-ba2c-49d8-b717-8774e288d09b",
@@ -39,7 +39,7 @@
     }
   },
   "02ca596b-3df1-41ba-8703-6018308520b4nds": {
-    "Id": "02ca596b-3df1-41ba-8703-6018308520b4nds",
+    "id": "02ca596b-3df1-41ba-8703-6018308520b4nds",
     "type": "Container",
     "name": "nds",
     "parent": "02ca596b-3df1-41ba-8703-6018308520b4",
@@ -51,21 +51,21 @@
     }
   },
   "040cb020-ea34-4405-b0db-085d9077f0da": {
-    "Id": "040cb020-ea34-4405-b0db-085d9077f0da",
+    "id": "040cb020-ea34-4405-b0db-085d9077f0da",
     "type": "Deployment",
     "name": "test-nds-deployment",
     "parent": "80901561ade51dcaab8c7fdefa027ef6cb51e3e4",
     "children": ["e8b023eb-ba2c-49d8-b717-8774e288d09b"]
   },
   "09461e07-3abe-4a70-97ae-2ce829dba9c9": {
-    "Id": "09461e07-3abe-4a70-97ae-2ce829dba9c9",
+    "id": "09461e07-3abe-4a70-97ae-2ce829dba9c9",
     "type": "Service",
     "name": "test-mariadb",
     "parent": "c0fe65a97b6323da8804cfa75baf064c500e3e61",
     "connectedTo": ["9766add1-033f-48bf-bb31-47cc10440974"]
   },
   "14b44196-36c1-4e36-b34d-db2b7f5be505": {
-    "Id": "14b44196-36c1-4e36-b34d-db2b7f5be505",
+    "id": "14b44196-36c1-4e36-b34d-db2b7f5be505",
     "type": "Pod",
     "name": "coredns-6955765f44-mg5hz",
     "parent": "c173a237-bb38-4a7d-bd3b-8a92aa54a00d",
@@ -76,7 +76,7 @@
     }
   },
   "14b44196-36c1-4e36-b34d-db2b7f5be505coredns": {
-    "Id": "14b44196-36c1-4e36-b34d-db2b7f5be505coredns",
+    "id": "14b44196-36c1-4e36-b34d-db2b7f5be505coredns",
     "type": "Container",
     "name": "coredns",
     "parent": "14b44196-36c1-4e36-b34d-db2b7f5be505",
@@ -88,12 +88,12 @@
     }
   },
   "17acdede-223d-42da-bd08-9d8a1a8fd6dd": {
-    "Id": "17acdede-223d-42da-bd08-9d8a1a8fd6dd",
+    "id": "17acdede-223d-42da-bd08-9d8a1a8fd6dd",
     "type": "Namespace",
     "name": "kube-public"
   },
   "25288c51-6660-44c8-9c95-40a4f4f3ae9f": {
-    "Id": "25288c51-6660-44c8-9c95-40a4f4f3ae9f",
+    "id": "25288c51-6660-44c8-9c95-40a4f4f3ae9f",
     "type": "Pod",
     "name": "kube-apiserver-m01",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -104,7 +104,7 @@
     }
   },
   "25288c51-6660-44c8-9c95-40a4f4f3ae9fkube-apiserver": {
-    "Id": "25288c51-6660-44c8-9c95-40a4f4f3ae9fkube-apiserver",
+    "id": "25288c51-6660-44c8-9c95-40a4f4f3ae9fkube-apiserver",
     "type": "Container",
     "name": "kube-apiserver",
     "parent": "25288c51-6660-44c8-9c95-40a4f4f3ae9f",
@@ -116,21 +116,21 @@
     }
   },
   "2613d8e4-46d5-40ec-8112-dae40d99eb4c": {
-    "Id": "2613d8e4-46d5-40ec-8112-dae40d99eb4c",
+    "id": "2613d8e4-46d5-40ec-8112-dae40d99eb4c",
     "type": "Service",
     "name": "weave-scope-app",
     "parent": "955995bd-d29e-444b-b4ac-66aab1826b30",
     "connectedTo": ["3ef6b956-0f7e-460b-b192-f97937064e11"]
   },
   "27c01c6d-f7dd-4488-ac66-83b5b28c16be": {
-    "Id": "27c01c6d-f7dd-4488-ac66-83b5b28c16be",
+    "id": "27c01c6d-f7dd-4488-ac66-83b5b28c16be",
     "type": "Deployment",
     "name": "kubernetes-dashboard",
     "parent": "4b67da08-6f66-4686-a411-7b7fdec41731",
     "children": ["ec2645ce-ee3f-4905-8fb2-a4aa1db6afb8"]
   },
   "2a1edf27-710c-4eb0-b62e-1fefc707722c": {
-    "Id": "2a1edf27-710c-4eb0-b62e-1fefc707722c",
+    "id": "2a1edf27-710c-4eb0-b62e-1fefc707722c",
     "type": "Namespace",
     "name": "default",
     "children": [
@@ -143,7 +143,7 @@
     ]
   },
   "2b551234-1169-4081-9724-9a5c10e228d1": {
-    "Id": "2b551234-1169-4081-9724-9a5c10e228d1",
+    "id": "2b551234-1169-4081-9724-9a5c10e228d1",
     "type": "Pod",
     "name": "kube-scheduler-m01",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -154,7 +154,7 @@
     }
   },
   "2b551234-1169-4081-9724-9a5c10e228d1kube-scheduler": {
-    "Id": "2b551234-1169-4081-9724-9a5c10e228d1kube-scheduler",
+    "id": "2b551234-1169-4081-9724-9a5c10e228d1kube-scheduler",
     "type": "Container",
     "name": "kube-scheduler",
     "parent": "2b551234-1169-4081-9724-9a5c10e228d1",
@@ -166,7 +166,7 @@
     }
   },
   "31dd7c19-e8be-4734-9df2-67664ab0b973": {
-    "Id": "31dd7c19-e8be-4734-9df2-67664ab0b973",
+    "id": "31dd7c19-e8be-4734-9df2-67664ab0b973",
     "type": "ReplicaSet",
     "name": "test-catalog-deployment-69b8fdfdd5",
     "parent": "d86a794e-3376-468d-a3fb-78f116197f67",
@@ -176,7 +176,7 @@
     ]
   },
   "3a2347cd-7cb6-4c6c-9d41-74019bb19525": {
-    "Id": "3a2347cd-7cb6-4c6c-9d41-74019bb19525",
+    "id": "3a2347cd-7cb6-4c6c-9d41-74019bb19525",
     "type": "Pod",
     "name": "kube-controller-manager-m01",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -187,7 +187,7 @@
     }
   },
   "3a2347cd-7cb6-4c6c-9d41-74019bb19525kube-controller-manager": {
-    "Id": "3a2347cd-7cb6-4c6c-9d41-74019bb19525kube-controller-manager",
+    "id": "3a2347cd-7cb6-4c6c-9d41-74019bb19525kube-controller-manager",
     "type": "Container",
     "name": "kube-controller-manager",
     "parent": "3a2347cd-7cb6-4c6c-9d41-74019bb19525",
@@ -199,7 +199,7 @@
     }
   },
   "3b36452f-d27b-4637-86c5-2021ce739fe1": {
-    "Id": "3b36452f-d27b-4637-86c5-2021ce739fe1",
+    "id": "3b36452f-d27b-4637-86c5-2021ce739fe1",
     "type": "Pod",
     "name": "test-catalog-deployment-69b8fdfdd5-hp4c8",
     "parent": "31dd7c19-e8be-4734-9df2-67664ab0b973",
@@ -211,7 +211,7 @@
     }
   },
   "3b36452f-d27b-4637-86c5-2021ce739fe1catalog": {
-    "Id": "3b36452f-d27b-4637-86c5-2021ce739fe1catalog",
+    "id": "3b36452f-d27b-4637-86c5-2021ce739fe1catalog",
     "type": "Container",
     "name": "catalog",
     "parent": "3b36452f-d27b-4637-86c5-2021ce739fe1",
@@ -223,14 +223,14 @@
     }
   },
   "3e1a703c-57fc-4949-9caa-6d4e71480546": {
-    "Id": "3e1a703c-57fc-4949-9caa-6d4e71480546",
+    "id": "3e1a703c-57fc-4949-9caa-6d4e71480546",
     "type": "ReplicaSet",
     "name": "weave-scope-app-7cbbf5b86f",
     "parent": "f287c8ec-faf2-45b3-b698-e5a95799bfba",
     "children": ["3ef6b956-0f7e-460b-b192-f97937064e11"]
   },
   "3ef6b956-0f7e-460b-b192-f97937064e11": {
-    "Id": "3ef6b956-0f7e-460b-b192-f97937064e11",
+    "id": "3ef6b956-0f7e-460b-b192-f97937064e11",
     "type": "Pod",
     "name": "weave-scope-app-7cbbf5b86f-v4fxh",
     "parent": "3e1a703c-57fc-4949-9caa-6d4e71480546",
@@ -241,7 +241,7 @@
     }
   },
   "3ef6b956-0f7e-460b-b192-f97937064e11app": {
-    "Id": "3ef6b956-0f7e-460b-b192-f97937064e11app",
+    "id": "3ef6b956-0f7e-460b-b192-f97937064e11app",
     "type": "Container",
     "name": "app",
     "parent": "3ef6b956-0f7e-460b-b192-f97937064e11",
@@ -253,13 +253,13 @@
     }
   },
   "47129c0c-10d7-4691-b28c-bfce6b3c43b0": {
-    "Id": "47129c0c-10d7-4691-b28c-bfce6b3c43b0",
+    "id": "47129c0c-10d7-4691-b28c-bfce6b3c43b0",
     "type": "Service",
     "name": "kubernetes",
     "parent": "2a1edf27-710c-4eb0-b62e-1fefc707722c"
   },
   "48d2ab8b-cef6-4147-8bca-4da0e7d86e79": {
-    "Id": "48d2ab8b-cef6-4147-8bca-4da0e7d86e79",
+    "id": "48d2ab8b-cef6-4147-8bca-4da0e7d86e79",
     "type": "Pod",
     "name": "etcd-m01",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -270,7 +270,7 @@
     }
   },
   "48d2ab8b-cef6-4147-8bca-4da0e7d86e79etcd": {
-    "Id": "48d2ab8b-cef6-4147-8bca-4da0e7d86e79etcd",
+    "id": "48d2ab8b-cef6-4147-8bca-4da0e7d86e79etcd",
     "type": "Container",
     "name": "etcd",
     "parent": "48d2ab8b-cef6-4147-8bca-4da0e7d86e79",
@@ -282,7 +282,7 @@
     }
   },
   "4b67da08-6f66-4686-a411-7b7fdec41731": {
-    "Id": "4b67da08-6f66-4686-a411-7b7fdec41731",
+    "id": "4b67da08-6f66-4686-a411-7b7fdec41731",
     "type": "Namespace",
     "name": "kubernetes-dashboard",
     "children": [
@@ -293,7 +293,7 @@
     ]
   },
   "4d21d0c7-81a9-4a6b-a814-39f7ecf79389": {
-    "Id": "4d21d0c7-81a9-4a6b-a814-39f7ecf79389",
+    "id": "4d21d0c7-81a9-4a6b-a814-39f7ecf79389",
     "type": "Pod",
     "name": "weave-scope-agent-p5gq7",
     "parent": "955995bd-d29e-444b-b4ac-66aab1826b30",
@@ -304,7 +304,7 @@
     }
   },
   "4d21d0c7-81a9-4a6b-a814-39f7ecf79389scope-agent": {
-    "Id": "4d21d0c7-81a9-4a6b-a814-39f7ecf79389scope-agent",
+    "id": "4d21d0c7-81a9-4a6b-a814-39f7ecf79389scope-agent",
     "type": "Container",
     "name": "scope-agent",
     "parent": "4d21d0c7-81a9-4a6b-a814-39f7ecf79389",
@@ -316,7 +316,7 @@
     }
   },
   "524460f9-a85b-492a-80b3-a0cdeebca7ba": {
-    "Id": "524460f9-a85b-492a-80b3-a0cdeebca7ba",
+    "id": "524460f9-a85b-492a-80b3-a0cdeebca7ba",
     "type": "Pod",
     "name": "test-ads-deployment-5858bf75c9-56cl4",
     "parent": "d5554008-671d-4c93-b464-f6d07e8dee9f",
@@ -332,7 +332,7 @@
     }
   },
   "524460f9-a85b-492a-80b3-a0cdeebca7baads": {
-    "Id": "524460f9-a85b-492a-80b3-a0cdeebca7baads",
+    "id": "524460f9-a85b-492a-80b3-a0cdeebca7baads",
     "type": "Container",
     "name": "ads",
     "parent": "524460f9-a85b-492a-80b3-a0cdeebca7ba",
@@ -344,21 +344,21 @@
     }
   },
   "53e8f05d-cbcb-401c-86a4-ff8869be146d": {
-    "Id": "53e8f05d-cbcb-401c-86a4-ff8869be146d",
+    "id": "53e8f05d-cbcb-401c-86a4-ff8869be146d",
     "type": "ReplicaSet",
     "name": "test-mariadb-deployment-66b4d76c7",
     "parent": "bd0694d7-783d-4088-9742-5a94c689fcd7",
     "children": ["9766add1-033f-48bf-bb31-47cc10440974"]
   },
   "56b0ee32-4184-4698-8377-8ccf94d349dd": {
-    "Id": "56b0ee32-4184-4698-8377-8ccf94d349dd",
+    "id": "56b0ee32-4184-4698-8377-8ccf94d349dd",
     "type": "Service",
     "name": "metrics-server",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
     "connectedTo": ["0010028c-f737-4bb2-bcab-ea3df09a7d9a"]
   },
   "5bb8a6e6-eef6-4479-9414-bd60df7caed9": {
-    "Id": "5bb8a6e6-eef6-4479-9414-bd60df7caed9",
+    "id": "5bb8a6e6-eef6-4479-9414-bd60df7caed9",
     "type": "Pod",
     "name": "nginx-ingress-controller-6fc5bcc8c9-dmqsd",
     "parent": "c767b6bf-d8c4-4005-8950-9efa807ec444",
@@ -371,7 +371,7 @@
     }
   },
   "5bb8a6e6-eef6-4479-9414-bd60df7caed9nginx-ingress-controller": {
-    "Id": "5bb8a6e6-eef6-4479-9414-bd60df7caed9nginx-ingress-controller",
+    "id": "5bb8a6e6-eef6-4479-9414-bd60df7caed9nginx-ingress-controller",
     "type": "Container",
     "name": "nginx-ingress-controller",
     "parent": "5bb8a6e6-eef6-4479-9414-bd60df7caed9",
@@ -383,14 +383,14 @@
     }
   },
   "6163a861-172d-4355-b65c-cc2db52de2a1": {
-    "Id": "6163a861-172d-4355-b65c-cc2db52de2a1",
+    "id": "6163a861-172d-4355-b65c-cc2db52de2a1",
     "type": "ReplicaSet",
     "name": "metrics-server-6754dbc9df",
     "parent": "8fc3ea12-07ba-4283-88c9-3a735ad7e973",
     "children": ["0010028c-f737-4bb2-bcab-ea3df09a7d9a"]
   },
   "7161f225-80b1-4099-a85b-6a60eee6d10d": {
-    "Id": "7161f225-80b1-4099-a85b-6a60eee6d10d",
+    "id": "7161f225-80b1-4099-a85b-6a60eee6d10d",
     "type": "Pod",
     "name": "weave-scope-cluster-agent-6fd4566858-t4ngr",
     "parent": "9562a9ad-6ed5-45e0-9a13-b7eb6b4b34c2",
@@ -401,7 +401,7 @@
     }
   },
   "7161f225-80b1-4099-a85b-6a60eee6d10dscope-cluster-agent": {
-    "Id": "7161f225-80b1-4099-a85b-6a60eee6d10dscope-cluster-agent",
+    "id": "7161f225-80b1-4099-a85b-6a60eee6d10dscope-cluster-agent",
     "type": "Container",
     "name": "scope-cluster-agent",
     "parent": "7161f225-80b1-4099-a85b-6a60eee6d10d",
@@ -413,14 +413,14 @@
     }
   },
   "76459827-e2bf-433b-9691-1899dd98aa01": {
-    "Id": "76459827-e2bf-433b-9691-1899dd98aa01",
+    "id": "76459827-e2bf-433b-9691-1899dd98aa01",
     "type": "Deployment",
     "name": "test-sample-deployment",
     "parent": "adea562778a0372b96b85882de6b1459094960e5",
     "children": ["b8ad32b9-4f1b-46f6-87e5-c373e381bdcc"]
   },
   "769d0985-6ce7-4101-b665-6f279db552e1": {
-    "Id": "769d0985-6ce7-4101-b665-6f279db552e1",
+    "id": "769d0985-6ce7-4101-b665-6f279db552e1",
     "type": "Pod",
     "name": "test-sample-deployment-cd87c48c-47922",
     "parent": "b8ad32b9-4f1b-46f6-87e5-c373e381bdcc",
@@ -432,7 +432,7 @@
     }
   },
   "769d0985-6ce7-4101-b665-6f279db552e1sample": {
-    "Id": "769d0985-6ce7-4101-b665-6f279db552e1sample",
+    "id": "769d0985-6ce7-4101-b665-6f279db552e1sample",
     "type": "Container",
     "name": "sample",
     "parent": "769d0985-6ce7-4101-b665-6f279db552e1",
@@ -444,14 +444,14 @@
     }
   },
   "7cfc898c-c1b3-43fd-ad2c-1a3d662bd5d2": {
-    "Id": "7cfc898c-c1b3-43fd-ad2c-1a3d662bd5d2",
+    "id": "7cfc898c-c1b3-43fd-ad2c-1a3d662bd5d2",
     "type": "Service",
     "name": "kubernetes-dashboard",
     "parent": "4b67da08-6f66-4686-a411-7b7fdec41731",
     "connectedTo": ["ba36b9a4-11a7-4162-8073-15129408e039"]
   },
   "7e56c631-aa1a-4319-8e0b-b582a465bad3": {
-    "Id": "7e56c631-aa1a-4319-8e0b-b582a465bad3",
+    "id": "7e56c631-aa1a-4319-8e0b-b582a465bad3",
     "type": "Pod",
     "name": "test-nds-deployment-7fbf79cc56-nmqmb",
     "parent": "e8b023eb-ba2c-49d8-b717-8774e288d09b",
@@ -467,7 +467,7 @@
     }
   },
   "7e56c631-aa1a-4319-8e0b-b582a465bad3nds": {
-    "Id": "7e56c631-aa1a-4319-8e0b-b582a465bad3nds",
+    "id": "7e56c631-aa1a-4319-8e0b-b582a465bad3nds",
     "type": "Container",
     "name": "nds",
     "parent": "7e56c631-aa1a-4319-8e0b-b582a465bad3",
@@ -479,14 +479,14 @@
     }
   },
   "80901561ade51dcaab8c7fdefa027ef6cb51e3e4": {
-    "Id": "80901561ade51dcaab8c7fdefa027ef6cb51e3e4",
+    "id": "80901561ade51dcaab8c7fdefa027ef6cb51e3e4",
     "type": "Group",
     "name": "test-nds",
     "parent": "2a1edf27-710c-4eb0-b62e-1fefc707722c",
     "children": ["040cb020-ea34-4405-b0db-085d9077f0da"]
   },
   "8138f7f6-f09c-45e1-9021-ab856aa70dac": {
-    "Id": "8138f7f6-f09c-45e1-9021-ab856aa70dac",
+    "id": "8138f7f6-f09c-45e1-9021-ab856aa70dac",
     "type": "Pod",
     "name": "test-ads-deployment-5858bf75c9-vcsv7",
     "parent": "d5554008-671d-4c93-b464-f6d07e8dee9f",
@@ -502,7 +502,7 @@
     }
   },
   "8138f7f6-f09c-45e1-9021-ab856aa70dacads": {
-    "Id": "8138f7f6-f09c-45e1-9021-ab856aa70dacads",
+    "id": "8138f7f6-f09c-45e1-9021-ab856aa70dacads",
     "type": "Container",
     "name": "ads",
     "parent": "8138f7f6-f09c-45e1-9021-ab856aa70dac",
@@ -514,7 +514,7 @@
     }
   },
   "8befe24e-6c77-4240-a196-8b782081525c": {
-    "Id": "8befe24e-6c77-4240-a196-8b782081525c",
+    "id": "8befe24e-6c77-4240-a196-8b782081525c",
     "type": "Service",
     "name": "kube-dns",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -524,14 +524,14 @@
     ]
   },
   "8fc3ea12-07ba-4283-88c9-3a735ad7e973": {
-    "Id": "8fc3ea12-07ba-4283-88c9-3a735ad7e973",
+    "id": "8fc3ea12-07ba-4283-88c9-3a735ad7e973",
     "type": "Deployment",
     "name": "metrics-server",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
     "children": ["6163a861-172d-4355-b65c-cc2db52de2a1"]
   },
   "9095bb39-23b5-4076-9aaa-49d661881bd9": {
-    "Id": "9095bb39-23b5-4076-9aaa-49d661881bd9",
+    "id": "9095bb39-23b5-4076-9aaa-49d661881bd9",
     "type": "Pod",
     "name": "kube-proxy-2444x",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -542,7 +542,7 @@
     }
   },
   "9095bb39-23b5-4076-9aaa-49d661881bd9kube-proxy": {
-    "Id": "9095bb39-23b5-4076-9aaa-49d661881bd9kube-proxy",
+    "id": "9095bb39-23b5-4076-9aaa-49d661881bd9kube-proxy",
     "type": "Container",
     "name": "kube-proxy",
     "parent": "9095bb39-23b5-4076-9aaa-49d661881bd9",
@@ -554,14 +554,14 @@
     }
   },
   "9394bf23-be23-4a80-a798-1e27ecfcd05a": {
-    "Id": "9394bf23-be23-4a80-a798-1e27ecfcd05a",
+    "id": "9394bf23-be23-4a80-a798-1e27ecfcd05a",
     "type": "Deployment",
     "name": "dashboard-metrics-scraper",
     "parent": "4b67da08-6f66-4686-a411-7b7fdec41731",
     "children": ["9a0eaf94-d143-4c4f-928c-a35f154e28d5"]
   },
   "955995bd-d29e-444b-b4ac-66aab1826b30": {
-    "Id": "955995bd-d29e-444b-b4ac-66aab1826b30",
+    "id": "955995bd-d29e-444b-b4ac-66aab1826b30",
     "type": "Namespace",
     "name": "weave",
     "children": [
@@ -572,14 +572,14 @@
     ]
   },
   "9562a9ad-6ed5-45e0-9a13-b7eb6b4b34c2": {
-    "Id": "9562a9ad-6ed5-45e0-9a13-b7eb6b4b34c2",
+    "id": "9562a9ad-6ed5-45e0-9a13-b7eb6b4b34c2",
     "type": "ReplicaSet",
     "name": "weave-scope-cluster-agent-6fd4566858",
     "parent": "b7489eaf-5a71-4f67-8854-8f2d9809ac6d",
     "children": ["7161f225-80b1-4099-a85b-6a60eee6d10d"]
   },
   "9766add1-033f-48bf-bb31-47cc10440974": {
-    "Id": "9766add1-033f-48bf-bb31-47cc10440974",
+    "id": "9766add1-033f-48bf-bb31-47cc10440974",
     "type": "Pod",
     "name": "test-mariadb-deployment-66b4d76c7-755l9",
     "parent": "53e8f05d-cbcb-401c-86a4-ff8869be146d",
@@ -590,7 +590,7 @@
     }
   },
   "9766add1-033f-48bf-bb31-47cc10440974mariadb": {
-    "Id": "9766add1-033f-48bf-bb31-47cc10440974mariadb",
+    "id": "9766add1-033f-48bf-bb31-47cc10440974mariadb",
     "type": "Container",
     "name": "mariadb",
     "parent": "9766add1-033f-48bf-bb31-47cc10440974",
@@ -602,14 +602,14 @@
     }
   },
   "9a0eaf94-d143-4c4f-928c-a35f154e28d5": {
-    "Id": "9a0eaf94-d143-4c4f-928c-a35f154e28d5",
+    "id": "9a0eaf94-d143-4c4f-928c-a35f154e28d5",
     "type": "ReplicaSet",
     "name": "dashboard-metrics-scraper-7b64584c5c",
     "parent": "9394bf23-be23-4a80-a798-1e27ecfcd05a",
     "children": ["bd64e6bf-d1b3-4793-b5b5-236fdb69626a"]
   },
   "9f3ab174-b395-4365-a59b-ccad76e2e3ab": {
-    "Id": "9f3ab174-b395-4365-a59b-ccad76e2e3ab",
+    "id": "9f3ab174-b395-4365-a59b-ccad76e2e3ab",
     "type": "Pod",
     "name": "test-ads-deployment-5858bf75c9-86v4s",
     "parent": "d5554008-671d-4c93-b464-f6d07e8dee9f",
@@ -625,7 +625,7 @@
     }
   },
   "9f3ab174-b395-4365-a59b-ccad76e2e3abads": {
-    "Id": "9f3ab174-b395-4365-a59b-ccad76e2e3abads",
+    "id": "9f3ab174-b395-4365-a59b-ccad76e2e3abads",
     "type": "Container",
     "name": "ads",
     "parent": "9f3ab174-b395-4365-a59b-ccad76e2e3ab",
@@ -637,21 +637,21 @@
     }
   },
   "a96bc581-73ea-4653-91a9-44aa63f1b9e3": {
-    "Id": "a96bc581-73ea-4653-91a9-44aa63f1b9e3",
+    "id": "a96bc581-73ea-4653-91a9-44aa63f1b9e3",
     "type": "Service",
     "name": "registry",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
     "connectedTo": ["dd1735cb-58ac-4829-9c8d-277c6dcedbf7"]
   },
   "adea562778a0372b96b85882de6b1459094960e5": {
-    "Id": "adea562778a0372b96b85882de6b1459094960e5",
+    "id": "adea562778a0372b96b85882de6b1459094960e5",
     "type": "Group",
     "name": "test-sample",
     "parent": "2a1edf27-710c-4eb0-b62e-1fefc707722c",
     "children": ["76459827-e2bf-433b-9691-1899dd98aa01"]
   },
   "b3a1a1bd-6ec8-4100-8c8c-a967473c074e": {
-    "Id": "b3a1a1bd-6ec8-4100-8c8c-a967473c074e",
+    "id": "b3a1a1bd-6ec8-4100-8c8c-a967473c074e",
     "type": "Service",
     "name": "test-catalog",
     "parent": "e127a2c7779a4220ea484d173f7f23b035bc413d",
@@ -661,14 +661,14 @@
     ]
   },
   "b593176d-d4c5-4452-99a5-bfb2c1b24335": {
-    "Id": "b593176d-d4c5-4452-99a5-bfb2c1b24335",
+    "id": "b593176d-d4c5-4452-99a5-bfb2c1b24335",
     "type": "Deployment",
     "name": "nginx-ingress-controller",
     "parent": "ec985ab25fec878d165e0530765cb70366e1cad3",
     "children": ["c767b6bf-d8c4-4005-8950-9efa807ec444"]
   },
   "b67fa703-a4dd-4363-98c0-359f6c52f9b6": {
-    "Id": "b67fa703-a4dd-4363-98c0-359f6c52f9b6",
+    "id": "b67fa703-a4dd-4363-98c0-359f6c52f9b6",
     "type": "Pod",
     "name": "coredns-6955765f44-pgmtp",
     "parent": "c173a237-bb38-4a7d-bd3b-8a92aa54a00d",
@@ -679,7 +679,7 @@
     }
   },
   "b67fa703-a4dd-4363-98c0-359f6c52f9b6coredns": {
-    "Id": "b67fa703-a4dd-4363-98c0-359f6c52f9b6coredns",
+    "id": "b67fa703-a4dd-4363-98c0-359f6c52f9b6coredns",
     "type": "Container",
     "name": "coredns",
     "parent": "b67fa703-a4dd-4363-98c0-359f6c52f9b6",
@@ -691,21 +691,21 @@
     }
   },
   "b7489eaf-5a71-4f67-8854-8f2d9809ac6d": {
-    "Id": "b7489eaf-5a71-4f67-8854-8f2d9809ac6d",
+    "id": "b7489eaf-5a71-4f67-8854-8f2d9809ac6d",
     "type": "Deployment",
     "name": "weave-scope-cluster-agent",
     "parent": "955995bd-d29e-444b-b4ac-66aab1826b30",
     "children": ["9562a9ad-6ed5-45e0-9a13-b7eb6b4b34c2"]
   },
   "b8ad32b9-4f1b-46f6-87e5-c373e381bdcc": {
-    "Id": "b8ad32b9-4f1b-46f6-87e5-c373e381bdcc",
+    "id": "b8ad32b9-4f1b-46f6-87e5-c373e381bdcc",
     "type": "ReplicaSet",
     "name": "test-sample-deployment-cd87c48c",
     "parent": "76459827-e2bf-433b-9691-1899dd98aa01",
     "children": ["769d0985-6ce7-4101-b665-6f279db552e1"]
   },
   "ba36b9a4-11a7-4162-8073-15129408e039": {
-    "Id": "ba36b9a4-11a7-4162-8073-15129408e039",
+    "id": "ba36b9a4-11a7-4162-8073-15129408e039",
     "type": "Pod",
     "name": "kubernetes-dashboard-79d9cd965-6qdnl",
     "parent": "ec2645ce-ee3f-4905-8fb2-a4aa1db6afb8",
@@ -716,7 +716,7 @@
     }
   },
   "ba36b9a4-11a7-4162-8073-15129408e039kubernetes-dashboard": {
-    "Id": "ba36b9a4-11a7-4162-8073-15129408e039kubernetes-dashboard",
+    "id": "ba36b9a4-11a7-4162-8073-15129408e039kubernetes-dashboard",
     "type": "Container",
     "name": "kubernetes-dashboard",
     "parent": "ba36b9a4-11a7-4162-8073-15129408e039",
@@ -728,14 +728,14 @@
     }
   },
   "bd0694d7-783d-4088-9742-5a94c689fcd7": {
-    "Id": "bd0694d7-783d-4088-9742-5a94c689fcd7",
+    "id": "bd0694d7-783d-4088-9742-5a94c689fcd7",
     "type": "Deployment",
     "name": "test-mariadb-deployment",
     "parent": "c0fe65a97b6323da8804cfa75baf064c500e3e61",
     "children": ["53e8f05d-cbcb-401c-86a4-ff8869be146d"]
   },
   "bd64e6bf-d1b3-4793-b5b5-236fdb69626a": {
-    "Id": "bd64e6bf-d1b3-4793-b5b5-236fdb69626a",
+    "id": "bd64e6bf-d1b3-4793-b5b5-236fdb69626a",
     "type": "Pod",
     "name": "dashboard-metrics-scraper-7b64584c5c-b4xj7",
     "parent": "9a0eaf94-d143-4c4f-928c-a35f154e28d5",
@@ -748,7 +748,7 @@
     }
   },
   "bd64e6bf-d1b3-4793-b5b5-236fdb69626adashboard-metrics-scraper": {
-    "Id": "bd64e6bf-d1b3-4793-b5b5-236fdb69626adashboard-metrics-scraper",
+    "id": "bd64e6bf-d1b3-4793-b5b5-236fdb69626adashboard-metrics-scraper",
     "type": "Container",
     "name": "dashboard-metrics-scraper",
     "parent": "bd64e6bf-d1b3-4793-b5b5-236fdb69626a",
@@ -760,7 +760,7 @@
     }
   },
   "c0fe65a97b6323da8804cfa75baf064c500e3e61": {
-    "Id": "c0fe65a97b6323da8804cfa75baf064c500e3e61",
+    "id": "c0fe65a97b6323da8804cfa75baf064c500e3e61",
     "type": "Group",
     "name": "test-mariadb",
     "parent": "2a1edf27-710c-4eb0-b62e-1fefc707722c",
@@ -770,7 +770,7 @@
     ]
   },
   "c173a237-bb38-4a7d-bd3b-8a92aa54a00d": {
-    "Id": "c173a237-bb38-4a7d-bd3b-8a92aa54a00d",
+    "id": "c173a237-bb38-4a7d-bd3b-8a92aa54a00d",
     "type": "ReplicaSet",
     "name": "coredns-6955765f44",
     "parent": "c6617282-361b-4d5a-bcc0-6e83747fd0e6",
@@ -780,7 +780,7 @@
     ]
   },
   "c1fe98d5-9262-4bed-9af2-56d647f97cfc": {
-    "Id": "c1fe98d5-9262-4bed-9af2-56d647f97cfc",
+    "id": "c1fe98d5-9262-4bed-9af2-56d647f97cfc",
     "type": "Pod",
     "name": "registry-proxy-5v86v",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -791,7 +791,7 @@
     }
   },
   "c1fe98d5-9262-4bed-9af2-56d647f97cfcregistry-proxy": {
-    "Id": "c1fe98d5-9262-4bed-9af2-56d647f97cfcregistry-proxy",
+    "id": "c1fe98d5-9262-4bed-9af2-56d647f97cfcregistry-proxy",
     "type": "Container",
     "name": "registry-proxy",
     "parent": "c1fe98d5-9262-4bed-9af2-56d647f97cfc",
@@ -803,7 +803,7 @@
     }
   },
   "c4deed9b-8b04-4132-adbb-5fa55e66536d": {
-    "Id": "c4deed9b-8b04-4132-adbb-5fa55e66536d",
+    "id": "c4deed9b-8b04-4132-adbb-5fa55e66536d",
     "type": "Pod",
     "name": "test-catalog-deployment-69b8fdfdd5-rgcgf",
     "parent": "31dd7c19-e8be-4734-9df2-67664ab0b973",
@@ -815,7 +815,7 @@
     }
   },
   "c4deed9b-8b04-4132-adbb-5fa55e66536dcatalog": {
-    "Id": "c4deed9b-8b04-4132-adbb-5fa55e66536dcatalog",
+    "id": "c4deed9b-8b04-4132-adbb-5fa55e66536dcatalog",
     "type": "Container",
     "name": "catalog",
     "parent": "c4deed9b-8b04-4132-adbb-5fa55e66536d",
@@ -827,21 +827,21 @@
     }
   },
   "c6617282-361b-4d5a-bcc0-6e83747fd0e6": {
-    "Id": "c6617282-361b-4d5a-bcc0-6e83747fd0e6",
+    "id": "c6617282-361b-4d5a-bcc0-6e83747fd0e6",
     "type": "Deployment",
     "name": "coredns",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
     "children": ["c173a237-bb38-4a7d-bd3b-8a92aa54a00d"]
   },
   "c767b6bf-d8c4-4005-8950-9efa807ec444": {
-    "Id": "c767b6bf-d8c4-4005-8950-9efa807ec444",
+    "id": "c767b6bf-d8c4-4005-8950-9efa807ec444",
     "type": "ReplicaSet",
     "name": "nginx-ingress-controller-6fc5bcc8c9",
     "parent": "b593176d-d4c5-4452-99a5-bfb2c1b24335",
     "children": ["5bb8a6e6-eef6-4479-9414-bd60df7caed9"]
   },
   "d5554008-671d-4c93-b464-f6d07e8dee9f": {
-    "Id": "d5554008-671d-4c93-b464-f6d07e8dee9f",
+    "id": "d5554008-671d-4c93-b464-f6d07e8dee9f",
     "type": "ReplicaSet",
     "name": "test-ads-deployment-5858bf75c9",
     "parent": "eae227c6-c2c9-4acf-86a0-03d2a60d688f",
@@ -852,19 +852,19 @@
     ]
   },
   "d86a794e-3376-468d-a3fb-78f116197f67": {
-    "Id": "d86a794e-3376-468d-a3fb-78f116197f67",
+    "id": "d86a794e-3376-468d-a3fb-78f116197f67",
     "type": "Deployment",
     "name": "test-catalog-deployment",
     "parent": "e127a2c7779a4220ea484d173f7f23b035bc413d",
     "children": ["31dd7c19-e8be-4734-9df2-67664ab0b973"]
   },
   "d8c05e28-c77c-45e2-a9d5-2bbbb840b4c2": {
-    "Id": "d8c05e28-c77c-45e2-a9d5-2bbbb840b4c2",
+    "id": "d8c05e28-c77c-45e2-a9d5-2bbbb840b4c2",
     "type": "Namespace",
     "name": "kube-node-lease"
   },
   "dd1735cb-58ac-4829-9c8d-277c6dcedbf7": {
-    "Id": "dd1735cb-58ac-4829-9c8d-277c6dcedbf7",
+    "id": "dd1735cb-58ac-4829-9c8d-277c6dcedbf7",
     "type": "Pod",
     "name": "registry-qjsls",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -875,7 +875,7 @@
     }
   },
   "dd1735cb-58ac-4829-9c8d-277c6dcedbf7registry": {
-    "Id": "dd1735cb-58ac-4829-9c8d-277c6dcedbf7registry",
+    "id": "dd1735cb-58ac-4829-9c8d-277c6dcedbf7registry",
     "type": "Container",
     "name": "registry",
     "parent": "dd1735cb-58ac-4829-9c8d-277c6dcedbf7",
@@ -887,7 +887,7 @@
     }
   },
   "e127a2c7779a4220ea484d173f7f23b035bc413d": {
-    "Id": "e127a2c7779a4220ea484d173f7f23b035bc413d",
+    "id": "e127a2c7779a4220ea484d173f7f23b035bc413d",
     "type": "Group",
     "name": "test-catalog",
     "parent": "2a1edf27-710c-4eb0-b62e-1fefc707722c",
@@ -898,7 +898,7 @@
     ]
   },
   "e385bb87-184a-4af1-a2b5-0cb8ffd7fa68": {
-    "Id": "e385bb87-184a-4af1-a2b5-0cb8ffd7fa68",
+    "id": "e385bb87-184a-4af1-a2b5-0cb8ffd7fa68",
     "type": "Pod",
     "name": "storage-provisioner",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
@@ -909,7 +909,7 @@
     }
   },
   "e385bb87-184a-4af1-a2b5-0cb8ffd7fa68storage-provisioner": {
-    "Id": "e385bb87-184a-4af1-a2b5-0cb8ffd7fa68storage-provisioner",
+    "id": "e385bb87-184a-4af1-a2b5-0cb8ffd7fa68storage-provisioner",
     "type": "Container",
     "name": "storage-provisioner",
     "parent": "e385bb87-184a-4af1-a2b5-0cb8ffd7fa68",
@@ -921,7 +921,7 @@
     }
   },
   "e8b023eb-ba2c-49d8-b717-8774e288d09b": {
-    "Id": "e8b023eb-ba2c-49d8-b717-8774e288d09b",
+    "id": "e8b023eb-ba2c-49d8-b717-8774e288d09b",
     "type": "ReplicaSet",
     "name": "test-nds-deployment-7fbf79cc56",
     "parent": "040cb020-ea34-4405-b0db-085d9077f0da",
@@ -931,42 +931,42 @@
     ]
   },
   "eae227c6-c2c9-4acf-86a0-03d2a60d688f": {
-    "Id": "eae227c6-c2c9-4acf-86a0-03d2a60d688f",
+    "id": "eae227c6-c2c9-4acf-86a0-03d2a60d688f",
     "type": "Deployment",
     "name": "test-ads-deployment",
     "parent": "2a1edf27-710c-4eb0-b62e-1fefc707722c",
     "children": ["d5554008-671d-4c93-b464-f6d07e8dee9f"]
   },
   "ec2645ce-ee3f-4905-8fb2-a4aa1db6afb8": {
-    "Id": "ec2645ce-ee3f-4905-8fb2-a4aa1db6afb8",
+    "id": "ec2645ce-ee3f-4905-8fb2-a4aa1db6afb8",
     "type": "ReplicaSet",
     "name": "kubernetes-dashboard-79d9cd965",
     "parent": "27c01c6d-f7dd-4488-ac66-83b5b28c16be",
     "children": ["ba36b9a4-11a7-4162-8073-15129408e039"]
   },
   "ec985ab25fec878d165e0530765cb70366e1cad3": {
-    "Id": "ec985ab25fec878d165e0530765cb70366e1cad3",
+    "id": "ec985ab25fec878d165e0530765cb70366e1cad3",
     "type": "Group",
     "name": "kube-system",
     "parent": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
     "children": ["b593176d-d4c5-4452-99a5-bfb2c1b24335"]
   },
   "f287c8ec-faf2-45b3-b698-e5a95799bfba": {
-    "Id": "f287c8ec-faf2-45b3-b698-e5a95799bfba",
+    "id": "f287c8ec-faf2-45b3-b698-e5a95799bfba",
     "type": "Deployment",
     "name": "weave-scope-app",
     "parent": "955995bd-d29e-444b-b4ac-66aab1826b30",
     "children": ["3e1a703c-57fc-4949-9caa-6d4e71480546"]
   },
   "f6a32845-f3e3-429b-b9ed-276d8955e5c9": {
-    "Id": "f6a32845-f3e3-429b-b9ed-276d8955e5c9",
+    "id": "f6a32845-f3e3-429b-b9ed-276d8955e5c9",
     "type": "Ingress",
     "name": "test-catalog",
     "parent": "e127a2c7779a4220ea484d173f7f23b035bc413d",
     "connectedTo": ["b3a1a1bd-6ec8-4100-8c8c-a967473c074e"]
   },
   "f9e37db4-e2bd-4eb4-bcd1-110eef15689c": {
-    "Id": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
+    "id": "f9e37db4-e2bd-4eb4-bcd1-110eef15689c",
     "type": "Namespace",
     "name": "kube-system",
     "children": [
@@ -987,7 +987,7 @@
     ]
   },
   "fa790f9e-2313-4770-bc86-f76e2379c142": {
-    "Id": "fa790f9e-2313-4770-bc86-f76e2379c142",
+    "id": "fa790f9e-2313-4770-bc86-f76e2379c142",
     "type": "Service",
     "name": "dashboard-metrics-scraper",
     "parent": "4b67da08-6f66-4686-a411-7b7fdec41731",

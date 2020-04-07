@@ -113,7 +113,9 @@ const SidePanel = ({ selectedId, model, panelVisible, setPanelVisible }) => {
                   item
                   xs={12}
                 >
-                  <Link href="#">Kubernetes Dashboard</Link>
+                  <Link target="_blank" href={selected.dashboardUrl}>
+                    Kubernetes Dashboard
+                  </Link>
                 </Grid>
               </>
             )}
