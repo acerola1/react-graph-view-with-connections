@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme =>
       height: "100%",
       right: 5,
       top: 0,
-      width: "300px",
+      width: "350px",
       display: "flex",
       flexDirection: "column"
     },
@@ -86,10 +86,21 @@ const SidePanel = ({ selectedId, model, panelVisible, setPanelVisible }) => {
                     align="left"
                     component="p"
                   >
-                    {"connected to:"}
+                    {"Connected to:"}
                   </Typography>
                 </Grid>
-                {}
+                {connectedTo.map(id => (
+                  <Grid item xs={8}>
+                    <Typography
+                      variant={"body2"}
+                      color={"textPrimary"}
+                      component="p"
+                      align="left"
+                    >
+                      {model[id].name}
+                    </Typography>
+                  </Grid>
+                ))}
               </>
             )}
             {selected && selected.dashboardUrl && (

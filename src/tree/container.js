@@ -49,7 +49,12 @@ const Container = props => {
   );*/
 
   return (
-    <svg {...props.svgProps} height={props.height} width={props.width}>
+    <svg
+      {...props.svgProps}
+      viewBox={props.viewBox}
+      height={props.height}
+      width={props.width}
+    >
       {props.children}
       {props.links.map(link => (
         <Link

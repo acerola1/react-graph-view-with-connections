@@ -1,0 +1,596 @@
+{
+  "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45": {
+    "id": "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45",
+    "type": "Pod",
+    "name": "test-ads-0",
+    "parent": "525e507d-2a4e-4a64-b1a9-afaa4a1ffb33",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-ads-0?namespace=default",
+    "children": [
+      "3e0336f5-187e-48bd-ac5e-9daae406f023",
+      "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45ads"
+    ],
+    "connectedTo": ["c67eff4d-3e8a-404b-9379-69c7e7812fdf"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45ads": {
+    "id": "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45ads",
+    "type": "Container",
+    "name": "ads",
+    "parent": "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45",
+    "connectedTo": ["3e0336f5-187e-48bd-ac5e-9daae406f023"],
+    "attributes": {
+      "UsedCpu": "40m",
+      "UsedMemory": "238288Ki",
+      "memory": "200Mi"
+    }
+  },
+  "1037a54e65ed8773dc1e0f65388f29375ad83096": {
+    "id": "1037a54e65ed8773dc1e0f65388f29375ad83096",
+    "type": "Group",
+    "name": "test",
+    "parent": "f43a4844-2cad-4071-815c-34b48d1664de",
+    "children": [
+      "5209f75838a14b5e1b9a19f2c02327163ddc6182",
+      "2c40d6e56e82eb5582d63830311ab6883622ed49",
+      "9940b5c46bd7695819ed924b5c6a658c1ca9e33d",
+      "2c5cc5f6ffb7b6d63f741bc6dab0f4a7467636a5",
+      "ba09f3451b17f1f654fe438e53bbb114e873477c"
+    ]
+  },
+  "2ab5d687-218f-45d2-87b3-387752892a0a": {
+    "id": "2ab5d687-218f-45d2-87b3-387752892a0a",
+    "type": "Pod",
+    "name": "test-nds-deployment-6f596f74db-7bqpl",
+    "parent": "4466e7ac-5d6c-4a62-867c-61e03dce1269",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-nds-deployment-6f596f74db-7bqpl?namespace=default",
+    "children": ["2ab5d687-218f-45d2-87b3-387752892a0ands"],
+    "connectedTo": ["c67eff4d-3e8a-404b-9379-69c7e7812fdf"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "2ab5d687-218f-45d2-87b3-387752892a0ands": {
+    "id": "2ab5d687-218f-45d2-87b3-387752892a0ands",
+    "type": "Container",
+    "name": "nds",
+    "parent": "2ab5d687-218f-45d2-87b3-387752892a0a",
+    "attributes": {
+      "UsedCpu": "65m",
+      "UsedMemory": "228040Ki",
+      "memory": "200Mi"
+    }
+  },
+  "2c40d6e56e82eb5582d63830311ab6883622ed49": {
+    "id": "2c40d6e56e82eb5582d63830311ab6883622ed49",
+    "type": "Group",
+    "name": "nds",
+    "parent": "1037a54e65ed8773dc1e0f65388f29375ad83096",
+    "children": ["de16cc6e-fc49-4343-bbce-e7ec09c6cf94"]
+  },
+  "2c5cc5f6ffb7b6d63f741bc6dab0f4a7467636a5": {
+    "id": "2c5cc5f6ffb7b6d63f741bc6dab0f4a7467636a5",
+    "type": "Group",
+    "name": "catalog",
+    "parent": "1037a54e65ed8773dc1e0f65388f29375ad83096",
+    "children": [
+      "3d2acfdd-7bbc-4032-9640-a3862df77e1c",
+      "b85a7bf1-6ff0-4ebb-acce-694e1e7cf63c",
+      "4bb721a7-b8c9-4c6a-94a1-1f219faa6dda"
+    ]
+  },
+  "3d2acfdd-7bbc-4032-9640-a3862df77e1c": {
+    "id": "3d2acfdd-7bbc-4032-9640-a3862df77e1c",
+    "type": "Service",
+    "name": "test-catalog",
+    "parent": "2c5cc5f6ffb7b6d63f741bc6dab0f4a7467636a5",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/service/default/test-catalog?namespace=default",
+    "connectedTo": [
+      "a15fb34c-2fe0-41fc-900b-3bb812398f59",
+      "71aec1fc-5b71-410a-bc9c-33830804a67b"
+    ]
+  },
+  "3e0336f5-187e-48bd-ac5e-9daae406f023": {
+    "id": "3e0336f5-187e-48bd-ac5e-9daae406f023",
+    "type": "PersistentVolume",
+    "name": "db-test-ads-0",
+    "parent": "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/persistentvolume/pvc-3604520d-b956-4cb7-887a-bf109bc2f276?namespace=default",
+    "attributes": {
+      "size": "1Gb"
+    }
+  },
+  "4466e7ac-5d6c-4a62-867c-61e03dce1269": {
+    "id": "4466e7ac-5d6c-4a62-867c-61e03dce1269",
+    "type": "ReplicaSet",
+    "name": "test-nds-deployment-6f596f74db",
+    "parent": "de16cc6e-fc49-4343-bbce-e7ec09c6cf94",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/replicaset/default/test-nds-deployment-6f596f74db?namespace=default",
+    "children": [
+      "8e478a4f-b6b1-40c8-ac86-468f12e83cf5",
+      "b3bc3a87-c288-40a3-bb6e-6510174acd07",
+      "2ab5d687-218f-45d2-87b3-387752892a0a"
+    ],
+    "attributes": {
+      "Replicas": "3"
+    }
+  },
+  "4649c11d-fea3-4ba2-bd08-4390848017a7": {
+    "id": "4649c11d-fea3-4ba2-bd08-4390848017a7",
+    "type": "Pod",
+    "name": "test-mariadb-deployment-7fcccb6db7-mwqdj",
+    "parent": "e0b011c5-822c-44ae-a0f7-07b2573b04df",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-mariadb-deployment-7fcccb6db7-mwqdj?namespace=default",
+    "children": ["4649c11d-fea3-4ba2-bd08-4390848017a7mariadb"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "4649c11d-fea3-4ba2-bd08-4390848017a7mariadb": {
+    "id": "4649c11d-fea3-4ba2-bd08-4390848017a7mariadb",
+    "type": "Container",
+    "name": "mariadb",
+    "parent": "4649c11d-fea3-4ba2-bd08-4390848017a7",
+    "attributes": {
+      "UsedCpu": "168m",
+      "UsedMemory": "138380Ki",
+      "memory": "200Mi"
+    }
+  },
+  "4bb721a7-b8c9-4c6a-94a1-1f219faa6dda": {
+    "id": "4bb721a7-b8c9-4c6a-94a1-1f219faa6dda",
+    "type": "Ingress",
+    "name": "test-catalog",
+    "parent": "2c5cc5f6ffb7b6d63f741bc6dab0f4a7467636a5",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ingress/default/test-catalog?namespace=default",
+    "connectedTo": ["3d2acfdd-7bbc-4032-9640-a3862df77e1c"]
+  },
+  "5209f75838a14b5e1b9a19f2c02327163ddc6182": {
+    "id": "5209f75838a14b5e1b9a19f2c02327163ddc6182",
+    "type": "Group",
+    "name": "mariadb",
+    "parent": "1037a54e65ed8773dc1e0f65388f29375ad83096",
+    "children": [
+      "67613f0b-7273-4ca6-9440-c527499a8ece",
+      "c67eff4d-3e8a-404b-9379-69c7e7812fdf"
+    ]
+  },
+  "525e507d-2a4e-4a64-b1a9-afaa4a1ffb33": {
+    "id": "525e507d-2a4e-4a64-b1a9-afaa4a1ffb33",
+    "type": "StatefulSet",
+    "name": "test-ads",
+    "parent": "9940b5c46bd7695819ed924b5c6a658c1ca9e33d",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/statefulset/default/test-ads?namespace=default",
+    "children": [
+      "b2a0147e-8a67-4c19-b5f2-6a2701030d28",
+      "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45",
+      "a9b0a182-3750-40e8-819e-d0792c315d87"
+    ]
+  },
+  "664013d9-4bf1-4dde-8d2f-b50da77b56e9": {
+    "id": "664013d9-4bf1-4dde-8d2f-b50da77b56e9",
+    "type": "ReplicaSet",
+    "name": "test-sample-deployment-75b9ff95f7",
+    "parent": "e17dca50-1ed8-4593-b143-4b949dd2e7e9",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/replicaset/default/test-sample-deployment-75b9ff95f7?namespace=default",
+    "children": ["c54285d9-f2b2-4c20-aef4-5c665fcf5fc3"],
+    "attributes": {
+      "Replicas": "1"
+    }
+  },
+  "67613f0b-7273-4ca6-9440-c527499a8ece": {
+    "id": "67613f0b-7273-4ca6-9440-c527499a8ece",
+    "type": "Deployment",
+    "name": "test-mariadb-deployment",
+    "parent": "5209f75838a14b5e1b9a19f2c02327163ddc6182",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/deployment/default/test-mariadb-deployment?namespace=default",
+    "scaleUrl": "/scaleDeployment/default",
+    "children": ["e0b011c5-822c-44ae-a0f7-07b2573b04df"],
+    "attributes": {
+      "Replicas": "1"
+    }
+  },
+  "71aec1fc-5b71-410a-bc9c-33830804a67b": {
+    "id": "71aec1fc-5b71-410a-bc9c-33830804a67b",
+    "type": "Pod",
+    "name": "test-catalog-deployment-5df79595f-cjqdt",
+    "parent": "d65d5878-2081-405a-95fb-3b3fd8710f52",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-catalog-deployment-5df79595f-cjqdt?namespace=default",
+    "children": ["71aec1fc-5b71-410a-bc9c-33830804a67bcatalog"],
+    "connectedTo": [
+      "c67eff4d-3e8a-404b-9379-69c7e7812fdf",
+      "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45",
+      "b2a0147e-8a67-4c19-b5f2-6a2701030d28",
+      "a9b0a182-3750-40e8-819e-d0792c315d87",
+      "2ab5d687-218f-45d2-87b3-387752892a0a",
+      "b3bc3a87-c288-40a3-bb6e-6510174acd07",
+      "8e478a4f-b6b1-40c8-ac86-468f12e83cf5"
+    ],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "71aec1fc-5b71-410a-bc9c-33830804a67bcatalog": {
+    "id": "71aec1fc-5b71-410a-bc9c-33830804a67bcatalog",
+    "type": "Container",
+    "name": "catalog",
+    "parent": "71aec1fc-5b71-410a-bc9c-33830804a67b",
+    "attributes": {
+      "UsedCpu": "11m",
+      "UsedMemory": "235224Ki",
+      "memory": "200Mi"
+    }
+  },
+  "85887c64-f4b0-4ace-a42f-7d90fef6f914": {
+    "id": "85887c64-f4b0-4ace-a42f-7d90fef6f914",
+    "type": "PersistentVolume",
+    "name": "db-test-ads-1",
+    "parent": "b2a0147e-8a67-4c19-b5f2-6a2701030d28",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/persistentvolume/pvc-9f1614ef-ab98-4ff3-8fb6-8b499131b366?namespace=default",
+    "attributes": {
+      "size": "1Gb"
+    }
+  },
+  "8e478a4f-b6b1-40c8-ac86-468f12e83cf5": {
+    "id": "8e478a4f-b6b1-40c8-ac86-468f12e83cf5",
+    "type": "Pod",
+    "name": "test-nds-deployment-6f596f74db-wkmpp",
+    "parent": "4466e7ac-5d6c-4a62-867c-61e03dce1269",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-nds-deployment-6f596f74db-wkmpp?namespace=default",
+    "children": ["8e478a4f-b6b1-40c8-ac86-468f12e83cf5nds"],
+    "connectedTo": ["c67eff4d-3e8a-404b-9379-69c7e7812fdf"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "8e478a4f-b6b1-40c8-ac86-468f12e83cf5nds": {
+    "id": "8e478a4f-b6b1-40c8-ac86-468f12e83cf5nds",
+    "type": "Container",
+    "name": "nds",
+    "parent": "8e478a4f-b6b1-40c8-ac86-468f12e83cf5",
+    "attributes": {
+      "UsedCpu": "64m",
+      "UsedMemory": "226964Ki",
+      "memory": "200Mi"
+    }
+  },
+  "9940b5c46bd7695819ed924b5c6a658c1ca9e33d": {
+    "id": "9940b5c46bd7695819ed924b5c6a658c1ca9e33d",
+    "type": "Group",
+    "name": "ads",
+    "parent": "1037a54e65ed8773dc1e0f65388f29375ad83096",
+    "children": ["525e507d-2a4e-4a64-b1a9-afaa4a1ffb33"]
+  },
+  "a15fb34c-2fe0-41fc-900b-3bb812398f59": {
+    "id": "a15fb34c-2fe0-41fc-900b-3bb812398f59",
+    "type": "Pod",
+    "name": "test-catalog-deployment-5df79595f-4knr5",
+    "parent": "d65d5878-2081-405a-95fb-3b3fd8710f52",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-catalog-deployment-5df79595f-4knr5?namespace=default",
+    "children": ["a15fb34c-2fe0-41fc-900b-3bb812398f59catalog"],
+    "connectedTo": [
+      "c67eff4d-3e8a-404b-9379-69c7e7812fdf",
+      "00a76a2e-a37a-4863-ad7b-ed1e96dbcb45",
+      "b2a0147e-8a67-4c19-b5f2-6a2701030d28",
+      "a9b0a182-3750-40e8-819e-d0792c315d87",
+      "2ab5d687-218f-45d2-87b3-387752892a0a",
+      "b3bc3a87-c288-40a3-bb6e-6510174acd07",
+      "8e478a4f-b6b1-40c8-ac86-468f12e83cf5"
+    ],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "a15fb34c-2fe0-41fc-900b-3bb812398f59catalog": {
+    "id": "a15fb34c-2fe0-41fc-900b-3bb812398f59catalog",
+    "type": "Container",
+    "name": "catalog",
+    "parent": "a15fb34c-2fe0-41fc-900b-3bb812398f59",
+    "attributes": {
+      "UsedCpu": "8m",
+      "UsedMemory": "224844Ki",
+      "memory": "200Mi"
+    }
+  },
+  "a9b0a182-3750-40e8-819e-d0792c315d87": {
+    "id": "a9b0a182-3750-40e8-819e-d0792c315d87",
+    "type": "Pod",
+    "name": "test-ads-2",
+    "parent": "525e507d-2a4e-4a64-b1a9-afaa4a1ffb33",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-ads-2?namespace=default",
+    "children": [
+      "ebc10027-78c4-4617-b7e9-2ce5a46a6f21",
+      "a9b0a182-3750-40e8-819e-d0792c315d87ads"
+    ],
+    "connectedTo": ["c67eff4d-3e8a-404b-9379-69c7e7812fdf"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "a9b0a182-3750-40e8-819e-d0792c315d87ads": {
+    "id": "a9b0a182-3750-40e8-819e-d0792c315d87ads",
+    "type": "Container",
+    "name": "ads",
+    "parent": "a9b0a182-3750-40e8-819e-d0792c315d87",
+    "connectedTo": ["ebc10027-78c4-4617-b7e9-2ce5a46a6f21"],
+    "attributes": {
+      "UsedCpu": "24m",
+      "UsedMemory": "209168Ki",
+      "memory": "200Mi"
+    }
+  },
+  "b2a0147e-8a67-4c19-b5f2-6a2701030d28": {
+    "id": "b2a0147e-8a67-4c19-b5f2-6a2701030d28",
+    "type": "Pod",
+    "name": "test-ads-1",
+    "parent": "525e507d-2a4e-4a64-b1a9-afaa4a1ffb33",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-ads-1?namespace=default",
+    "children": [
+      "85887c64-f4b0-4ace-a42f-7d90fef6f914",
+      "b2a0147e-8a67-4c19-b5f2-6a2701030d28ads"
+    ],
+    "connectedTo": ["c67eff4d-3e8a-404b-9379-69c7e7812fdf"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "b2a0147e-8a67-4c19-b5f2-6a2701030d28ads": {
+    "id": "b2a0147e-8a67-4c19-b5f2-6a2701030d28ads",
+    "type": "Container",
+    "name": "ads",
+    "parent": "b2a0147e-8a67-4c19-b5f2-6a2701030d28",
+    "connectedTo": ["85887c64-f4b0-4ace-a42f-7d90fef6f914"],
+    "attributes": {
+      "UsedCpu": "4m",
+      "UsedMemory": "213348Ki",
+      "memory": "200Mi"
+    }
+  },
+  "b3bc3a87-c288-40a3-bb6e-6510174acd07": {
+    "id": "b3bc3a87-c288-40a3-bb6e-6510174acd07",
+    "type": "Pod",
+    "name": "test-nds-deployment-6f596f74db-l9krw",
+    "parent": "4466e7ac-5d6c-4a62-867c-61e03dce1269",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-nds-deployment-6f596f74db-l9krw?namespace=default",
+    "children": ["b3bc3a87-c288-40a3-bb6e-6510174acd07nds"],
+    "connectedTo": ["c67eff4d-3e8a-404b-9379-69c7e7812fdf"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "b3bc3a87-c288-40a3-bb6e-6510174acd07nds": {
+    "id": "b3bc3a87-c288-40a3-bb6e-6510174acd07nds",
+    "type": "Container",
+    "name": "nds",
+    "parent": "b3bc3a87-c288-40a3-bb6e-6510174acd07",
+    "attributes": {
+      "UsedCpu": "62m",
+      "UsedMemory": "242320Ki",
+      "memory": "200Mi"
+    }
+  },
+  "b85a7bf1-6ff0-4ebb-acce-694e1e7cf63c": {
+    "id": "b85a7bf1-6ff0-4ebb-acce-694e1e7cf63c",
+    "type": "Deployment",
+    "name": "test-catalog-deployment",
+    "parent": "2c5cc5f6ffb7b6d63f741bc6dab0f4a7467636a5",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/deployment/default/test-catalog-deployment?namespace=default",
+    "scaleUrl": "/scaleDeployment/default",
+    "children": ["d65d5878-2081-405a-95fb-3b3fd8710f52"],
+    "attributes": {
+      "Replicas": "2"
+    }
+  },
+  "ba09f3451b17f1f654fe438e53bbb114e873477c": {
+    "id": "ba09f3451b17f1f654fe438e53bbb114e873477c",
+    "type": "Group",
+    "name": "sample",
+    "parent": "1037a54e65ed8773dc1e0f65388f29375ad83096",
+    "children": ["e17dca50-1ed8-4593-b143-4b949dd2e7e9"]
+  },
+  "c54285d9-f2b2-4c20-aef4-5c665fcf5fc3": {
+    "id": "c54285d9-f2b2-4c20-aef4-5c665fcf5fc3",
+    "type": "Pod",
+    "name": "test-sample-deployment-75b9ff95f7-rmhk7",
+    "parent": "664013d9-4bf1-4dde-8d2f-b50da77b56e9",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/pod/default/test-sample-deployment-75b9ff95f7-rmhk7?namespace=default",
+    "children": ["c54285d9-f2b2-4c20-aef4-5c665fcf5fc3sample"],
+    "connectedTo": ["c67eff4d-3e8a-404b-9379-69c7e7812fdf"],
+    "attributes": {
+      "Phase": "Running",
+      "PodIP": "192.168.99.106"
+    }
+  },
+  "c54285d9-f2b2-4c20-aef4-5c665fcf5fc3sample": {
+    "id": "c54285d9-f2b2-4c20-aef4-5c665fcf5fc3sample",
+    "type": "Container",
+    "name": "sample",
+    "parent": "c54285d9-f2b2-4c20-aef4-5c665fcf5fc3",
+    "attributes": {
+      "memory": "200Mi"
+    }
+  },
+  "c67eff4d-3e8a-404b-9379-69c7e7812fdf": {
+    "id": "c67eff4d-3e8a-404b-9379-69c7e7812fdf",
+    "type": "Service",
+    "name": "test-mariadb",
+    "parent": "5209f75838a14b5e1b9a19f2c02327163ddc6182",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/service/default/test-mariadb?namespace=default",
+    "connectedTo": ["4649c11d-fea3-4ba2-bd08-4390848017a7"]
+  },
+  "d65d5878-2081-405a-95fb-3b3fd8710f52": {
+    "id": "d65d5878-2081-405a-95fb-3b3fd8710f52",
+    "type": "ReplicaSet",
+    "name": "test-catalog-deployment-5df79595f",
+    "parent": "b85a7bf1-6ff0-4ebb-acce-694e1e7cf63c",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/replicaset/default/test-catalog-deployment-5df79595f?namespace=default",
+    "children": [
+      "a15fb34c-2fe0-41fc-900b-3bb812398f59",
+      "71aec1fc-5b71-410a-bc9c-33830804a67b"
+    ],
+    "attributes": {
+      "Replicas": "2"
+    }
+  },
+  "de16cc6e-fc49-4343-bbce-e7ec09c6cf94": {
+    "id": "de16cc6e-fc49-4343-bbce-e7ec09c6cf94",
+    "type": "Deployment",
+    "name": "test-nds-deployment",
+    "parent": "2c40d6e56e82eb5582d63830311ab6883622ed49",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/deployment/default/test-nds-deployment?namespace=default",
+    "scaleUrl": "/scaleDeployment/default",
+    "children": ["4466e7ac-5d6c-4a62-867c-61e03dce1269"],
+    "attributes": {
+      "Replicas": "3"
+    }
+  },
+  "e0b011c5-822c-44ae-a0f7-07b2573b04df": {
+    "id": "e0b011c5-822c-44ae-a0f7-07b2573b04df",
+    "type": "ReplicaSet",
+    "name": "test-mariadb-deployment-7fcccb6db7",
+    "parent": "67613f0b-7273-4ca6-9440-c527499a8ece",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/replicaset/default/test-mariadb-deployment-7fcccb6db7?namespace=default",
+    "children": ["4649c11d-fea3-4ba2-bd08-4390848017a7"],
+    "attributes": {
+      "Replicas": "1"
+    }
+  },
+  "e17dca50-1ed8-4593-b143-4b949dd2e7e9": {
+    "id": "e17dca50-1ed8-4593-b143-4b949dd2e7e9",
+    "type": "Deployment",
+    "name": "test-sample-deployment",
+    "parent": "ba09f3451b17f1f654fe438e53bbb114e873477c",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/deployment/default/test-sample-deployment?namespace=default",
+    "scaleUrl": "/scaleDeployment/default",
+    "children": ["664013d9-4bf1-4dde-8d2f-b50da77b56e9"],
+    "attributes": {
+      "Replicas": "1"
+    }
+  },
+  "ebc10027-78c4-4617-b7e9-2ce5a46a6f21": {
+    "id": "ebc10027-78c4-4617-b7e9-2ce5a46a6f21",
+    "type": "PersistentVolume",
+    "name": "db-test-ads-2",
+    "parent": "a9b0a182-3750-40e8-819e-d0792c315d87",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/persistentvolume/pvc-25c7e013-873e-40ec-8c84-38b5ea87f9c3?namespace=default",
+    "attributes": {
+      "size": "1Gb"
+    }
+  },
+  "f43a4844-2cad-4071-815c-34b48d1664de": {
+    "id": "f43a4844-2cad-4071-815c-34b48d1664de",
+    "type": "Namespace",
+    "name": "default",
+    "dashboardUrl": "http://127.0.0.1:57478/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/namespace/kubernetes-dashboard?namespace=default",
+    "children": [
+      "fd624a0bc16023943975a88f590f84a50b602f53",
+      "1037a54e65ed8773dc1e0f65388f29375ad83096"
+    ]
+  },
+  "fd624a0bc16023943975a88f590f84a50b602f53": {
+    "id": "fd624a0bc16023943975a88f590f84a50b602f53",
+    "type": "Group",
+    "name": "releases",
+    "parent": "f43a4844-2cad-4071-815c-34b48d1664de",
+    "children": ["ffd461a586b421e834590060e20caaca7150172a"]
+  },
+  "ffd461a586b421e834590060e20caaca7150172a": {
+    "id": "ffd461a586b421e834590060e20caaca7150172a",
+    "type": "Release",
+    "name": "test",
+    "parent": "fd624a0bc16023943975a88f590f84a50b602f53",
+    "connectedTo": [
+      "3d2acfdd-7bbc-4032-9640-a3862df77e1c",
+      "c67eff4d-3e8a-404b-9379-69c7e7812fdf",
+      "b85a7bf1-6ff0-4ebb-acce-694e1e7cf63c",
+      "67613f0b-7273-4ca6-9440-c527499a8ece",
+      "de16cc6e-fc49-4343-bbce-e7ec09c6cf94",
+      "e17dca50-1ed8-4593-b143-4b949dd2e7e9",
+      "525e507d-2a4e-4a64-b1a9-afaa4a1ffb33",
+      "4bb721a7-b8c9-4c6a-94a1-1f219faa6dda"
+    ],
+    "attributes": {
+      "ads": {
+        "count": 3,
+        "rdbPassword": "ads123456",
+        "resources": {
+          "limits": {
+            "memory": "400Mi"
+          },
+          "requests": {
+            "memory": "200Mi"
+          }
+        }
+      },
+      "catalog": {
+        "count": 2,
+        "rdbPassword": "catalog123456",
+        "resources": {
+          "limits": {
+            "memory": "400Mi"
+          },
+          "requests": {
+            "memory": "200Mi"
+          }
+        }
+      },
+      "common": {
+        "count": 2,
+        "rdbPassword": "common123456",
+        "resources": {
+          "limits": {
+            "memory": "400Mi"
+          },
+          "requests": {
+            "memory": "200Mi"
+          }
+        }
+      },
+      "mariadb": {
+        "resources": {
+          "limits": {
+            "memory": "400Mi"
+          },
+          "requests": {
+            "memory": "200Mi"
+          }
+        },
+        "rootPassword": "rootPassword123456"
+      },
+      "nds": {
+        "count": 2,
+        "rdbPassword": "nds123456",
+        "resources": {
+          "limits": {
+            "memory": "400Mi"
+          },
+          "requests": {
+            "memory": "200Mi"
+          }
+        }
+      },
+      "sample": {
+        "count": 1,
+        "rdbPassword": "sample123456",
+        "resources": {
+          "limits": {
+            "memory": "400Mi"
+          },
+          "requests": {
+            "memory": "200Mi"
+          }
+        }
+      }
+    }
+  }
+}

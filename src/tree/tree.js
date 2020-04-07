@@ -68,13 +68,23 @@ export default class Tree extends React.PureComponent {
 
     let root = tree()
       .separation(() => 1)
-      .size([contentHeight, contentWidth])(data);
+      .nodeSize([this.props.nodeHeight, this.props.nodeWidth])(data);
     let nodes = root.descendants();
     let links = root.links();
+    let minX = 0;
+    let minY = 0;
+    let maxX = 0;
+    let maxY = 0;
 
     nodes.forEach(node => {
       node.y += this.props.margins.top;
+      maxX = Math.max(maxX, node.x);
+      maxY = Math.max(maxY, node.y);
+      minX = Math.min(minX, node.x);
+      minY = Math.min(minY, node.y);
     });
+
+    console.log(minX, minY, maxX, maxY);
 
     const nodeMap = {};
     nodes.forEach(node => (nodeMap[node.data.id] = node));
@@ -82,11 +92,15 @@ export default class Tree extends React.PureComponent {
     return (
       <Container
         animated={this.props.animated}
+        viewBox={`${this.props.nodeWidth} ${minX -
+          this.props.nodeHeight / 2} ${maxY} ${maxX -
+          minX +
+          this.props.nodeHeight * 1.5}`}
         getChildren={this.props.getChildren}
-        height={this.props.height}
+        height={Math.max(this.props.height, maxX - minX)}
         keyProp={this.props.keyProp}
         labelProp={this.props.labelProp}
-        links={links}
+        links={links.filter(l => l.source.data.id !== this.props.dummyNodeId)}
         nodes={nodes}
         connections={this.props.connections
           .filter(c => nodeMap[c.source] && nodeMap[c.target])
@@ -99,7 +113,6 @@ export default class Tree extends React.PureComponent {
         nodeRadius={this.props.nodeRadius}
         pathFunc={this.props.pathFunc}
         steps={this.props.steps}
-        width={this.props.width}
         circleProps={this.props.circleProps}
         gProps={{ className: "node", ...this.props.gProps }}
         pathProps={{ className: "link", ...this.props.pathProps }}
