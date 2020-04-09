@@ -1,9 +1,10 @@
 import React from "react";
 import Tree from "../tree/tree";
 import Card from "@material-ui/core/Card";
+import axios from "axios";
 
 import { makeStyles, createStyles } from "@material-ui/core/styles";
-import sample from "../sample2.json";
+import sample from "../sample3.json";
 import SidePanel from "./SidePanel";
 import PopupMenu from "./PopupMenu";
 
@@ -13,12 +14,18 @@ const useStyles = makeStyles(theme =>
       height: "100%",
       display: "flex",
       width: "100%"
+    },
+    treeContainer: {
+      height: "calc(100vh - 60px)",
+      overflow: "auto",
+      width: "100%"
     }
   })
 );
 
 const TreeContainer = ({ connVisible }) => {
   const classes = useStyles();
+  const [model, setModel] = React.useState();
   const [selectedId, setSelectedId] = React.useState();
   const [hoverId, setHoverId] = React.useState();
   const [panelVisible, setPanelVisible] = React.useState(false);
@@ -28,33 +35,78 @@ const TreeContainer = ({ connVisible }) => {
     anchorEl: undefined
   });
   const [closedNodes, setClosedNodes] = React.useState([]);
+  const [data, setData] = React.useState();
 
-  const getData = () => {
-    const root = sample["f43a4844-2cad-4071-815c-34b48d1664de"];
+  // initial load
+  React.useEffect(() => {
+    let initialData = "";
+    axios
+      .get("/data")
+      .then(function(response) {
+        if (typeof response.data === "object") {
+          initialData = response.data;
+        } else {
+          return Promise.reject();
+        }
+      })
+      .catch(() => (initialData = sample))
+      .then(() => {
+        setData(addDummyRoot(initialData));
+      });
+  }, []);
+  // model creation
+  React.useEffect(() => {
+    data && setModel(getData(data));
+  }, [selectedId, hoverId, closedNodes, data]);
+
+  const addDummyRoot = initialData => {
+    const children = [];
+    Object.entries(initialData).forEach(([key, value]) => {
+      if (!value.parent) {
+        value.parent = "dummy-root";
+        initialData[key] = value;
+        children.push(key);
+      }
+    });
+
+    const dummyRoot = {
+      id: "dummy-root",
+      name: "dummy-root",
+      type: "dummy-root",
+      children
+    };
+    initialData["dummy-root"] = dummyRoot;
+
+    return initialData;
+  };
+
+  const getData = data => {
+    const root = data["dummy-root"];
+    //const root = sample["f43a4844-2cad-4071-815c-34b48d1664de"];
     return fillNode(root);
   };
 
   const fillNode = node => {
     let newNode = {
       name: node.name,
-      id: node.Id,
+      id: node.id,
       type: node.type,
       connectedTo: node.connectedTo,
       circleProps: { style: { fill: getColorByType(node.type) } }
     };
     let className = "node";
-    if (selectedId && selectedId === node.Id) {
+    if (selectedId && selectedId === node.id) {
       className = className + " selected";
     }
-    if (hoverId && hoverId === node.Id) {
+    if (hoverId && hoverId === node.id) {
       className = className + " hovered";
     }
     newNode.gProps = {
       className
     };
-    if (!closedNodes.includes(node.Id) && node.children) {
+    if (!closedNodes.includes(node.id) && node.children) {
       newNode.children = node.children.map(childKey =>
-        fillNode(sample[childKey])
+        fillNode(data[childKey])
       );
     }
     return newNode;
@@ -106,8 +158,8 @@ const TreeContainer = ({ connVisible }) => {
       .filter(n => n.connectedTo)
       .map(n => {
         return n.connectedTo.map(toId => {
-          const hovered = hoverNodeId === n.Id || hoverNodeId === toId;
-          return { source: n.Id, target: toId, hovered };
+          const hovered = hoverNodeId === n.id || hoverNodeId === toId;
+          return { source: n.id, target: toId, hovered };
         });
       })
       .flat();
@@ -115,57 +167,64 @@ const TreeContainer = ({ connVisible }) => {
 
   return (
     <div className={classes.root}>
-      <Card>
-        <Tree
-          connections={
-            connVisible
-              ? createConnections(sample, hoverId ? hoverId : selectedId)
-              : []
-          }
-          data={getData()}
-          nodeRadius={9}
-          labelProp={"name"}
-          keyProp="id"
-          margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
-          height={600}
-          width={1200}
-          gProps={{
-            onClick: (e, node) => {
-              e.stopPropagation();
-              setSelectedId(node);
-              setPanelVisible(true);
-            },
-            onContextMenu: (e, node) => {
-              e.preventDefault();
-              setMenuContext({
-                visible: true,
-                anchorEl: e.currentTarget,
-                nodeId: node
-              });
-            },
-            onMouseOver: (e, node) => {
-              setHoverId(node);
-            },
-            onMouseOut: (e, node) => {
-              e.stopPropagation();
-              setHoverId();
-            }
-          }}
-          textProps={{ x: -20, y: 20 }}
-          svgProps={{
-            onClick: e => {
-              //setSelectedId(undefined);
-              setPanelVisible(false);
-            }
-          }}
-          steps={30}
-        />
-      </Card>
+      <div className={classes.treeContainer}>
+        <Card>
+          {model && (
+            <Tree
+              connections={createConnections(
+                data,
+                hoverId ? hoverId : selectedId
+              )}
+              data={model}
+              nodeRadius={9}
+              labelProp={"name"}
+              dummyNodeId={"dummy-root"}
+              keyProp="id"
+              margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
+              nodeHeight={40}
+              nodeWidth={130}
+              height={600}
+              width={1200}
+              connVisible={connVisible}
+              gProps={{
+                onClick: (e, node) => {
+                  e.stopPropagation();
+                  setSelectedId(node);
+                  setPanelVisible(true);
+                },
+                onContextMenu: (e, node) => {
+                  e.preventDefault();
+                  setMenuContext({
+                    visible: true,
+                    anchorEl: e.currentTarget,
+                    nodeId: node
+                  });
+                },
+                onMouseOver: (e, node) => {
+                  setHoverId(node);
+                },
+                onMouseOut: (e, node) => {
+                  e.stopPropagation();
+                  setHoverId();
+                }
+              }}
+              textProps={{ x: -20, y: 20 }}
+              svgProps={{
+                onClick: e => {
+                  //setSelectedId(undefined);
+                  setPanelVisible(false);
+                }
+              }}
+              steps={30}
+            />
+          )}
+        </Card>
+      </div>
       <SidePanel
         setPanelVisible={setPanelVisible}
         panelVisible={panelVisible}
         selectedId={selectedId}
-        model={sample}
+        model={data}
       />
       {menuContext.visible && (
         <PopupMenu
