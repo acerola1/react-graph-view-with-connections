@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { useTransition } from "react-spring";
 import Link from "./link";
 import Node from "./node";
 import Connection from "./connection";

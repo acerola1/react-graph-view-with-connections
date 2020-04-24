@@ -1,10 +1,8 @@
 import React from "react";
 import Tree from "../tree/tree";
 import Card from "@material-ui/core/Card";
-import axios from "axios";
-
 import { makeStyles, createStyles } from "@material-ui/core/styles";
-import sample from "../sample3.json";
+
 import SidePanel from "./SidePanel";
 import PopupMenu from "./PopupMenu";
 
@@ -23,7 +21,7 @@ const useStyles = makeStyles(theme =>
   })
 );
 
-const TreeContainer = ({ connVisible }) => {
+const TreeContainer = ({ connVisible, animateConnections, data, resultIds, useCache }) => {
   const classes = useStyles();
   const [model, setModel] = React.useState();
   const [selectedId, setSelectedId] = React.useState();
@@ -35,55 +33,34 @@ const TreeContainer = ({ connVisible }) => {
     anchorEl: undefined
   });
   const [closedNodes, setClosedNodes] = React.useState([]);
-  const [data, setData] = React.useState();
+  const [focusedNode, setFocusedNode] = React.useState("");
 
-  // initial load
-  React.useEffect(() => {
-    let initialData = "";
-    axios
-      .get("/data")
-      .then(function(response) {
-        if (typeof response.data === "object") {
-          initialData = response.data;
-        } else {
-          return Promise.reject();
-        }
-      })
-      .catch(() => (initialData = sample))
-      .then(() => {
-        setData(addDummyRoot(initialData));
-      });
-  }, []);
+  /*React.useEffect(() => {
+    setData(addRemoveDummyForFocused(data, focusedNode));
+  }, [focusedNode]);*/
+
   // model creation
   React.useEffect(() => {
     data && setModel(getData(data));
-  }, [selectedId, hoverId, closedNodes, data]);
+  }, [selectedId, hoverId, closedNodes, data, focusedNode, resultIds]);
 
-  const addDummyRoot = initialData => {
-    const children = [];
-    Object.entries(initialData).forEach(([key, value]) => {
-      if (!value.parent) {
-        value.parent = "dummy-root";
-        initialData[key] = value;
-        children.push(key);
-      }
-    });
-
-    const dummyRoot = {
-      id: "dummy-root",
-      name: "dummy-root",
-      type: "dummy-root",
-      children
-    };
-    initialData["dummy-root"] = dummyRoot;
-
-    return initialData;
-  };
+  const legendEntries = (types) => {
+    Object.entries(types)
+  }
 
   const getData = data => {
-    const root = data["dummy-root"];
+    const root = focusedNode ? data[focusedNode] : data["dummy-root"];
     //const root = sample["f43a4844-2cad-4071-815c-34b48d1664de"];
-    return fillNode(root);
+    const tree = fillNode(root);
+    return !focusedNode
+      ?
+        tree
+      : {
+          id: "dummy-root",
+          name: "dummy-root",
+          type: "dummy-root",
+          children: [tree]
+        };
   };
 
   const fillNode = node => {
@@ -101,55 +78,58 @@ const TreeContainer = ({ connVisible }) => {
     if (hoverId && hoverId === node.id) {
       className = className + " hovered";
     }
+    if (resultIds.includes(node.id)) {
+      className = className + " searched";
+    }
     newNode.gProps = {
       className
     };
+    newNode.letters = getLetterByType(node.type);
+    newNode.closed = closedNodes.includes(node.id) ? true : false;
+    newNode.focused = focusedNode === node.id ? true : false;
+    newNode.state = node.state;
     if (!closedNodes.includes(node.id) && node.children) {
       newNode.children = node.children.map(childKey =>
-        fillNode(sample[childKey])
+        fillNode(data[childKey])
       );
     }
     return newNode;
   };
 
-  const colors = [
-    "#003f5c",
-    "#2f4b7c",
-    "#665191",
-    "#a05195",
-    "#d45087",
-    "#f95d6a",
-    "#ff7c43",
-    "#ffa600"
-  ];
+  // Generated with https://color.hailpixel.com/#F5E1E0,E9C4BE,E6C3B3,DDCF98,B8D47D,B6CB62,66BF40,349D36,32955B,25646F,231C54,391339,D3E0A3,C4E9BE,D1F0DF,F2E1D9
+  //const colors = "F5E1E0,E9C4BE,E6C3B3,DDCF98,B8D47D,B6CB62,66BF40,349D36,32955B,25646F,231C54,391339,D3E0A3,C4E9BE,D1F0DF,F2E1D9".split(',').map(s => "#" + s);
 
-  const colors2 = [
-    "#183693",
-    "#3d48a0",
-    "#585cae",
-    "#7070bb",
-    "#8885c8",
-    "#9e9ad6",
-    "#b5b0e4",
-    "#cbc7f1",
-    "#e2deff"
-  ];
+  //http://tristen.ca/hcl-picker/#/hlc/6/1/000000/BD677B
+  const colors = "#000000,#DCEE6D,#66E0A7,#54BFD4,#A391C0,#BD677B".split(",");
 
   const types = [
-    "Namespace",
-    "Ingress",
-    "Group",
-    "Service",
-    "Deployment",
-    "ReplicaSet",
-    "StatefulSet",
-    "Pod",
-    "Container"
+    {name:"Container", color: 4, letters: "C"},
+    {name:"CR", color: 2, letters: "CR"},
+    {name:"CRD", color: 3, letters: "CRD"},
+    {name:"DaemonSet", color: 5, letters: "DS"},
+    {name:"Deployment", color: 5, letters: "D"},
+    {name:"Group", color: 3, letters: "G"},
+    {name:"Ingress", color: 5, letters: "In"},
+    {name:"Namespace", color: 1, letters: "Ns"},
+    {name:"PersistentVolume", color: 4, letters: "PV"},
+    {name:"Pod", color: 4, letters: "P"},
+    {name:"Release", color: 1, letters: "HR"},
+    {name:"ReplicaSet", color: 5, letters: "RS"},
+    {name:"Service", color: 5, letters: "S"},
+    {name:"StatefulSet", color: 5, letters: "SS"},
+    {name:"Job", color: 4, letters: "J"},
+    {name:"PersistentVolumeClaim", color: 4, letters: "PVC"},
+    {name:"Event", color: 3, letters: "E"},
   ];
 
-  const getColorByType = type => {
-    const index = types.indexOf(type);
-    return index === -1 ? "orange" : colors[index];
+  const getColorByType = typeName => {
+    const type = types.find(t => t.name === typeName);
+    return !type ? "orange" : colors[type.color];
+  };
+
+  const getLetterByType = typeName => {
+    const type = types.find(t => t.name === typeName);
+    return !type ? "??" : type.letters;
   };
 
   const createConnections = (data, hoverNodeId) => {
@@ -165,14 +145,25 @@ const TreeContainer = ({ connVisible }) => {
       .flat();
   };
 
+  const toggleNodeClose = (id) => {
+    if (closedNodes.includes(id)) {
+      setClosedNodes([
+        ...closedNodes.filter(n => n !== id)
+      ]);
+    } else {
+      setClosedNodes([...closedNodes, id]);
+    }
+  }
+
   return (
     <div className={classes.root}>
-      <div className={classes.treeContainer}>
+      <div className={classes.treeContainer + " " + (animateConnections ? "animated" : "")}>
         <Card>
+
           {model && (
             <Tree
               connections={createConnections(
-                sample,
+                data,
                 hoverId ? hoverId : selectedId
               )}
               data={model}
@@ -180,9 +171,9 @@ const TreeContainer = ({ connVisible }) => {
               labelProp={"name"}
               dummyNodeId={"dummy-root"}
               keyProp="id"
-              margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
-              nodeHeight={40}
-              nodeWidth={130}
+              margins={{ top: 20, bottom: 10, left: 200, right: 200 }}
+              nodeHeight={25}
+              nodeWidth={200}
               height={600}
               width={1200}
               connVisible={connVisible}
@@ -192,6 +183,7 @@ const TreeContainer = ({ connVisible }) => {
                   setSelectedId(node);
                   setPanelVisible(true);
                 },
+                onDoubleClick: (e, node) => toggleNodeClose(node),
                 onContextMenu: (e, node) => {
                   e.preventDefault();
                   setMenuContext({
@@ -208,10 +200,10 @@ const TreeContainer = ({ connVisible }) => {
                   setHoverId();
                 }
               }}
-              textProps={{ x: -20, y: 20 }}
+              textProps={{ x: -0, y: 0 }}
               svgProps={{
                 onClick: e => {
-                  //setSelectedId(undefined);
+                  setSelectedId(undefined);
                   setPanelVisible(false);
                 }
               }}
@@ -224,7 +216,7 @@ const TreeContainer = ({ connVisible }) => {
         setPanelVisible={setPanelVisible}
         panelVisible={panelVisible}
         selectedId={selectedId}
-        model={sample}
+        model={data}
       />
       {menuContext.visible && (
         <PopupMenu
@@ -232,6 +224,8 @@ const TreeContainer = ({ connVisible }) => {
           setMenuContext={setMenuContext}
           closedNodes={closedNodes}
           setClosedNodes={setClosedNodes}
+          focusedNode={focusedNode}
+          setFocusedNode={setFocusedNode}
         />
       )}
     </div>
@@ -239,3 +233,4 @@ const TreeContainer = ({ connVisible }) => {
 };
 
 export default TreeContainer;
+

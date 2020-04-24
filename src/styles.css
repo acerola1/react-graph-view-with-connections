@@ -8,14 +8,14 @@
   }
 }
 
-.node circle {
+.node rect {
   fill: #f3f3ff;
   stroke: #2593b8;
   stroke-width: 1.5px;
 }
 
-.node.hovered circle,
-.node.selected circle {
+.node.hovered rect,
+.node.selected rect {
   stroke-width: 3.5px;
 }
 
@@ -23,17 +23,26 @@
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: rgb(241, 241, 241);
-  stroke: white;
-  stroke-width: 4;
-  paint-order: stroke;
   fill: #282828;
 }
 
+.node .label {
+  stroke: white;
+  stroke-width: 4;
+  paint-order: stroke;
+}
+
+.node.searched .label {
+  stroke: yellow;
+  stroke-width: 8;
+  paint-order: stroke;
+}
+
+
 .node.hovered text,
 .node.selected text {
-  stroke: #282828;
-  stroke-width: 1;
-  paint-order: stroke;
+  font-weight: bold;
+  font-size: 15px;
   fill: #282828;
 }
 
@@ -41,13 +50,13 @@
   cursor: pointer;
 }
 
-.node.searchIncluded text {
-  font-weight: bold;
-  font-size: 14px;
+.node text {
+  pointer-events: none;
 }
 
-.node.searchExcluded text {
-  opacity: 0.6;
+.node circle {
+  stroke: white;
+  stroke-width: 2px;
 }
 
 path.link {
@@ -63,6 +72,9 @@ body {
 .connection {
   stroke-dasharray: 4 4;
   stroke: gray;
+}
+
+.animated .connection {
   animation: dash 5s linear infinite;
 }
 
@@ -74,4 +86,13 @@ body {
   stroke-dasharray: 8 4;
   stroke-width: 2px;
   display: unset;
+}
+
+.preformatted {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.ace-github .ace_gutter {
+  background: white;
 }

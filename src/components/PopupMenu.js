@@ -6,7 +6,9 @@ const PopupMenu = ({
   menuContext,
   setMenuContext,
   closedNodes,
-  setClosedNodes
+  setClosedNodes,
+  setFocusedNode,
+  focusedNode
 }) => {
   const handleClose = () => setMenuContext({ visible: false });
   return (
@@ -27,6 +29,16 @@ const PopupMenu = ({
           Close
         </MenuItem>
       )}
+      {focusedNode !== menuContext.nodeId && (
+        <MenuItem
+          onClick={() => {
+            setFocusedNode( menuContext.nodeId)
+            handleClose();
+          }}
+        >
+          Focus on
+        </MenuItem>
+      )}
       {closedNodes.includes(menuContext.nodeId) && (
         <MenuItem
           onClick={() => {
@@ -37,6 +49,16 @@ const PopupMenu = ({
           }}
         >
           Open
+        </MenuItem>
+      )}
+      {focusedNode === menuContext.nodeId && (
+        <MenuItem
+          onClick={() => {
+            setFocusedNode("");
+            handleClose();
+          }}
+        >
+          Unfocus
         </MenuItem>
       )}
     </Menu>

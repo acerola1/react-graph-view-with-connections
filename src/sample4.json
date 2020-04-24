@@ -1,0 +1,3331 @@
+{
+	"00f7a780-ba52-4583-8788-7e653cea92c0": {
+		"id": "00f7a780-ba52-4583-8788-7e653cea92c0",
+		"type": "Pod",
+		"name": "qg6ph",
+		"shortName": "qg6ph",
+		"longName": "app1-mariadb-deployment-6964dcd845-qg6ph",
+		"parent": "5619099f-5a41-419c-9dbe-0fa637e3d597",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-mariadb-deployment-6964dcd845-qg6ph?namespace=default",
+		"children": [
+			"00f7a780-ba52-4583-8788-7e653cea92c0mariadb"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:39:36 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-mariadb-deployment-6964dcd845-qg6ph_default(00f7a780-ba52-4583-8788-7e653cea92c0)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"00f7a780-ba52-4583-8788-7e653cea92c0mariadb": {
+		"id": "00f7a780-ba52-4583-8788-7e653cea92c0mariadb",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "00f7a780-ba52-4583-8788-7e653cea92c0",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"03da6251-de6c-48dd-8c39-57208023e3d2": {
+		"id": "03da6251-de6c-48dd-8c39-57208023e3d2",
+		"type": "Pod",
+		"name": "0",
+		"shortName": "0",
+		"longName": "app1-ads-0",
+		"parent": "d42f3b1c-4c78-4c02-a7be-bf6f6455bc24",
+		"state": "containers with unready status: [ads]",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-ads-0?namespace=default",
+		"children": [
+			"bf1e9ab2-4552-44f7-ab10-2bb0f8b5e9be",
+			"03da6251-de6c-48dd-8c39-57208023e3d2ads"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:39:45 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-ads-0_default(03da6251-de6c-48dd-8c39-57208023e3d2)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"03da6251-de6c-48dd-8c39-57208023e3d2ads": {
+		"id": "03da6251-de6c-48dd-8c39-57208023e3d2ads",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "03da6251-de6c-48dd-8c39-57208023e3d2",
+		"connectedTo": [
+			"bf1e9ab2-4552-44f7-ab10-2bb0f8b5e9be"
+		],
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"0496756f-5e28-465f-a1f2-ec6837ee1b4c": {
+		"id": "0496756f-5e28-465f-a1f2-ec6837ee1b4c",
+		"type": "Deployment",
+		"name": "museu...useum",
+		"shortName": "museu...useum",
+		"longName": "museum-chartmuseum",
+		"parent": "3ff0a02b-5bda-44a2-8057-557e594caf99",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/utility/museum-chartmuseum?namespace=utility",
+		"scaleUrl": "/scaleDeployment/utility",
+		"children": [
+			"e73fbbb5-3760-40d0-9a33-32f43d34cd08"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2": {
+		"id": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"type": "Namespace",
+		"name": "kube-system",
+		"shortName": "kube-system",
+		"longName": "kube-system",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=kube-system",
+		"children": [
+			"dbdfcf77-e7cb-455b-97d0-5b4af134d874",
+			"dadff17b-84f5-4382-8edb-3007047234f9",
+			"2b908d6e-ac4c-45d0-9895-e8250f7237de",
+			"c8a62a32-7728-48bc-9469-054cfbade7bf",
+			"c5631036-7283-45b6-a4af-63532ec0b367",
+			"41a1b804-a7d5-471d-be4e-f38f69cde3f8",
+			"25a48150-af46-48cc-a689-3a8bedd21f47",
+			"11460c5e-40d4-4f61-ae2c-adfdfd842567",
+			"4c0557c3-5728-4a8a-9ca3-f815e3010571",
+			"4b066654-e5c7-4cdb-9ace-6d48736193a0"
+		]
+	},
+	"0cab40f2-c567-4f91-b712-f3b85c94e643": {
+		"id": "0cab40f2-c567-4f91-b712-f3b85c94e643",
+		"type": "Service",
+		"name": "registry",
+		"shortName": "registry",
+		"longName": "registry",
+		"parent": "904378a3-b477-4de0-b1a9-119d911e1526",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/container-registry/registry?namespace=container-registry",
+		"connectedTo": [
+			"26e96b94-a810-428f-a23d-0ace55d72d0b"
+		]
+	},
+	"0f716843-97ea-43b7-8b06-8ce3ffdb8440": {
+		"id": "0f716843-97ea-43b7-8b06-8ce3ffdb8440",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app2-sample-deployment",
+		"parent": "4be671f3d6079375b3a8d45978f389b093114c92",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app2-sample-deployment?namespace=default",
+		"scaleUrl": "/scale/default/app2/Deployment/app2-sample-deployment/sample.count",
+		"children": [
+			"b9f5ae5a-ff8b-4a41-b4de-b91b962da5fb"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"0feb470b-d4c1-454b-8f8f-315c1d8ce3db": {
+		"id": "0feb470b-d4c1-454b-8f8f-315c1d8ce3db",
+		"type": "Pod",
+		"name": "mprbj",
+		"shortName": "mprbj",
+		"longName": "app2-mariadb-deployment-57cd87cb45-mprbj",
+		"parent": "8b86d3ca-5da2-4a00-a603-c0b6f44090b6",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-mariadb-deployment-57cd87cb45-mprbj?namespace=default",
+		"children": [
+			"0feb470b-d4c1-454b-8f8f-315c1d8ce3dbmariadb"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:01 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-mariadb-deployment-57cd87cb45-mprbj_default(0feb470b-d4c1-454b-8f8f-315c1d8ce3db)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"0feb470b-d4c1-454b-8f8f-315c1d8ce3dbmariadb": {
+		"id": "0feb470b-d4c1-454b-8f8f-315c1d8ce3dbmariadb",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "0feb470b-d4c1-454b-8f8f-315c1d8ce3db",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"11460c5e-40d4-4f61-ae2c-adfdfd842567": {
+		"id": "11460c5e-40d4-4f61-ae2c-adfdfd842567",
+		"type": "Deployment",
+		"name": "dashb...raper",
+		"shortName": "dashb...raper",
+		"longName": "dashboard-metrics-scraper",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/kube-system/dashboard-metrics-scraper?namespace=kube-system",
+		"scaleUrl": "/scaleDeployment/kube-system",
+		"children": [
+			"7d673e0d-6aa9-447c-a451-93dd2b693e89"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"14d4c782-efae-4702-a435-14b9425abe70": {
+		"id": "14d4c782-efae-4702-a435-14b9425abe70",
+		"type": "Ingress",
+		"name": "Ingress",
+		"shortName": "Ingress",
+		"longName": "Ingress",
+		"parent": "e71ca390e8e6ae50226da9ce0914d37878a89db8",
+		"dashboardUrl": "https://10.41.50.245:11111/#/ingress/default/app2-catalog?namespace=default",
+		"connectedTo": [
+			"53de9d28-8e86-4101-a3c3-bbe922d7388a"
+		],
+		"events": [
+			{
+				"id": "2020-04-22 21:43:24 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:43:24 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:44:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:44:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:50:51 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:50:51 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:51:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:51:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:58:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:58:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:59:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 21:59:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:05:25 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:05:25 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:06:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:06:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:12:43 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:12:43 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:13:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:13:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:20:06 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:20:06 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:21:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:21:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:27:31 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:27:31 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:28:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:28:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:34:47 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:34:47 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:35:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:35:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:42:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:42:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:43:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app2-catalog"
+			},
+			{
+				"id": "2020-04-22 22:43:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app2-catalog"
+			}
+		]
+	},
+	"16adef18cfddf35b2a39df9d98dc37ae6b54eb19": {
+		"id": "16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+		"type": "Group",
+		"name": "app1",
+		"shortName": "app1",
+		"longName": "app1",
+		"parent": "ab3fe946-5a39-4f92-b73b-55f0bcda7cab",
+		"children": [
+			"f5030cff96a517aa0269bd667599450927ac8894",
+			"c8e39c242a8b70c18620b70c1aa9bb9028ffbdfb",
+			"bd8511f5ef938a63f1a0125fac1102ab64102bde",
+			"5f6436620efd0b2bbc0ae229640cf1fca862381f",
+			"c9b8dbffa2a2f5753d269b99d19f1409488b3c21",
+			"8ea86d1ca3b22760a0a4305c41dba754de4e8c0c"
+		]
+	},
+	"1770a67a-a9d8-41ea-b1e5-ef1453e3dc93": {
+		"id": "1770a67a-a9d8-41ea-b1e5-ef1453e3dc93",
+		"type": "DaemonSet",
+		"name": "nginx...oller",
+		"shortName": "nginx...oller",
+		"longName": "nginx-ingress-microk8s-controller",
+		"parent": "26634c31-a825-4fd7-a0b0-c5b6f9d30d32",
+		"dashboardUrl": "https://10.41.50.245:11111/#/daemonset/ingress/nginx-ingress-microk8s-controller?namespace=ingress",
+		"children": [
+			"278a02f5-fa49-4a85-9b52-a764e48ff273"
+		]
+	},
+	"1dbfe585ec14b6a68567cf90140fb27bda43247b": {
+		"id": "1dbfe585ec14b6a68567cf90140fb27bda43247b",
+		"type": "CRD",
+		"name": "cront...e.com",
+		"shortName": "cront...e.com",
+		"longName": "crontabs.stable.example.com",
+		"parent": "ab3fe946-5a39-4f92-b73b-55f0bcda7cab",
+		"dashboardUrl": "https://10.41.50.245:11111/#/customresourcedefinition/crontabs.stable.example.com/?namespace=default",
+		"connectedTo": [
+			"4ef3e4f4-f649-4ff8-8800-ec47896d1a00",
+			"a0c2b058-1345-4a1a-ab95-d9aee0c3a861"
+		]
+	},
+	"1dea2898-d04d-4519-9b9a-e4fe15f1e131": {
+		"id": "1dea2898-d04d-4519-9b9a-e4fe15f1e131",
+		"type": "PersistentVolume",
+		"name": "db",
+		"shortName": "db",
+		"longName": "db-app1-ads-2",
+		"parent": "2fb8a018-e617-4194-9198-0971c309d465",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-ad3ce6d2-58c7-48ab-a7e7-98576de84c49?namespace=default",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"25a48150-af46-48cc-a689-3a8bedd21f47": {
+		"id": "25a48150-af46-48cc-a689-3a8bedd21f47",
+		"type": "Deployment",
+		"name": "monit...na-v4",
+		"shortName": "monit...na-v4",
+		"longName": "monitoring-influxdb-grafana-v4",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/kube-system/monitoring-influxdb-grafana-v4?namespace=kube-system",
+		"scaleUrl": "/scaleDeployment/kube-system",
+		"children": [
+			"e83730cd-b4dc-4c8c-9bf0-f40eb56f0a95"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"26634c31-a825-4fd7-a0b0-c5b6f9d30d32": {
+		"id": "26634c31-a825-4fd7-a0b0-c5b6f9d30d32",
+		"type": "Namespace",
+		"name": "ingress",
+		"shortName": "ingress",
+		"longName": "ingress",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=ingress",
+		"children": [
+			"1770a67a-a9d8-41ea-b1e5-ef1453e3dc93"
+		]
+	},
+	"26e96b94-a810-428f-a23d-0ace55d72d0b": {
+		"id": "26e96b94-a810-428f-a23d-0ace55d72d0b",
+		"type": "Pod",
+		"name": "q9llh",
+		"shortName": "q9llh",
+		"longName": "registry-7cf58dcdcc-q9llh",
+		"parent": "b51ad246-c3c5-491b-b6e7-f1bec04687ac",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/container-registry/registry-7cf58dcdcc-q9llh?namespace=container-registry",
+		"children": [
+			"26e96b94-a810-428f-a23d-0ace55d72d0bregistry",
+			"56dfade3-4500-48ef-a957-7a70629ff7dd"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:35 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"registry-7cf58dcdcc-q9llh_container-registry(26e96b94-a810-428f-a23d-0ace55d72d0b)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"26e96b94-a810-428f-a23d-0ace55d72d0bregistry": {
+		"id": "26e96b94-a810-428f-a23d-0ace55d72d0bregistry",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "26e96b94-a810-428f-a23d-0ace55d72d0b"
+	},
+	"26f951b5-d4cf-494d-9068-e4962269e9a7": {
+		"id": "26f951b5-d4cf-494d-9068-e4962269e9a7",
+		"type": "Pod",
+		"name": "j94xw",
+		"shortName": "j94xw",
+		"longName": "app2-nds-deployment-6d4f57c466-j94xw",
+		"parent": "8ec488df-b352-4fae-ad2d-63ca1f08f431",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-nds-deployment-6d4f57c466-j94xw?namespace=default",
+		"children": [
+			"26f951b5-d4cf-494d-9068-e4962269e9a7nds"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:14 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-nds-deployment-6d4f57c466-j94xw_default(26f951b5-d4cf-494d-9068-e4962269e9a7)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"26f951b5-d4cf-494d-9068-e4962269e9a7nds": {
+		"id": "26f951b5-d4cf-494d-9068-e4962269e9a7nds",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "26f951b5-d4cf-494d-9068-e4962269e9a7",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"278a02f5-fa49-4a85-9b52-a764e48ff273": {
+		"id": "278a02f5-fa49-4a85-9b52-a764e48ff273",
+		"type": "Pod",
+		"name": "2j5bd",
+		"shortName": "2j5bd",
+		"longName": "nginx-ingress-microk8s-controller-2j5bd",
+		"parent": "1770a67a-a9d8-41ea-b1e5-ef1453e3dc93",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/ingress/nginx-ingress-microk8s-controller-2j5bd?namespace=ingress",
+		"children": [
+			"278a02f5-fa49-4a85-9b52-a764e48ff273nginx-ingress-microk8s"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:10 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"nginx-ingress-microk8s-controller-2j5bd_ingress(278a02f5-fa49-4a85-9b52-a764e48ff273)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			},
+			{
+				"id": "2020-04-22 22:36:29 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "Unhealthy",
+				"Message": "Liveness probe failed: HTTP probe failed with statuscode: 500"
+			},
+			{
+				"id": "2020-04-22 22:31:12 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "BackOff",
+				"Message": "Back-off restarting failed container"
+			}
+		]
+	},
+	"278a02f5-fa49-4a85-9b52-a764e48ff273nginx-ingress-microk8s": {
+		"id": "278a02f5-fa49-4a85-9b52-a764e48ff273nginx-ingress-microk8s",
+		"type": "Container",
+		"name": "nginx...rok8s",
+		"shortName": "nginx...rok8s",
+		"longName": "nginx-ingress-microk8s",
+		"parent": "278a02f5-fa49-4a85-9b52-a764e48ff273"
+	},
+	"2b908d6e-ac4c-45d0-9895-e8250f7237de": {
+		"id": "2b908d6e-ac4c-45d0-9895-e8250f7237de",
+		"type": "Service",
+		"name": "monit...afana",
+		"shortName": "monit...afana",
+		"longName": "monitoring-grafana",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/kube-system/monitoring-grafana?namespace=kube-system",
+		"connectedTo": [
+			"2d1d90f0-368f-4eeb-b858-61b6aff4d1fd"
+		]
+	},
+	"2d1d90f0-368f-4eeb-b858-61b6aff4d1fd": {
+		"id": "2d1d90f0-368f-4eeb-b858-61b6aff4d1fd",
+		"type": "Pod",
+		"name": "btrn8",
+		"shortName": "btrn8",
+		"longName": "monitoring-influxdb-grafana-v4-6dc675bf8c-btrn8",
+		"parent": "e83730cd-b4dc-4c8c-9bf0-f40eb56f0a95",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/kube-system/monitoring-influxdb-grafana-v4-6dc675bf8c-btrn8?namespace=kube-system",
+		"children": [
+			"2d1d90f0-368f-4eeb-b858-61b6aff4d1fdgrafana",
+			"2d1d90f0-368f-4eeb-b858-61b6aff4d1fdinfluxdb"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:15 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"monitoring-influxdb-grafana-v4-6dc675bf8c-btrn8_kube-system(2d1d90f0-368f-4eeb-b858-61b6aff4d1fd)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"2d1d90f0-368f-4eeb-b858-61b6aff4d1fdgrafana": {
+		"id": "2d1d90f0-368f-4eeb-b858-61b6aff4d1fdgrafana",
+		"type": "Container",
+		"name": "grafana",
+		"shortName": "grafana",
+		"longName": "grafana",
+		"parent": "2d1d90f0-368f-4eeb-b858-61b6aff4d1fd",
+		"attributes": {
+			"cpu": "100m",
+			"memory": "100Mi"
+		}
+	},
+	"2d1d90f0-368f-4eeb-b858-61b6aff4d1fdinfluxdb": {
+		"id": "2d1d90f0-368f-4eeb-b858-61b6aff4d1fdinfluxdb",
+		"type": "Container",
+		"name": "influxdb",
+		"shortName": "influxdb",
+		"longName": "influxdb",
+		"parent": "2d1d90f0-368f-4eeb-b858-61b6aff4d1fd",
+		"attributes": {
+			"cpu": "100m",
+			"memory": "500Mi"
+		}
+	},
+	"2fb8a018-e617-4194-9198-0971c309d465": {
+		"id": "2fb8a018-e617-4194-9198-0971c309d465",
+		"type": "Pod",
+		"name": "2",
+		"shortName": "2",
+		"longName": "app1-ads-2",
+		"parent": "d42f3b1c-4c78-4c02-a7be-bf6f6455bc24",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-ads-2?namespace=default",
+		"children": [
+			"1dea2898-d04d-4519-9b9a-e4fe15f1e131",
+			"2fb8a018-e617-4194-9198-0971c309d465ads"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:29 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-ads-2_default(2fb8a018-e617-4194-9198-0971c309d465)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"2fb8a018-e617-4194-9198-0971c309d465ads": {
+		"id": "2fb8a018-e617-4194-9198-0971c309d465ads",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "2fb8a018-e617-4194-9198-0971c309d465",
+		"connectedTo": [
+			"1dea2898-d04d-4519-9b9a-e4fe15f1e131"
+		],
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"3734e5f7-ef27-49e8-9c77-4b96d4a492f4": {
+		"id": "3734e5f7-ef27-49e8-9c77-4b96d4a492f4",
+		"type": "Pod",
+		"name": "qbf7j",
+		"shortName": "qbf7j",
+		"longName": "app1-catalog-deployment-58fb745bc5-qbf7j",
+		"parent": "809bc6c4-5a2d-436b-a6e0-74f5bb66a8ad",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-catalog-deployment-58fb745bc5-qbf7j?namespace=default",
+		"children": [
+			"3734e5f7-ef27-49e8-9c77-4b96d4a492f4catalog"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc",
+			"03da6251-de6c-48dd-8c39-57208023e3d2",
+			"fe9d43ec-e85d-4284-8dd3-79806a90db72",
+			"2fb8a018-e617-4194-9198-0971c309d465",
+			"b4a6ef8d-360e-4bc7-b209-288904978654",
+			"6c21ddb1-4e04-4323-80b9-6b1efbe65576",
+			"847596cb-9f17-49fb-9f57-e983a099aca8"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:37 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-catalog-deployment-58fb745bc5-qbf7j_default(3734e5f7-ef27-49e8-9c77-4b96d4a492f4)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"3734e5f7-ef27-49e8-9c77-4b96d4a492f4catalog": {
+		"id": "3734e5f7-ef27-49e8-9c77-4b96d4a492f4catalog",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "3734e5f7-ef27-49e8-9c77-4b96d4a492f4",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"374d0af6cfa98dfd21941b379d87b7756ab3ff49": {
+		"id": "374d0af6cfa98dfd21941b379d87b7756ab3ff49",
+		"type": "Release",
+		"name": "museum",
+		"shortName": "museum",
+		"longName": "museum",
+		"parent": "a5be3ad6f9859f3ca4bf9cedf1b212d50c74fa30",
+		"version": "2.12.0",
+		"healUrl": "/heal/utility/museum",
+		"reconfigureUrl": "/reconfigure/utility/museum",
+		"connectedTo": [
+			"5758d24c-8c78-45c2-a475-7562f8b35e98",
+			"0496756f-5e28-465f-a1f2-ec6837ee1b4c"
+		],
+		"attributes": {
+			"Version": "2.12.0"
+		},
+		"attributesJson": {
+			"affinity": {},
+			"bearerAuth": {
+				"secret": {
+					"enabled": false,
+					"publicKeySecret": "chartmuseum-public-key"
+				}
+			},
+			"deployment": {
+				"annotations": {},
+				"labels": {},
+				"matchlabes": {}
+			},
+			"env": {
+				"existingSecret": null,
+				"existingSecretMappings": {
+					"BASIC_AUTH_PASS": null,
+					"BASIC_AUTH_USER": null,
+					"CACHE_REDIS_PASSWORD": null,
+					"GOOGLE_CREDENTIALS_JSON": null
+				},
+				"field": null,
+				"open": {
+					"ALLOW_OVERWRITE": false,
+					"AUTH_ANONYMOUS_GET": false,
+					"AUTH_REALM": null,
+					"AUTH_SERVICE": null,
+					"BEARER_AUTH": false,
+					"CACHE": null,
+					"CACHE_REDIS_ADDR": null,
+					"CACHE_REDIS_DB": 0,
+					"CHART_POST_FORM_FIELD_NAME": "chart",
+					"CHART_URL": null,
+					"CONTEXT_PATH": null,
+					"DEBUG": false,
+					"DEPTH": 0,
+					"DISABLE_API": true,
+					"DISABLE_METRICS": true,
+					"DISABLE_STATEFILES": false,
+					"INDEX_LIMIT": 0,
+					"LOG_JSON": true,
+					"PROV_POST_FORM_FIELD_NAME": "prov",
+					"STORAGE": "local",
+					"STORAGE_ALIBABA_BUCKET": null,
+					"STORAGE_ALIBABA_ENDPOINT": null,
+					"STORAGE_ALIBABA_PREFIX": null,
+					"STORAGE_ALIBABA_SSE": null,
+					"STORAGE_AMAZON_BUCKET": null,
+					"STORAGE_AMAZON_ENDPOINT": null,
+					"STORAGE_AMAZON_PREFIX": null,
+					"STORAGE_AMAZON_REGION": null,
+					"STORAGE_AMAZON_SSE": null,
+					"STORAGE_GOOGLE_BUCKET": null,
+					"STORAGE_GOOGLE_PREFIX": null,
+					"STORAGE_MICROSOFT_CONTAINER": null,
+					"STORAGE_MICROSOFT_PREFIX": null,
+					"STORAGE_OPENSTACK_CACERT": null,
+					"STORAGE_OPENSTACK_CONTAINER": null,
+					"STORAGE_OPENSTACK_PREFIX": null,
+					"STORAGE_OPENSTACK_REGION": null,
+					"STORAGE_ORACLE_BUCKET": null,
+					"STORAGE_ORACLE_COMPARTMENTID": null,
+					"STORAGE_ORACLE_PREFIX": null
+				},
+				"secret": {
+					"BASIC_AUTH_PASS": null,
+					"BASIC_AUTH_USER": null,
+					"CACHE_REDIS_PASSWORD": null,
+					"GOOGLE_CREDENTIALS_JSON": null
+				}
+			},
+			"extraArgs": null,
+			"gcp": {
+				"secret": {
+					"enabled": false,
+					"key": "credentials.json",
+					"name": null
+				}
+			},
+			"image": {
+				"pullPolicy": "IfNotPresent",
+				"repository": "chartmuseum/chartmuseum",
+				"tag": "v0.12.0"
+			},
+			"ingress": {
+				"enabled": false
+			},
+			"nodeSelector": {},
+			"oracle": {
+				"secret": {
+					"config": "config",
+					"enabled": false,
+					"key_file": "key_file",
+					"name": null
+				}
+			},
+			"persistence": {
+				"accessMode": "ReadWriteOnce",
+				"enabled": false,
+				"labels": {},
+				"path": "/storage",
+				"pv": {
+					"accessMode": "ReadWriteOnce",
+					"capacity": {
+						"storage": "8Gi"
+					},
+					"enabled": false,
+					"nfs": {
+						"path": null,
+						"server": null
+					},
+					"pvname": null
+				},
+				"size": "8Gi"
+			},
+			"priorityClassName": "",
+			"probes": {
+				"liveness": {
+					"failureThreshold": 3,
+					"initialDelaySeconds": 5,
+					"periodSeconds": 10,
+					"successThreshold": 1,
+					"timeoutSeconds": 1
+				},
+				"readiness": {
+					"failureThreshold": 3,
+					"initialDelaySeconds": 5,
+					"periodSeconds": 10,
+					"successThreshold": 1,
+					"timeoutSeconds": 1
+				}
+			},
+			"replica": {
+				"annotations": {}
+			},
+			"replicaCount": 1,
+			"resources": {},
+			"securityContext": {
+				"enabled": true,
+				"fsGroup": 1000
+			},
+			"service": {
+				"annotations": {},
+				"externalPort": 8080,
+				"externalTrafficPolicy": "Local",
+				"labels": {},
+				"loadBalancerSourceRanges": [],
+				"nodePort": null,
+				"servicename": null,
+				"type": "ClusterIP"
+			},
+			"serviceAccount": {
+				"annotations": {},
+				"create": false
+			},
+			"serviceMonitor": {
+				"enabled": false,
+				"labels": {},
+				"metricsPath": "/metrics"
+			},
+			"strategy": {
+				"rollingUpdate": {
+					"maxUnavailable": 0
+				},
+				"type": "RollingUpdate"
+			},
+			"tolerations": [],
+			"volumePermissions": {
+				"image": {
+					"pullPolicy": "Always",
+					"registry": "docker.io",
+					"repository": "bitnami/minideb",
+					"tag": "buster"
+				}
+			}
+		},
+		"versions": [
+			"2.12.0"
+		]
+	},
+	"3aa13974-6562-4bd7-b38d-dca082a2c4c0": {
+		"id": "3aa13974-6562-4bd7-b38d-dca082a2c4c0",
+		"type": "Pod",
+		"name": "4m82c",
+		"shortName": "4m82c",
+		"longName": "kubernetes-dashboard-67765b55f5-4m82c",
+		"parent": "f9ab0d96-2870-4d0c-8443-76b18bab560f",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/kube-system/kubernetes-dashboard-67765b55f5-4m82c?namespace=kube-system",
+		"children": [
+			"3aa13974-6562-4bd7-b38d-dca082a2c4c0kubernetes-dashboard"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:42:25 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"kubernetes-dashboard-67765b55f5-4m82c_kube-system(3aa13974-6562-4bd7-b38d-dca082a2c4c0)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"3aa13974-6562-4bd7-b38d-dca082a2c4c0kubernetes-dashboard": {
+		"id": "3aa13974-6562-4bd7-b38d-dca082a2c4c0kubernetes-dashboard",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "3aa13974-6562-4bd7-b38d-dca082a2c4c0"
+	},
+	"3ef31e6c-9ec6-45b5-b13f-4ca7d25af803": {
+		"id": "3ef31e6c-9ec6-45b5-b13f-4ca7d25af803",
+		"type": "Namespace",
+		"name": "kube-...lease",
+		"shortName": "kube-...lease",
+		"longName": "kube-node-lease",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=kube-node-lease"
+	},
+	"3ff0a02b-5bda-44a2-8057-557e594caf99": {
+		"id": "3ff0a02b-5bda-44a2-8057-557e594caf99",
+		"type": "Namespace",
+		"name": "utility",
+		"shortName": "utility",
+		"longName": "utility",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=utility",
+		"children": [
+			"b6955a5e-4237-4f9e-b21f-49bbe2a9ea33",
+			"44032ee5-5311-4dde-9093-afd2f958ef5f",
+			"5758d24c-8c78-45c2-a475-7562f8b35e98",
+			"0496756f-5e28-465f-a1f2-ec6837ee1b4c",
+			"a5be3ad6f9859f3ca4bf9cedf1b212d50c74fa30"
+		]
+	},
+	"41a1b804-a7d5-471d-be4e-f38f69cde3f8": {
+		"id": "41a1b804-a7d5-471d-be4e-f38f69cde3f8",
+		"type": "Service",
+		"name": "monit...luxdb",
+		"shortName": "monit...luxdb",
+		"longName": "monitoring-influxdb",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/kube-system/monitoring-influxdb?namespace=kube-system",
+		"connectedTo": [
+			"2d1d90f0-368f-4eeb-b858-61b6aff4d1fd"
+		]
+	},
+	"44032ee5-5311-4dde-9093-afd2f958ef5f": {
+		"id": "44032ee5-5311-4dde-9093-afd2f958ef5f",
+		"type": "Deployment",
+		"name": "exp-a...osure",
+		"shortName": "exp-a...osure",
+		"longName": "exp-api-exposure",
+		"parent": "3ff0a02b-5bda-44a2-8057-557e594caf99",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/utility/exp-api-exposure?namespace=utility",
+		"scaleUrl": "/scaleDeployment/utility",
+		"children": [
+			"d138d25f-4482-4366-851c-0b71a8bb8192"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"455a37c1e46e4e9b3970b02db6fbcbe77e6f2d30": {
+		"id": "455a37c1e46e4e9b3970b02db6fbcbe77e6f2d30",
+		"type": "Release",
+		"name": "exp",
+		"shortName": "exp",
+		"longName": "exp",
+		"parent": "a5be3ad6f9859f3ca4bf9cedf1b212d50c74fa30",
+		"version": "0.1.0",
+		"healUrl": "/heal/utility/exp",
+		"reconfigureUrl": "/reconfigure/utility/exp",
+		"connectedTo": [
+			"b6955a5e-4237-4f9e-b21f-49bbe2a9ea33",
+			"44032ee5-5311-4dde-9093-afd2f958ef5f"
+		],
+		"attributes": {
+			"Version": "0.1.0"
+		},
+		"attributesJson": {
+			"affinity": {},
+			"dashboardUrl": "https://10.41.50.245:11111/#/",
+			"fullnameOverride": "",
+			"helmRepos": "http://10.41.50.245:8888",
+			"image": {
+				"pullPolicy": "IfNotPresent",
+				"repository": "docker.io/library/api_exposure",
+				"version": "latest"
+			},
+			"imagePullSecrets": [],
+			"ingress": {
+				"annotations": {},
+				"enabled": false,
+				"hosts": [
+					{
+						"host": "chart-example.local",
+						"paths": []
+					}
+				],
+				"tls": []
+			},
+			"nameOverride": "",
+			"nodeSelector": {},
+			"podSecurityContext": {},
+			"replicaCount": 1,
+			"resources": {},
+			"securityContext": {},
+			"service": {
+				"nodePort": 30080,
+				"port": 8080,
+				"type": "NodePort"
+			},
+			"serviceAccount": {
+				"annotations": {},
+				"clusterAdmin": true,
+				"create": true,
+				"name": null
+			},
+			"tolerations": []
+		},
+		"versions": [
+			"0.1.0"
+		]
+	},
+	"462b5c1a-6777-46ca-8d95-8011bafc9354": {
+		"id": "462b5c1a-6777-46ca-8d95-8011bafc9354",
+		"type": "Pod",
+		"name": "6zgzq",
+		"shortName": "6zgzq",
+		"longName": "app1-sample-deployment-6c59667b75-6zgzq",
+		"parent": "844d1027-5e1f-4d26-8a4e-c9ba02885ec6",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-sample-deployment-6c59667b75-6zgzq?namespace=default",
+		"children": [
+			"462b5c1a-6777-46ca-8d95-8011bafc9354sample"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:39:56 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-sample-deployment-6c59667b75-6zgzq_default(462b5c1a-6777-46ca-8d95-8011bafc9354)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"462b5c1a-6777-46ca-8d95-8011bafc9354sample": {
+		"id": "462b5c1a-6777-46ca-8d95-8011bafc9354sample",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "462b5c1a-6777-46ca-8d95-8011bafc9354",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"4b066654-e5c7-4cdb-9ace-6d48736193a0": {
+		"id": "4b066654-e5c7-4cdb-9ace-6d48736193a0",
+		"type": "Service",
+		"name": "kuber...board",
+		"shortName": "kuber...board",
+		"longName": "kubernetes-dashboard",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/kube-system/kubernetes-dashboard?namespace=kube-system",
+		"connectedTo": [
+			"3aa13974-6562-4bd7-b38d-dca082a2c4c0"
+		]
+	},
+	"4be671f3d6079375b3a8d45978f389b093114c92": {
+		"id": "4be671f3d6079375b3a8d45978f389b093114c92",
+		"type": "Group",
+		"name": "sample",
+		"shortName": "sample",
+		"longName": "sample",
+		"parent": "862846a97c43a8bad0efd450857900dea85414a3",
+		"children": [
+			"0f716843-97ea-43b7-8b06-8ce3ffdb8440"
+		]
+	},
+	"4c0557c3-5728-4a8a-9ca3-f815e3010571": {
+		"id": "4c0557c3-5728-4a8a-9ca3-f815e3010571",
+		"type": "Service",
+		"name": "dashb...raper",
+		"shortName": "dashb...raper",
+		"longName": "dashboard-metrics-scraper",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/kube-system/dashboard-metrics-scraper?namespace=kube-system",
+		"connectedTo": [
+			"730b7477-12bd-4c07-8b17-f5adf13bd58f"
+		]
+	},
+	"4d879705-1cb0-4d93-b6b6-50929fd41f34": {
+		"id": "4d879705-1cb0-4d93-b6b6-50929fd41f34",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app2-nds-deployment",
+		"parent": "fd1710ecebde4bd58d50880b9a211833aa666cdd",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app2-nds-deployment?namespace=default",
+		"scaleUrl": "/scale/default/app2/Deployment/app2-nds-deployment/nds.count",
+		"children": [
+			"8ec488df-b352-4fae-ad2d-63ca1f08f431"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"4ef3e4f4-f649-4ff8-8800-ec47896d1a00": {
+		"id": "4ef3e4f4-f649-4ff8-8800-ec47896d1a00",
+		"type": "CR",
+		"name": "cron-cr",
+		"shortName": "cron-cr",
+		"longName": "app1-cron-cr",
+		"parent": "c8e39c242a8b70c18620b70c1aa9bb9028ffbdfb",
+		"dashboardUrl": "https://10.41.50.245:11111/#/customresourcedefinition/crontabs.stable.example.com/default/app1-cron-cr/?namespace=default"
+	},
+	"53c8ec01-0b07-4b27-a970-fc6e4d6db0fd": {
+		"id": "53c8ec01-0b07-4b27-a970-fc6e4d6db0fd",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app2-mariadb-deployment",
+		"parent": "fe0bef0ae3a0113d28b65f5d8fcfbd2a7ef27a09",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app2-mariadb-deployment?namespace=default",
+		"scaleUrl": "/scaleDeployment/default",
+		"children": [
+			"8b86d3ca-5da2-4a00-a603-c0b6f44090b6"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"53de9d28-8e86-4101-a3c3-bbe922d7388a": {
+		"id": "53de9d28-8e86-4101-a3c3-bbe922d7388a",
+		"type": "Service",
+		"name": "Service",
+		"shortName": "Service",
+		"longName": "Service",
+		"parent": "e71ca390e8e6ae50226da9ce0914d37878a89db8",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/default/app2-catalog?namespace=default",
+		"connectedTo": [
+			"cf4de351-b7a7-4607-b6c3-c8e42c2a4be0",
+			"88ef1528-6c36-4b0b-801c-302530fd04fe"
+		]
+	},
+	"5619099f-5a41-419c-9dbe-0fa637e3d597": {
+		"id": "5619099f-5a41-419c-9dbe-0fa637e3d597",
+		"type": "ReplicaSet",
+		"name": "6964dcd845",
+		"shortName": "6964dcd845",
+		"longName": "app1-mariadb-deployment-6964dcd845",
+		"parent": "b8ce8de8-f7fd-49de-b9dc-9c877aa62448",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app1-mariadb-deployment-6964dcd845?namespace=default",
+		"children": [
+			"00f7a780-ba52-4583-8788-7e653cea92c0"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"56dfade3-4500-48ef-a957-7a70629ff7dd": {
+		"id": "56dfade3-4500-48ef-a957-7a70629ff7dd",
+		"type": "PersistentVolume",
+		"name": "claim",
+		"shortName": "claim",
+		"longName": "registry-claim",
+		"parent": "26e96b94-a810-428f-a23d-0ace55d72d0b",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-76b9284c-44cb-433d-9e90-b0477d04324f?namespace=container-registry",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"5758d24c-8c78-45c2-a475-7562f8b35e98": {
+		"id": "5758d24c-8c78-45c2-a475-7562f8b35e98",
+		"type": "Service",
+		"name": "museu...useum",
+		"shortName": "museu...useum",
+		"longName": "museum-chartmuseum",
+		"parent": "3ff0a02b-5bda-44a2-8057-557e594caf99",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/utility/museum-chartmuseum?namespace=utility",
+		"connectedTo": [
+			"bc0d0e6c-41dc-40bc-85bd-9ae88109d94f"
+		]
+	},
+	"581b758cd87611212309cc8733f42264683eec17": {
+		"id": "581b758cd87611212309cc8733f42264683eec17",
+		"type": "Group",
+		"name": "ads",
+		"shortName": "ads",
+		"longName": "ads",
+		"parent": "862846a97c43a8bad0efd450857900dea85414a3",
+		"children": [
+			"a0c2b058-1345-4a1a-ab95-d9aee0c3a861",
+			"841f85ea-8c2c-4f46-8593-eb0812329ba9"
+		]
+	},
+	"5f6063dc-30f5-44b3-91db-977a5a64fb41": {
+		"id": "5f6063dc-30f5-44b3-91db-977a5a64fb41",
+		"type": "Ingress",
+		"name": "Ingress",
+		"shortName": "Ingress",
+		"longName": "Ingress",
+		"parent": "bd8511f5ef938a63f1a0125fac1102ab64102bde",
+		"dashboardUrl": "https://10.41.50.245:11111/#/ingress/default/app1-catalog?namespace=default",
+		"connectedTo": [
+			"b705efb4-401f-4756-af9e-5e288f499452"
+		],
+		"events": [
+			{
+				"id": "2020-04-22 21:43:24 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:43:24 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:44:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:44:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:50:51 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:50:51 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:51:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:51:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:58:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:58:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:59:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 21:59:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:05:25 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:05:25 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:06:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:06:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:12:43 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:12:43 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:13:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:13:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:20:06 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:20:06 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:21:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:21:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:27:31 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:27:31 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:28:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:28:32 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:34:47 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:34:47 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:35:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:35:52 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:42:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:42:10 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:43:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "CREATE",
+				"Message": "Ingress default/app1-catalog"
+			},
+			{
+				"id": "2020-04-22 22:43:12 +0200 CEST",
+				"Type": "Normal",
+				"Reason": "UPDATE",
+				"Message": "Ingress default/app1-catalog"
+			}
+		]
+	},
+	"5f6436620efd0b2bbc0ae229640cf1fca862381f": {
+		"id": "5f6436620efd0b2bbc0ae229640cf1fca862381f",
+		"type": "Group",
+		"name": "sample",
+		"shortName": "sample",
+		"longName": "sample",
+		"parent": "16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+		"children": [
+			"ab358617-e623-4b43-9e13-1b868ba34235"
+		]
+	},
+	"61a22c8d-5291-4d09-81c0-510ea626b3b6": {
+		"id": "61a22c8d-5291-4d09-81c0-510ea626b3b6",
+		"type": "ReplicaSet",
+		"name": "654899f869",
+		"shortName": "654899f869",
+		"longName": "app2-catalog-deployment-654899f869",
+		"parent": "72827e71-4eb4-480c-bf14-aee4debb6d1c",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app2-catalog-deployment-654899f869?namespace=default",
+		"children": [
+			"cf4de351-b7a7-4607-b6c3-c8e42c2a4be0",
+			"88ef1528-6c36-4b0b-801c-302530fd04fe"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"666c257a-d914-4011-8373-a4cae93c9ac5": {
+		"id": "666c257a-d914-4011-8373-a4cae93c9ac5",
+		"type": "Pod",
+		"name": "rvjb6",
+		"shortName": "rvjb6",
+		"longName": "app2-sample-deployment-7bf89df6c5-rvjb6",
+		"parent": "b9f5ae5a-ff8b-4a41-b4de-b91b962da5fb",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-sample-deployment-7bf89df6c5-rvjb6?namespace=default",
+		"children": [
+			"666c257a-d914-4011-8373-a4cae93c9ac5sample"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:52 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-sample-deployment-7bf89df6c5-rvjb6_default(666c257a-d914-4011-8373-a4cae93c9ac5)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"666c257a-d914-4011-8373-a4cae93c9ac5sample": {
+		"id": "666c257a-d914-4011-8373-a4cae93c9ac5sample",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "666c257a-d914-4011-8373-a4cae93c9ac5",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"6c21ddb1-4e04-4323-80b9-6b1efbe65576": {
+		"id": "6c21ddb1-4e04-4323-80b9-6b1efbe65576",
+		"type": "Pod",
+		"name": "4cll9",
+		"shortName": "4cll9",
+		"longName": "app1-nds-deployment-7d7f775566-4cll9",
+		"parent": "eae85776-7423-40c2-9581-d0f7193dd396",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-nds-deployment-7d7f775566-4cll9?namespace=default",
+		"children": [
+			"6c21ddb1-4e04-4323-80b9-6b1efbe65576nds"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:34 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-nds-deployment-7d7f775566-4cll9_default(6c21ddb1-4e04-4323-80b9-6b1efbe65576)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"6c21ddb1-4e04-4323-80b9-6b1efbe65576nds": {
+		"id": "6c21ddb1-4e04-4323-80b9-6b1efbe65576nds",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "6c21ddb1-4e04-4323-80b9-6b1efbe65576",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"6cb26dd2-4186-4efd-8470-40b2f83b97bc": {
+		"id": "6cb26dd2-4186-4efd-8470-40b2f83b97bc",
+		"type": "Service",
+		"name": "Service",
+		"shortName": "Service",
+		"longName": "Service",
+		"parent": "c9b8dbffa2a2f5753d269b99d19f1409488b3c21",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/default/app1-mariadb?namespace=default",
+		"connectedTo": [
+			"00f7a780-ba52-4583-8788-7e653cea92c0"
+		]
+	},
+	"6f821309-bca5-4850-93bf-59facff42c28": {
+		"id": "6f821309-bca5-4850-93bf-59facff42c28",
+		"type": "Pod",
+		"name": "1",
+		"shortName": "1",
+		"longName": "app2-ads-1",
+		"parent": "841f85ea-8c2c-4f46-8593-eb0812329ba9",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-ads-1?namespace=default",
+		"children": [
+			"6f821309-bca5-4850-93bf-59facff42c28ads",
+			"8f13e181-77f0-4255-8292-a89403efeef2"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:14 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-ads-1_default(6f821309-bca5-4850-93bf-59facff42c28)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"6f821309-bca5-4850-93bf-59facff42c28ads": {
+		"id": "6f821309-bca5-4850-93bf-59facff42c28ads",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "6f821309-bca5-4850-93bf-59facff42c28",
+		"connectedTo": [
+			"8f13e181-77f0-4255-8292-a89403efeef2"
+		],
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"70f1c81e-1e6a-4e67-9d64-dea1867e5846": {
+		"id": "70f1c81e-1e6a-4e67-9d64-dea1867e5846",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app1-nds-deployment",
+		"parent": "8ea86d1ca3b22760a0a4305c41dba754de4e8c0c",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app1-nds-deployment?namespace=default",
+		"scaleUrl": "/scale/default/app1/Deployment/app1-nds-deployment/nds.count",
+		"children": [
+			"eae85776-7423-40c2-9581-d0f7193dd396"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"72827e71-4eb4-480c-bf14-aee4debb6d1c": {
+		"id": "72827e71-4eb4-480c-bf14-aee4debb6d1c",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app2-catalog-deployment",
+		"parent": "e71ca390e8e6ae50226da9ce0914d37878a89db8",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app2-catalog-deployment?namespace=default",
+		"scaleUrl": "/scale/default/app2/Deployment/app2-catalog-deployment/catalog.count",
+		"children": [
+			"61a22c8d-5291-4d09-81c0-510ea626b3b6"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"730b7477-12bd-4c07-8b17-f5adf13bd58f": {
+		"id": "730b7477-12bd-4c07-8b17-f5adf13bd58f",
+		"type": "Pod",
+		"name": "l7m4b",
+		"shortName": "l7m4b",
+		"longName": "dashboard-metrics-scraper-db65b9c6f-l7m4b",
+		"parent": "7d673e0d-6aa9-447c-a451-93dd2b693e89",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/kube-system/dashboard-metrics-scraper-db65b9c6f-l7m4b?namespace=kube-system",
+		"children": [
+			"730b7477-12bd-4c07-8b17-f5adf13bd58fdashboard-metrics-scraper"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:23 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"dashboard-metrics-scraper-db65b9c6f-l7m4b_kube-system(730b7477-12bd-4c07-8b17-f5adf13bd58f)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"730b7477-12bd-4c07-8b17-f5adf13bd58fdashboard-metrics-scraper": {
+		"id": "730b7477-12bd-4c07-8b17-f5adf13bd58fdashboard-metrics-scraper",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "730b7477-12bd-4c07-8b17-f5adf13bd58f"
+	},
+	"77d2da76-173b-475f-a3cf-8861be3ec861": {
+		"id": "77d2da76-173b-475f-a3cf-8861be3ec861",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app1-catalog-deployment",
+		"parent": "bd8511f5ef938a63f1a0125fac1102ab64102bde",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app1-catalog-deployment?namespace=default",
+		"scaleUrl": "/scale/default/app1/Deployment/app1-catalog-deployment/catalog.count",
+		"children": [
+			"809bc6c4-5a2d-436b-a6e0-74f5bb66a8ad"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"7d673e0d-6aa9-447c-a451-93dd2b693e89": {
+		"id": "7d673e0d-6aa9-447c-a451-93dd2b693e89",
+		"type": "ReplicaSet",
+		"name": "db65b9c6f",
+		"shortName": "db65b9c6f",
+		"longName": "dashboard-metrics-scraper-db65b9c6f",
+		"parent": "11460c5e-40d4-4f61-ae2c-adfdfd842567",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/kube-system/dashboard-metrics-scraper-db65b9c6f?namespace=kube-system",
+		"children": [
+			"730b7477-12bd-4c07-8b17-f5adf13bd58f"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"809bc6c4-5a2d-436b-a6e0-74f5bb66a8ad": {
+		"id": "809bc6c4-5a2d-436b-a6e0-74f5bb66a8ad",
+		"type": "ReplicaSet",
+		"name": "58fb745bc5",
+		"shortName": "58fb745bc5",
+		"longName": "app1-catalog-deployment-58fb745bc5",
+		"parent": "77d2da76-173b-475f-a3cf-8861be3ec861",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app1-catalog-deployment-58fb745bc5?namespace=default",
+		"children": [
+			"3734e5f7-ef27-49e8-9c77-4b96d4a492f4",
+			"ec0848c1-9a11-4801-b093-34782772cd5d"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"841f85ea-8c2c-4f46-8593-eb0812329ba9": {
+		"id": "841f85ea-8c2c-4f46-8593-eb0812329ba9",
+		"type": "StatefulSet",
+		"name": "StatefulSet",
+		"shortName": "StatefulSet",
+		"longName": "StatefulSet",
+		"parent": "581b758cd87611212309cc8733f42264683eec17",
+		"dashboardUrl": "https://10.41.50.245:11111/#/statefulset/default/app2-ads?namespace=default",
+		"scaleUrl": "/scale/default/app2/StatefulSet/app2-ads/ads.count",
+		"children": [
+			"a9376350-a45f-4e85-b150-a149cc5216a9",
+			"6f821309-bca5-4850-93bf-59facff42c28",
+			"fd32c347-cc2c-424f-a4e4-f571c53b79ad"
+		],
+		"attributes": {
+			"Replicas": "3"
+		}
+	},
+	"844d1027-5e1f-4d26-8a4e-c9ba02885ec6": {
+		"id": "844d1027-5e1f-4d26-8a4e-c9ba02885ec6",
+		"type": "ReplicaSet",
+		"name": "6c59667b75",
+		"shortName": "6c59667b75",
+		"longName": "app1-sample-deployment-6c59667b75",
+		"parent": "ab358617-e623-4b43-9e13-1b868ba34235",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app1-sample-deployment-6c59667b75?namespace=default",
+		"children": [
+			"462b5c1a-6777-46ca-8d95-8011bafc9354"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"847596cb-9f17-49fb-9f57-e983a099aca8": {
+		"id": "847596cb-9f17-49fb-9f57-e983a099aca8",
+		"type": "Pod",
+		"name": "dmzwm",
+		"shortName": "dmzwm",
+		"longName": "app1-nds-deployment-7d7f775566-dmzwm",
+		"parent": "eae85776-7423-40c2-9581-d0f7193dd396",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-nds-deployment-7d7f775566-dmzwm?namespace=default",
+		"children": [
+			"847596cb-9f17-49fb-9f57-e983a099aca8nds"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:26 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-nds-deployment-7d7f775566-dmzwm_default(847596cb-9f17-49fb-9f57-e983a099aca8)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"847596cb-9f17-49fb-9f57-e983a099aca8nds": {
+		"id": "847596cb-9f17-49fb-9f57-e983a099aca8nds",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "847596cb-9f17-49fb-9f57-e983a099aca8",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"862846a97c43a8bad0efd450857900dea85414a3": {
+		"id": "862846a97c43a8bad0efd450857900dea85414a3",
+		"type": "Group",
+		"name": "app2",
+		"shortName": "app2",
+		"longName": "app2",
+		"parent": "ab3fe946-5a39-4f92-b73b-55f0bcda7cab",
+		"children": [
+			"fe0bef0ae3a0113d28b65f5d8fcfbd2a7ef27a09",
+			"581b758cd87611212309cc8733f42264683eec17",
+			"fd1710ecebde4bd58d50880b9a211833aa666cdd",
+			"f8d664fdda501262b18a22caa88b032cf3b8cff9",
+			"e71ca390e8e6ae50226da9ce0914d37878a89db8",
+			"4be671f3d6079375b3a8d45978f389b093114c92"
+		]
+	},
+	"87385657-8662-4e30-8a92-c11c80fb42f5": {
+		"id": "87385657-8662-4e30-8a92-c11c80fb42f5",
+		"type": "Namespace",
+		"name": "kube-public",
+		"shortName": "kube-public",
+		"longName": "kube-public",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=kube-public"
+	},
+	"87baa944-429f-449b-81ea-efba436adfc5": {
+		"id": "87baa944-429f-449b-81ea-efba436adfc5",
+		"type": "ReplicaSet",
+		"name": "58fdbb6f4d",
+		"shortName": "58fdbb6f4d",
+		"longName": "heapster-v1.5.2-58fdbb6f4d",
+		"parent": "c5631036-7283-45b6-a4af-63532ec0b367",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/kube-system/heapster-v1.5.2-58fdbb6f4d?namespace=kube-system",
+		"children": [
+			"dc6e058c-cee8-475b-96ee-6dab1f922ec2"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"889a879fed3268afbd9b071a6d235f844324327d": {
+		"id": "889a879fed3268afbd9b071a6d235f844324327d",
+		"type": "Release",
+		"name": "udm-p...sites",
+		"shortName": "udm-p...sites",
+		"longName": "udm-prerequisites",
+		"parent": "8eeaf6d49834ff82ef19125fd77a0190dc633dd9",
+		"version": "1.0.0",
+		"healUrl": "/heal/5g/udm-prerequisites",
+		"reconfigureUrl": "/reconfigure/5g/udm-prerequisites",
+		"attributes": {
+			"Version": "1.0.0"
+		},
+		"attributesJson": {
+			"danm-net": {
+				"acreencryptionLan": {
+					"allocationPoolEndIp": "172.18.9.204",
+					"allocationPoolStartIp": "172.18.9.202",
+					"enabled": true,
+					"routes": null
+				},
+				"eeHttp2Lan": {
+					"allocationPoolEndIp": "172.18.2.190",
+					"allocationPoolStartIp": "172.18.2.161",
+					"enabled": true,
+					"routes": null
+				},
+				"enabled": false,
+				"generic": {
+					"rt_tables": 100
+				},
+				"global": {
+					"plumbing": {
+						"enabled": true
+					}
+				},
+				"hsm1Lan": {
+					"allocationPoolEndIp": "172.18.7.254",
+					"allocationPoolStartIp": "172.18.7.100",
+					"cidr": "172.18.7.0/24",
+					"enabled": true,
+					"hostDevice": "eth5",
+					"routes": null
+				},
+				"hsm2Lan": {
+					"allocationPoolEndIp": "172.18.8.254",
+					"allocationPoolStartIp": "172.18.8.100",
+					"cidr": "172.18.8.0/24",
+					"enabled": true,
+					"hostDevice": "eth6",
+					"routes": null
+				},
+				"http2Lan": {
+					"cidr": "172.18.2.0/24",
+					"hostDevice": "eth2"
+				},
+				"ldapLan": {
+					"allocationPoolEndIp": "172.18.3.254",
+					"allocationPoolStartIp": "172.18.3.100",
+					"cidr": "172.18.3.0/24",
+					"enabled": true,
+					"hostDevice": "eth3",
+					"routes": null
+				},
+				"liLan": {
+					"allocationPoolEndIp": "172.18.6.201",
+					"allocationPoolStartIp": "172.18.6.200",
+					"cidr": "172.18.6.0/24",
+					"enabled": true,
+					"hostDevice": "eth4",
+					"routes": null
+				},
+				"nimHttp2Lan": {
+					"allocationPoolEndIp": "172.18.2.254",
+					"allocationPoolStartIp": "172.18.2.221",
+					"enabled": true,
+					"routes": null
+				},
+				"sdmHttp2Lan": {
+					"allocationPoolEndIp": "172.18.2.160",
+					"allocationPoolStartIp": "172.18.2.131",
+					"enabled": true,
+					"routes": null
+				},
+				"triggerAndreencryption": {
+					"cidr": "172.18.9.0/24",
+					"hostDevice": "eth7"
+				},
+				"triggerLan": {
+					"allocationPoolEndIp": "172.18.9.201",
+					"allocationPoolStartIp": "172.18.9.200",
+					"enabled": true,
+					"routes": null
+				},
+				"ueauthnHttp2Lan": {
+					"allocationPoolEndIp": "172.18.2.220",
+					"allocationPoolStartIp": "172.18.2.191",
+					"enabled": true,
+					"routes": null
+				},
+				"uecmHttp2Lan": {
+					"allocationPoolEndIp": "172.18.2.130",
+					"allocationPoolStartIp": "172.18.2.100",
+					"enabled": true,
+					"routes": null
+				},
+				"vnflbLan": {
+					"allocationPoolEndIp": "172.18.10.203",
+					"allocationPoolStartIp": "172.18.10.200",
+					"cidr": "172.18.10.0/24",
+					"enabled": true,
+					"hostDevice": "eth2",
+					"routes": null
+				}
+			},
+			"priority-classes": {
+				"enabled": true,
+				"global": {
+					"plumbing": {
+						"enabled": true
+					}
+				},
+				"prioClassLevel1": {
+					"globalDefault": false,
+					"priolevel1val": 10000000
+				},
+				"prioClassLevel2": {
+					"globalDefault": false,
+					"priolevel2val": 9000000
+				},
+				"prioClassLevel3": {
+					"globalDefault": false,
+					"priolevel3val": 8000000
+				},
+				"prioClassLevel4": {
+					"globalDefault": false,
+					"priolevel4val": 7000000
+				}
+			},
+			"udm-operators": {
+				"enabled": false,
+				"global": {
+					"plumbing": {
+						"enabled": true
+					}
+				},
+				"sysctl": {
+					"net": {
+						"core": {
+							"rmem_max": 4194304,
+							"wmem_max": 4194304
+						},
+						"ipv4": {
+							"tcp_rmem": "1048576 1048576 6291456",
+							"tcp_wmem": "1048576 2097152 4194304"
+						}
+					},
+					"swappiness": 80
+				}
+			}
+		},
+		"versions": [
+			"1.0.0"
+		]
+	},
+	"88ef1528-6c36-4b0b-801c-302530fd04fe": {
+		"id": "88ef1528-6c36-4b0b-801c-302530fd04fe",
+		"type": "Pod",
+		"name": "zbch6",
+		"shortName": "zbch6",
+		"longName": "app2-catalog-deployment-654899f869-zbch6",
+		"parent": "61a22c8d-5291-4d09-81c0-510ea626b3b6",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-catalog-deployment-654899f869-zbch6?namespace=default",
+		"children": [
+			"88ef1528-6c36-4b0b-801c-302530fd04fecatalog"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118",
+			"fd32c347-cc2c-424f-a4e4-f571c53b79ad",
+			"6f821309-bca5-4850-93bf-59facff42c28",
+			"a9376350-a45f-4e85-b150-a149cc5216a9",
+			"26f951b5-d4cf-494d-9068-e4962269e9a7",
+			"ef806c1a-2d1a-46ec-bc76-8ee580bb3d39"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:31 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-catalog-deployment-654899f869-zbch6_default(88ef1528-6c36-4b0b-801c-302530fd04fe)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"88ef1528-6c36-4b0b-801c-302530fd04fecatalog": {
+		"id": "88ef1528-6c36-4b0b-801c-302530fd04fecatalog",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "88ef1528-6c36-4b0b-801c-302530fd04fe",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"8b86d3ca-5da2-4a00-a603-c0b6f44090b6": {
+		"id": "8b86d3ca-5da2-4a00-a603-c0b6f44090b6",
+		"type": "ReplicaSet",
+		"name": "57cd87cb45",
+		"shortName": "57cd87cb45",
+		"longName": "app2-mariadb-deployment-57cd87cb45",
+		"parent": "53c8ec01-0b07-4b27-a970-fc6e4d6db0fd",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app2-mariadb-deployment-57cd87cb45?namespace=default",
+		"children": [
+			"0feb470b-d4c1-454b-8f8f-315c1d8ce3db"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"8ea86d1ca3b22760a0a4305c41dba754de4e8c0c": {
+		"id": "8ea86d1ca3b22760a0a4305c41dba754de4e8c0c",
+		"type": "Group",
+		"name": "nds",
+		"shortName": "nds",
+		"longName": "nds",
+		"parent": "16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+		"children": [
+			"70f1c81e-1e6a-4e67-9d64-dea1867e5846"
+		]
+	},
+	"8ec488df-b352-4fae-ad2d-63ca1f08f431": {
+		"id": "8ec488df-b352-4fae-ad2d-63ca1f08f431",
+		"type": "ReplicaSet",
+		"name": "6d4f57c466",
+		"shortName": "6d4f57c466",
+		"longName": "app2-nds-deployment-6d4f57c466",
+		"parent": "4d879705-1cb0-4d93-b6b6-50929fd41f34",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app2-nds-deployment-6d4f57c466?namespace=default",
+		"children": [
+			"26f951b5-d4cf-494d-9068-e4962269e9a7",
+			"ef806c1a-2d1a-46ec-bc76-8ee580bb3d39"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"8eeaf6d49834ff82ef19125fd77a0190dc633dd9": {
+		"id": "8eeaf6d49834ff82ef19125fd77a0190dc633dd9",
+		"type": "Group",
+		"name": "releases",
+		"shortName": "releases",
+		"longName": "releases",
+		"parent": "d57b2909-dfe7-4287-b486-2cdd158bd997",
+		"children": [
+			"889a879fed3268afbd9b071a6d235f844324327d"
+		]
+	},
+	"8f13e181-77f0-4255-8292-a89403efeef2": {
+		"id": "8f13e181-77f0-4255-8292-a89403efeef2",
+		"type": "PersistentVolume",
+		"name": "db",
+		"shortName": "db",
+		"longName": "db-app2-ads-1",
+		"parent": "6f821309-bca5-4850-93bf-59facff42c28",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-21b28aa4-de5f-41a1-8172-e89b9d98559d?namespace=default",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"904378a3-b477-4de0-b1a9-119d911e1526": {
+		"id": "904378a3-b477-4de0-b1a9-119d911e1526",
+		"type": "Namespace",
+		"name": "conta...istry",
+		"shortName": "conta...istry",
+		"longName": "container-registry",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=container-registry",
+		"children": [
+			"0cab40f2-c567-4f91-b712-f3b85c94e643",
+			"d98f4b56-0995-41e1-8c0d-3c9a89106138"
+		]
+	},
+	"9587beb6-ef3c-498a-9539-180c4d8ebdf8": {
+		"id": "9587beb6-ef3c-498a-9539-180c4d8ebdf8",
+		"type": "PersistentVolume",
+		"name": "db",
+		"shortName": "db",
+		"longName": "db-app1-ads-1",
+		"parent": "fe9d43ec-e85d-4284-8dd3-79806a90db72",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-eca62864-a76f-4ed9-bd93-5e9902f6388f?namespace=default",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"a0c2b058-1345-4a1a-ab95-d9aee0c3a861": {
+		"id": "a0c2b058-1345-4a1a-ab95-d9aee0c3a861",
+		"type": "CR",
+		"name": "cron-cr",
+		"shortName": "cron-cr",
+		"longName": "app2-cron-cr",
+		"parent": "581b758cd87611212309cc8733f42264683eec17",
+		"dashboardUrl": "https://10.41.50.245:11111/#/customresourcedefinition/crontabs.stable.example.com/default/app2-cron-cr/?namespace=default"
+	},
+	"a2d46cbb-5c7b-4941-865a-426d31e48d96": {
+		"id": "a2d46cbb-5c7b-4941-865a-426d31e48d96",
+		"type": "PersistentVolume",
+		"name": "db",
+		"shortName": "db",
+		"longName": "db-app1-ads-3",
+		"parent": "b4a6ef8d-360e-4bc7-b209-288904978654",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-5be4fba7-cf29-4b10-bf67-a0b752e545c8?namespace=default",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"a434c9da-ad81-4711-bffc-e9fba298442a": {
+		"id": "a434c9da-ad81-4711-bffc-e9fba298442a",
+		"type": "Pod",
+		"name": "th2tk",
+		"shortName": "th2tk",
+		"longName": "exp-api-exposure-6467754659-th2tk",
+		"parent": "d138d25f-4482-4366-851c-0b71a8bb8192",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/utility/exp-api-exposure-6467754659-th2tk?namespace=utility",
+		"children": [
+			"a434c9da-ad81-4711-bffc-e9fba298442aapi-exposure"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:42:33 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"exp-api-exposure-6467754659-th2tk_utility(a434c9da-ad81-4711-bffc-e9fba298442a)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"a434c9da-ad81-4711-bffc-e9fba298442aapi-exposure": {
+		"id": "a434c9da-ad81-4711-bffc-e9fba298442aapi-exposure",
+		"type": "Container",
+		"name": "api-exposure",
+		"shortName": "api-exposure",
+		"longName": "api-exposure",
+		"parent": "a434c9da-ad81-4711-bffc-e9fba298442a"
+	},
+	"a5be3ad6f9859f3ca4bf9cedf1b212d50c74fa30": {
+		"id": "a5be3ad6f9859f3ca4bf9cedf1b212d50c74fa30",
+		"type": "Group",
+		"name": "releases",
+		"shortName": "releases",
+		"longName": "releases",
+		"parent": "3ff0a02b-5bda-44a2-8057-557e594caf99",
+		"children": [
+			"374d0af6cfa98dfd21941b379d87b7756ab3ff49",
+			"455a37c1e46e4e9b3970b02db6fbcbe77e6f2d30"
+		]
+	},
+	"a9376350-a45f-4e85-b150-a149cc5216a9": {
+		"id": "a9376350-a45f-4e85-b150-a149cc5216a9",
+		"type": "Pod",
+		"name": "2",
+		"shortName": "2",
+		"longName": "app2-ads-2",
+		"parent": "841f85ea-8c2c-4f46-8593-eb0812329ba9",
+		"state": "containers with unready status: [ads]",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-ads-2?namespace=default",
+		"children": [
+			"b54341fe-b0d0-4ad4-82ae-8d6bbf8a2109",
+			"a9376350-a45f-4e85-b150-a149cc5216a9ads"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:13 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-ads-2_default(a9376350-a45f-4e85-b150-a149cc5216a9)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"a9376350-a45f-4e85-b150-a149cc5216a9ads": {
+		"id": "a9376350-a45f-4e85-b150-a149cc5216a9ads",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "a9376350-a45f-4e85-b150-a149cc5216a9",
+		"connectedTo": [
+			"b54341fe-b0d0-4ad4-82ae-8d6bbf8a2109"
+		],
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"ab358617-e623-4b43-9e13-1b868ba34235": {
+		"id": "ab358617-e623-4b43-9e13-1b868ba34235",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app1-sample-deployment",
+		"parent": "5f6436620efd0b2bbc0ae229640cf1fca862381f",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app1-sample-deployment?namespace=default",
+		"scaleUrl": "/scale/default/app1/Deployment/app1-sample-deployment/sample.count",
+		"children": [
+			"844d1027-5e1f-4d26-8a4e-c9ba02885ec6"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"ab3fe946-5a39-4f92-b73b-55f0bcda7cab": {
+		"id": "ab3fe946-5a39-4f92-b73b-55f0bcda7cab",
+		"type": "Namespace",
+		"name": "default",
+		"shortName": "default",
+		"longName": "default",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=default",
+		"children": [
+			"862846a97c43a8bad0efd450857900dea85414a3",
+			"fd624a0bc16023943975a88f590f84a50b602f53",
+			"16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+			"1dbfe585ec14b6a68567cf90140fb27bda43247b"
+		]
+	},
+	"b4a6ef8d-360e-4bc7-b209-288904978654": {
+		"id": "b4a6ef8d-360e-4bc7-b209-288904978654",
+		"type": "Pod",
+		"name": "3",
+		"shortName": "3",
+		"longName": "app1-ads-3",
+		"parent": "d42f3b1c-4c78-4c02-a7be-bf6f6455bc24",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-ads-3?namespace=default",
+		"children": [
+			"a2d46cbb-5c7b-4941-865a-426d31e48d96",
+			"b4a6ef8d-360e-4bc7-b209-288904978654ads"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:42:22 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-ads-3_default(b4a6ef8d-360e-4bc7-b209-288904978654)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"b4a6ef8d-360e-4bc7-b209-288904978654ads": {
+		"id": "b4a6ef8d-360e-4bc7-b209-288904978654ads",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "b4a6ef8d-360e-4bc7-b209-288904978654",
+		"connectedTo": [
+			"a2d46cbb-5c7b-4941-865a-426d31e48d96"
+		],
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"b51ad246-c3c5-491b-b6e7-f1bec04687ac": {
+		"id": "b51ad246-c3c5-491b-b6e7-f1bec04687ac",
+		"type": "ReplicaSet",
+		"name": "7cf58dcdcc",
+		"shortName": "7cf58dcdcc",
+		"longName": "registry-7cf58dcdcc",
+		"parent": "d98f4b56-0995-41e1-8c0d-3c9a89106138",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/container-registry/registry-7cf58dcdcc?namespace=container-registry",
+		"children": [
+			"26e96b94-a810-428f-a23d-0ace55d72d0b"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"b54341fe-b0d0-4ad4-82ae-8d6bbf8a2109": {
+		"id": "b54341fe-b0d0-4ad4-82ae-8d6bbf8a2109",
+		"type": "PersistentVolume",
+		"name": "db",
+		"shortName": "db",
+		"longName": "db-app2-ads-2",
+		"parent": "a9376350-a45f-4e85-b150-a149cc5216a9",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-82e3f49a-cdbe-4fec-88b1-8dd1d0187f7d?namespace=default",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"b6955a5e-4237-4f9e-b21f-49bbe2a9ea33": {
+		"id": "b6955a5e-4237-4f9e-b21f-49bbe2a9ea33",
+		"type": "Service",
+		"name": "exp-a...osure",
+		"shortName": "exp-a...osure",
+		"longName": "exp-api-exposure",
+		"parent": "3ff0a02b-5bda-44a2-8057-557e594caf99",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/utility/exp-api-exposure?namespace=utility",
+		"connectedTo": [
+			"a434c9da-ad81-4711-bffc-e9fba298442a"
+		]
+	},
+	"b705efb4-401f-4756-af9e-5e288f499452": {
+		"id": "b705efb4-401f-4756-af9e-5e288f499452",
+		"type": "Service",
+		"name": "Service",
+		"shortName": "Service",
+		"longName": "Service",
+		"parent": "bd8511f5ef938a63f1a0125fac1102ab64102bde",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/default/app1-catalog?namespace=default",
+		"connectedTo": [
+			"3734e5f7-ef27-49e8-9c77-4b96d4a492f4",
+			"ec0848c1-9a11-4801-b093-34782772cd5d"
+		]
+	},
+	"b714fd26-5fb7-4589-bb97-78e86249dcee": {
+		"id": "b714fd26-5fb7-4589-bb97-78e86249dcee",
+		"type": "PersistentVolume",
+		"name": "db",
+		"shortName": "db",
+		"longName": "db-app2-ads-0",
+		"parent": "fd32c347-cc2c-424f-a4e4-f571c53b79ad",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-2b4bc4db-b733-4c8d-a0ee-62cc24f3f6bf?namespace=default",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"b8ce8de8-f7fd-49de-b9dc-9c877aa62448": {
+		"id": "b8ce8de8-f7fd-49de-b9dc-9c877aa62448",
+		"type": "Deployment",
+		"name": "deployment",
+		"shortName": "deployment",
+		"longName": "app1-mariadb-deployment",
+		"parent": "c9b8dbffa2a2f5753d269b99d19f1409488b3c21",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/default/app1-mariadb-deployment?namespace=default",
+		"scaleUrl": "/scaleDeployment/default",
+		"children": [
+			"5619099f-5a41-419c-9dbe-0fa637e3d597"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"b9f5ae5a-ff8b-4a41-b4de-b91b962da5fb": {
+		"id": "b9f5ae5a-ff8b-4a41-b4de-b91b962da5fb",
+		"type": "ReplicaSet",
+		"name": "7bf89df6c5",
+		"shortName": "7bf89df6c5",
+		"longName": "app2-sample-deployment-7bf89df6c5",
+		"parent": "0f716843-97ea-43b7-8b06-8ce3ffdb8440",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app2-sample-deployment-7bf89df6c5?namespace=default",
+		"children": [
+			"666c257a-d914-4011-8373-a4cae93c9ac5"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"bc0d0e6c-41dc-40bc-85bd-9ae88109d94f": {
+		"id": "bc0d0e6c-41dc-40bc-85bd-9ae88109d94f",
+		"type": "Pod",
+		"name": "8mwjv",
+		"shortName": "8mwjv",
+		"longName": "museum-chartmuseum-75d54df5f8-8mwjv",
+		"parent": "e73fbbb5-3760-40d0-9a33-32f43d34cd08",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/utility/museum-chartmuseum-75d54df5f8-8mwjv?namespace=utility",
+		"children": [
+			"bc0d0e6c-41dc-40bc-85bd-9ae88109d94fchartmuseum"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:02 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"museum-chartmuseum-75d54df5f8-8mwjv_utility(bc0d0e6c-41dc-40bc-85bd-9ae88109d94f)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"bc0d0e6c-41dc-40bc-85bd-9ae88109d94fchartmuseum": {
+		"id": "bc0d0e6c-41dc-40bc-85bd-9ae88109d94fchartmuseum",
+		"type": "Container",
+		"name": "chartmuseum",
+		"shortName": "chartmuseum",
+		"longName": "chartmuseum",
+		"parent": "bc0d0e6c-41dc-40bc-85bd-9ae88109d94f"
+	},
+	"bd8511f5ef938a63f1a0125fac1102ab64102bde": {
+		"id": "bd8511f5ef938a63f1a0125fac1102ab64102bde",
+		"type": "Group",
+		"name": "catalog",
+		"shortName": "catalog",
+		"longName": "catalog",
+		"parent": "16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+		"children": [
+			"b705efb4-401f-4756-af9e-5e288f499452",
+			"5f6063dc-30f5-44b3-91db-977a5a64fb41",
+			"77d2da76-173b-475f-a3cf-8861be3ec861"
+		]
+	},
+	"bf1e9ab2-4552-44f7-ab10-2bb0f8b5e9be": {
+		"id": "bf1e9ab2-4552-44f7-ab10-2bb0f8b5e9be",
+		"type": "PersistentVolume",
+		"name": "db",
+		"shortName": "db",
+		"longName": "db-app1-ads-0",
+		"parent": "03da6251-de6c-48dd-8c39-57208023e3d2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/persistentvolume/pvc-2f4ba568-2cde-4fc7-a70f-7da87ddbddd3?namespace=default",
+		"attributes": {
+			"size": "1Gb"
+		}
+	},
+	"c5631036-7283-45b6-a4af-63532ec0b367": {
+		"id": "c5631036-7283-45b6-a4af-63532ec0b367",
+		"type": "Deployment",
+		"name": "heaps...1.5.2",
+		"shortName": "heaps...1.5.2",
+		"longName": "heapster-v1.5.2",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/kube-system/heapster-v1.5.2?namespace=kube-system",
+		"scaleUrl": "/scaleDeployment/kube-system",
+		"children": [
+			"87baa944-429f-449b-81ea-efba436adfc5"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"c8a62a32-7728-48bc-9469-054cfbade7bf": {
+		"id": "c8a62a32-7728-48bc-9469-054cfbade7bf",
+		"type": "Deployment",
+		"name": "hostp...ioner",
+		"shortName": "hostp...ioner",
+		"longName": "hostpath-provisioner",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/kube-system/hostpath-provisioner?namespace=kube-system",
+		"scaleUrl": "/scaleDeployment/kube-system",
+		"children": [
+			"d0363f94-820a-480e-ad32-f7c6d01b83bc"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"c8e39c242a8b70c18620b70c1aa9bb9028ffbdfb": {
+		"id": "c8e39c242a8b70c18620b70c1aa9bb9028ffbdfb",
+		"type": "Group",
+		"name": "ads",
+		"shortName": "ads",
+		"longName": "ads",
+		"parent": "16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+		"children": [
+			"d42f3b1c-4c78-4c02-a7be-bf6f6455bc24",
+			"4ef3e4f4-f649-4ff8-8800-ec47896d1a00"
+		]
+	},
+	"c9b8dbffa2a2f5753d269b99d19f1409488b3c21": {
+		"id": "c9b8dbffa2a2f5753d269b99d19f1409488b3c21",
+		"type": "Group",
+		"name": "mariadb",
+		"shortName": "mariadb",
+		"longName": "mariadb",
+		"parent": "16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+		"children": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc",
+			"b8ce8de8-f7fd-49de-b9dc-9c877aa62448"
+		]
+	},
+	"cf4de351-b7a7-4607-b6c3-c8e42c2a4be0": {
+		"id": "cf4de351-b7a7-4607-b6c3-c8e42c2a4be0",
+		"type": "Pod",
+		"name": "f5vfs",
+		"shortName": "f5vfs",
+		"longName": "app2-catalog-deployment-654899f869-f5vfs",
+		"parent": "61a22c8d-5291-4d09-81c0-510ea626b3b6",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-catalog-deployment-654899f869-f5vfs?namespace=default",
+		"children": [
+			"cf4de351-b7a7-4607-b6c3-c8e42c2a4be0catalog"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118",
+			"fd32c347-cc2c-424f-a4e4-f571c53b79ad",
+			"6f821309-bca5-4850-93bf-59facff42c28",
+			"a9376350-a45f-4e85-b150-a149cc5216a9",
+			"26f951b5-d4cf-494d-9068-e4962269e9a7",
+			"ef806c1a-2d1a-46ec-bc76-8ee580bb3d39"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:35 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-catalog-deployment-654899f869-f5vfs_default(cf4de351-b7a7-4607-b6c3-c8e42c2a4be0)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"cf4de351-b7a7-4607-b6c3-c8e42c2a4be0catalog": {
+		"id": "cf4de351-b7a7-4607-b6c3-c8e42c2a4be0catalog",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "cf4de351-b7a7-4607-b6c3-c8e42c2a4be0",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"d0363f94-820a-480e-ad32-f7c6d01b83bc": {
+		"id": "d0363f94-820a-480e-ad32-f7c6d01b83bc",
+		"type": "ReplicaSet",
+		"name": "75fdc8fccd",
+		"shortName": "75fdc8fccd",
+		"longName": "hostpath-provisioner-75fdc8fccd",
+		"parent": "c8a62a32-7728-48bc-9469-054cfbade7bf",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/kube-system/hostpath-provisioner-75fdc8fccd?namespace=kube-system",
+		"children": [
+			"f42696ce-a36c-4e8a-b7a8-f63e8193f808"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"d138d25f-4482-4366-851c-0b71a8bb8192": {
+		"id": "d138d25f-4482-4366-851c-0b71a8bb8192",
+		"type": "ReplicaSet",
+		"name": "6467754659",
+		"shortName": "6467754659",
+		"longName": "exp-api-exposure-6467754659",
+		"parent": "44032ee5-5311-4dde-9093-afd2f958ef5f",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/utility/exp-api-exposure-6467754659?namespace=utility",
+		"children": [
+			"a434c9da-ad81-4711-bffc-e9fba298442a"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"d42f3b1c-4c78-4c02-a7be-bf6f6455bc24": {
+		"id": "d42f3b1c-4c78-4c02-a7be-bf6f6455bc24",
+		"type": "StatefulSet",
+		"name": "StatefulSet",
+		"shortName": "StatefulSet",
+		"longName": "StatefulSet",
+		"parent": "c8e39c242a8b70c18620b70c1aa9bb9028ffbdfb",
+		"dashboardUrl": "https://10.41.50.245:11111/#/statefulset/default/app1-ads?namespace=default",
+		"scaleUrl": "/scale/default/app1/StatefulSet/app1-ads/ads.count",
+		"children": [
+			"fe9d43ec-e85d-4284-8dd3-79806a90db72",
+			"03da6251-de6c-48dd-8c39-57208023e3d2",
+			"b4a6ef8d-360e-4bc7-b209-288904978654",
+			"2fb8a018-e617-4194-9198-0971c309d465"
+		],
+		"attributes": {
+			"Replicas": "4"
+		}
+	},
+	"d57b2909-dfe7-4287-b486-2cdd158bd997": {
+		"id": "d57b2909-dfe7-4287-b486-2cdd158bd997",
+		"type": "Namespace",
+		"name": "5g",
+		"shortName": "5g",
+		"longName": "5g",
+		"dashboardUrl": "https://10.41.50.245:11111/#/namespace/kubernetes-dashboard?namespace=5g",
+		"children": [
+			"8eeaf6d49834ff82ef19125fd77a0190dc633dd9"
+		]
+	},
+	"d98f4b56-0995-41e1-8c0d-3c9a89106138": {
+		"id": "d98f4b56-0995-41e1-8c0d-3c9a89106138",
+		"type": "Deployment",
+		"name": "registry",
+		"shortName": "registry",
+		"longName": "registry",
+		"parent": "904378a3-b477-4de0-b1a9-119d911e1526",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/container-registry/registry?namespace=container-registry",
+		"scaleUrl": "/scaleDeployment/container-registry",
+		"children": [
+			"b51ad246-c3c5-491b-b6e7-f1bec04687ac"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"dadff17b-84f5-4382-8edb-3007047234f9": {
+		"id": "dadff17b-84f5-4382-8edb-3007047234f9",
+		"type": "Service",
+		"name": "heapster",
+		"shortName": "heapster",
+		"longName": "heapster",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/kube-system/heapster?namespace=kube-system",
+		"connectedTo": [
+			"dc6e058c-cee8-475b-96ee-6dab1f922ec2"
+		]
+	},
+	"dbdfcf77-e7cb-455b-97d0-5b4af134d874": {
+		"id": "dbdfcf77-e7cb-455b-97d0-5b4af134d874",
+		"type": "Deployment",
+		"name": "kuber...board",
+		"shortName": "kuber...board",
+		"longName": "kubernetes-dashboard",
+		"parent": "0b7e3c1a-3ea5-45f7-a6f3-0080910e75a2",
+		"dashboardUrl": "https://10.41.50.245:11111/#/deployment/kube-system/kubernetes-dashboard?namespace=kube-system",
+		"scaleUrl": "/scaleDeployment/kube-system",
+		"children": [
+			"f9ab0d96-2870-4d0c-8443-76b18bab560f"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"dc6e058c-cee8-475b-96ee-6dab1f922ec2": {
+		"id": "dc6e058c-cee8-475b-96ee-6dab1f922ec2",
+		"type": "Pod",
+		"name": "9hvvv",
+		"shortName": "9hvvv",
+		"longName": "heapster-v1.5.2-58fdbb6f4d-9hvvv",
+		"parent": "87baa944-429f-449b-81ea-efba436adfc5",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/kube-system/heapster-v1.5.2-58fdbb6f4d-9hvvv?namespace=kube-system",
+		"children": [
+			"dc6e058c-cee8-475b-96ee-6dab1f922ec2heapster",
+			"dc6e058c-cee8-475b-96ee-6dab1f922ec2eventer",
+			"dc6e058c-cee8-475b-96ee-6dab1f922ec2heapster-nanny",
+			"dc6e058c-cee8-475b-96ee-6dab1f922ec2eventer-nanny"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:49 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"heapster-v1.5.2-58fdbb6f4d-9hvvv_kube-system(dc6e058c-cee8-475b-96ee-6dab1f922ec2)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"dc6e058c-cee8-475b-96ee-6dab1f922ec2eventer": {
+		"id": "dc6e058c-cee8-475b-96ee-6dab1f922ec2eventer",
+		"type": "Container",
+		"name": "eventer",
+		"shortName": "eventer",
+		"longName": "eventer",
+		"parent": "dc6e058c-cee8-475b-96ee-6dab1f922ec2"
+	},
+	"dc6e058c-cee8-475b-96ee-6dab1f922ec2eventer-nanny": {
+		"id": "dc6e058c-cee8-475b-96ee-6dab1f922ec2eventer-nanny",
+		"type": "Container",
+		"name": "eventer-nanny",
+		"shortName": "eventer-nanny",
+		"longName": "eventer-nanny",
+		"parent": "dc6e058c-cee8-475b-96ee-6dab1f922ec2",
+		"attributes": {
+			"cpu": "50m",
+			"memory": "92360Ki"
+		}
+	},
+	"dc6e058c-cee8-475b-96ee-6dab1f922ec2heapster": {
+		"id": "dc6e058c-cee8-475b-96ee-6dab1f922ec2heapster",
+		"type": "Container",
+		"name": "heapster",
+		"shortName": "heapster",
+		"longName": "heapster",
+		"parent": "dc6e058c-cee8-475b-96ee-6dab1f922ec2"
+	},
+	"dc6e058c-cee8-475b-96ee-6dab1f922ec2heapster-nanny": {
+		"id": "dc6e058c-cee8-475b-96ee-6dab1f922ec2heapster-nanny",
+		"type": "Container",
+		"name": "heaps...nanny",
+		"shortName": "heaps...nanny",
+		"longName": "heapster-nanny",
+		"parent": "dc6e058c-cee8-475b-96ee-6dab1f922ec2",
+		"attributes": {
+			"cpu": "50m",
+			"memory": "92360Ki"
+		}
+	},
+	"e71ca390e8e6ae50226da9ce0914d37878a89db8": {
+		"id": "e71ca390e8e6ae50226da9ce0914d37878a89db8",
+		"type": "Group",
+		"name": "catalog",
+		"shortName": "catalog",
+		"longName": "catalog",
+		"parent": "862846a97c43a8bad0efd450857900dea85414a3",
+		"children": [
+			"53de9d28-8e86-4101-a3c3-bbe922d7388a",
+			"72827e71-4eb4-480c-bf14-aee4debb6d1c",
+			"14d4c782-efae-4702-a435-14b9425abe70"
+		]
+	},
+	"e73fbbb5-3760-40d0-9a33-32f43d34cd08": {
+		"id": "e73fbbb5-3760-40d0-9a33-32f43d34cd08",
+		"type": "ReplicaSet",
+		"name": "75d54df5f8",
+		"shortName": "75d54df5f8",
+		"longName": "museum-chartmuseum-75d54df5f8",
+		"parent": "0496756f-5e28-465f-a1f2-ec6837ee1b4c",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/utility/museum-chartmuseum-75d54df5f8?namespace=utility",
+		"children": [
+			"bc0d0e6c-41dc-40bc-85bd-9ae88109d94f"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"e83730cd-b4dc-4c8c-9bf0-f40eb56f0a95": {
+		"id": "e83730cd-b4dc-4c8c-9bf0-f40eb56f0a95",
+		"type": "ReplicaSet",
+		"name": "6dc675bf8c",
+		"shortName": "6dc675bf8c",
+		"longName": "monitoring-influxdb-grafana-v4-6dc675bf8c",
+		"parent": "25a48150-af46-48cc-a689-3a8bedd21f47",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/kube-system/monitoring-influxdb-grafana-v4-6dc675bf8c?namespace=kube-system",
+		"children": [
+			"2d1d90f0-368f-4eeb-b858-61b6aff4d1fd"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"eae85776-7423-40c2-9581-d0f7193dd396": {
+		"id": "eae85776-7423-40c2-9581-d0f7193dd396",
+		"type": "ReplicaSet",
+		"name": "7d7f775566",
+		"shortName": "7d7f775566",
+		"longName": "app1-nds-deployment-7d7f775566",
+		"parent": "70f1c81e-1e6a-4e67-9d64-dea1867e5846",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/default/app1-nds-deployment-7d7f775566?namespace=default",
+		"children": [
+			"6c21ddb1-4e04-4323-80b9-6b1efbe65576",
+			"847596cb-9f17-49fb-9f57-e983a099aca8"
+		],
+		"attributes": {
+			"Replicas": "2"
+		}
+	},
+	"ec0848c1-9a11-4801-b093-34782772cd5d": {
+		"id": "ec0848c1-9a11-4801-b093-34782772cd5d",
+		"type": "Pod",
+		"name": "w87d5",
+		"shortName": "w87d5",
+		"longName": "app1-catalog-deployment-58fb745bc5-w87d5",
+		"parent": "809bc6c4-5a2d-436b-a6e0-74f5bb66a8ad",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-catalog-deployment-58fb745bc5-w87d5?namespace=default",
+		"children": [
+			"ec0848c1-9a11-4801-b093-34782772cd5dcatalog"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc",
+			"03da6251-de6c-48dd-8c39-57208023e3d2",
+			"fe9d43ec-e85d-4284-8dd3-79806a90db72",
+			"2fb8a018-e617-4194-9198-0971c309d465",
+			"b4a6ef8d-360e-4bc7-b209-288904978654",
+			"6c21ddb1-4e04-4323-80b9-6b1efbe65576",
+			"847596cb-9f17-49fb-9f57-e983a099aca8"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:39:37 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-catalog-deployment-58fb745bc5-w87d5_default(ec0848c1-9a11-4801-b093-34782772cd5d)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"ec0848c1-9a11-4801-b093-34782772cd5dcatalog": {
+		"id": "ec0848c1-9a11-4801-b093-34782772cd5dcatalog",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "ec0848c1-9a11-4801-b093-34782772cd5d",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"ec8b8418-d476-4aae-b8b5-13fc40368118": {
+		"id": "ec8b8418-d476-4aae-b8b5-13fc40368118",
+		"type": "Service",
+		"name": "Service",
+		"shortName": "Service",
+		"longName": "Service",
+		"parent": "fe0bef0ae3a0113d28b65f5d8fcfbd2a7ef27a09",
+		"dashboardUrl": "https://10.41.50.245:11111/#/service/default/app2-mariadb?namespace=default",
+		"connectedTo": [
+			"0feb470b-d4c1-454b-8f8f-315c1d8ce3db"
+		]
+	},
+	"ef806c1a-2d1a-46ec-bc76-8ee580bb3d39": {
+		"id": "ef806c1a-2d1a-46ec-bc76-8ee580bb3d39",
+		"type": "Pod",
+		"name": "tjspm",
+		"shortName": "tjspm",
+		"longName": "app2-nds-deployment-6d4f57c466-tjspm",
+		"parent": "8ec488df-b352-4fae-ad2d-63ca1f08f431",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-nds-deployment-6d4f57c466-tjspm?namespace=default",
+		"children": [
+			"ef806c1a-2d1a-46ec-bc76-8ee580bb3d39nds"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:58 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-nds-deployment-6d4f57c466-tjspm_default(ef806c1a-2d1a-46ec-bc76-8ee580bb3d39)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"ef806c1a-2d1a-46ec-bc76-8ee580bb3d39nds": {
+		"id": "ef806c1a-2d1a-46ec-bc76-8ee580bb3d39nds",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "ef806c1a-2d1a-46ec-bc76-8ee580bb3d39",
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"f42696ce-a36c-4e8a-b7a8-f63e8193f808": {
+		"id": "f42696ce-a36c-4e8a-b7a8-f63e8193f808",
+		"type": "Pod",
+		"name": "62p89",
+		"shortName": "62p89",
+		"longName": "hostpath-provisioner-75fdc8fccd-62p89",
+		"parent": "d0363f94-820a-480e-ad32-f7c6d01b83bc",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/kube-system/hostpath-provisioner-75fdc8fccd-62p89?namespace=kube-system",
+		"children": [
+			"f42696ce-a36c-4e8a-b7a8-f63e8193f808hostpath-provisioner"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:41:39 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"hostpath-provisioner-75fdc8fccd-62p89_kube-system(f42696ce-a36c-4e8a-b7a8-f63e8193f808)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"f42696ce-a36c-4e8a-b7a8-f63e8193f808hostpath-provisioner": {
+		"id": "f42696ce-a36c-4e8a-b7a8-f63e8193f808hostpath-provisioner",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "f42696ce-a36c-4e8a-b7a8-f63e8193f808"
+	},
+	"f5030cff96a517aa0269bd667599450927ac8894": {
+		"id": "f5030cff96a517aa0269bd667599450927ac8894",
+		"type": "Release",
+		"name": "Release",
+		"shortName": "Release",
+		"longName": "Release",
+		"parent": "16adef18cfddf35b2a39df9d98dc37ae6b54eb19",
+		"version": "0.2.0",
+		"healUrl": "/heal/default/app1",
+		"reconfigureUrl": "/reconfigure/default/app1",
+		"upgradeUrl": "/upgrade/default/app1",
+		"connectedTo": [
+			"b705efb4-401f-4756-af9e-5e288f499452",
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc",
+			"77d2da76-173b-475f-a3cf-8861be3ec861",
+			"b8ce8de8-f7fd-49de-b9dc-9c877aa62448",
+			"70f1c81e-1e6a-4e67-9d64-dea1867e5846",
+			"ab358617-e623-4b43-9e13-1b868ba34235",
+			"d42f3b1c-4c78-4c02-a7be-bf6f6455bc24",
+			"5f6063dc-30f5-44b3-91db-977a5a64fb41"
+		],
+		"attributes": {
+			"Version": "0.2.0"
+		},
+		"attributesJson": {
+			"ads": {
+				"count": 3,
+				"rdbPassword": "ads123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"catalog": {
+				"count": 2,
+				"rdbPassword": "catalog123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"common": {
+				"count": 2,
+				"rdbPassword": "common123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"dummy": true,
+			"global": {
+				"postheal": 0,
+				"postscalein": 0,
+				"postscaleout": 0,
+				"preheal": 0,
+				"prescalein": 0,
+				"prescaleout": 0
+			},
+			"mariadb": {
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				},
+				"rootPassword": "rootPassword123456"
+			},
+			"nds": {
+				"count": 2,
+				"rdbPassword": "nds123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"sample": {
+				"count": 1,
+				"rdbPassword": "sample123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			}
+		},
+		"versions": [
+			"0.2.0",
+			"0.1.0"
+		]
+	},
+	"f8d664fdda501262b18a22caa88b032cf3b8cff9": {
+		"id": "f8d664fdda501262b18a22caa88b032cf3b8cff9",
+		"type": "Release",
+		"name": "Release",
+		"shortName": "Release",
+		"longName": "Release",
+		"parent": "862846a97c43a8bad0efd450857900dea85414a3",
+		"version": "0.2.0",
+		"healUrl": "/heal/default/app2",
+		"reconfigureUrl": "/reconfigure/default/app2",
+		"upgradeUrl": "/upgrade/default/app2",
+		"connectedTo": [
+			"53de9d28-8e86-4101-a3c3-bbe922d7388a",
+			"ec8b8418-d476-4aae-b8b5-13fc40368118",
+			"72827e71-4eb4-480c-bf14-aee4debb6d1c",
+			"53c8ec01-0b07-4b27-a970-fc6e4d6db0fd",
+			"4d879705-1cb0-4d93-b6b6-50929fd41f34",
+			"0f716843-97ea-43b7-8b06-8ce3ffdb8440",
+			"841f85ea-8c2c-4f46-8593-eb0812329ba9",
+			"14d4c782-efae-4702-a435-14b9425abe70"
+		],
+		"attributes": {
+			"Version": "0.2.0"
+		},
+		"attributesJson": {
+			"ads": {
+				"count": 3,
+				"rdbPassword": "ads123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"catalog": {
+				"count": 2,
+				"rdbPassword": "catalog123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"common": {
+				"count": 2,
+				"rdbPassword": "common123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"dummy": true,
+			"global": {
+				"postheal": 0,
+				"postscalein": 0,
+				"postscaleout": 0,
+				"preheal": 0,
+				"prescalein": 0,
+				"prescaleout": 0
+			},
+			"mariadb": {
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				},
+				"rootPassword": "rootPassword123456"
+			},
+			"nds": {
+				"count": 2,
+				"rdbPassword": "nds123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			},
+			"sample": {
+				"count": 1,
+				"rdbPassword": "sample123456",
+				"resources": {
+					"limits": {
+						"memory": "16Mi"
+					},
+					"requests": {
+						"memory": "16Mi"
+					}
+				}
+			}
+		},
+		"versions": [
+			"0.2.0",
+			"0.1.0"
+		]
+	},
+	"f9ab0d96-2870-4d0c-8443-76b18bab560f": {
+		"id": "f9ab0d96-2870-4d0c-8443-76b18bab560f",
+		"type": "ReplicaSet",
+		"name": "67765b55f5",
+		"shortName": "67765b55f5",
+		"longName": "kubernetes-dashboard-67765b55f5",
+		"parent": "dbdfcf77-e7cb-455b-97d0-5b4af134d874",
+		"dashboardUrl": "https://10.41.50.245:11111/#/replicaset/kube-system/kubernetes-dashboard-67765b55f5?namespace=kube-system",
+		"children": [
+			"3aa13974-6562-4bd7-b38d-dca082a2c4c0"
+		],
+		"attributes": {
+			"Replicas": "1"
+		}
+	},
+	"fd1710ecebde4bd58d50880b9a211833aa666cdd": {
+		"id": "fd1710ecebde4bd58d50880b9a211833aa666cdd",
+		"type": "Group",
+		"name": "nds",
+		"shortName": "nds",
+		"longName": "nds",
+		"parent": "862846a97c43a8bad0efd450857900dea85414a3",
+		"children": [
+			"4d879705-1cb0-4d93-b6b6-50929fd41f34"
+		]
+	},
+	"fd32c347-cc2c-424f-a4e4-f571c53b79ad": {
+		"id": "fd32c347-cc2c-424f-a4e4-f571c53b79ad",
+		"type": "Pod",
+		"name": "0",
+		"shortName": "0",
+		"longName": "app2-ads-0",
+		"parent": "841f85ea-8c2c-4f46-8593-eb0812329ba9",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app2-ads-0?namespace=default",
+		"children": [
+			"fd32c347-cc2c-424f-a4e4-f571c53b79adads",
+			"b714fd26-5fb7-4589-bb97-78e86249dcee"
+		],
+		"connectedTo": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:18 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app2-ads-0_default(fd32c347-cc2c-424f-a4e4-f571c53b79ad)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"fd32c347-cc2c-424f-a4e4-f571c53b79adads": {
+		"id": "fd32c347-cc2c-424f-a4e4-f571c53b79adads",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "fd32c347-cc2c-424f-a4e4-f571c53b79ad",
+		"connectedTo": [
+			"b714fd26-5fb7-4589-bb97-78e86249dcee"
+		],
+		"attributes": {
+			"memory": "16Mi"
+		}
+	},
+	"fd624a0bc16023943975a88f590f84a50b602f53": {
+		"id": "fd624a0bc16023943975a88f590f84a50b602f53",
+		"type": "Group",
+		"name": "releases",
+		"shortName": "releases",
+		"longName": "releases",
+		"parent": "ab3fe946-5a39-4f92-b73b-55f0bcda7cab"
+	},
+	"fe0bef0ae3a0113d28b65f5d8fcfbd2a7ef27a09": {
+		"id": "fe0bef0ae3a0113d28b65f5d8fcfbd2a7ef27a09",
+		"type": "Group",
+		"name": "mariadb",
+		"shortName": "mariadb",
+		"longName": "mariadb",
+		"parent": "862846a97c43a8bad0efd450857900dea85414a3",
+		"children": [
+			"ec8b8418-d476-4aae-b8b5-13fc40368118",
+			"53c8ec01-0b07-4b27-a970-fc6e4d6db0fd"
+		]
+	},
+	"fe9d43ec-e85d-4284-8dd3-79806a90db72": {
+		"id": "fe9d43ec-e85d-4284-8dd3-79806a90db72",
+		"type": "Pod",
+		"name": "1",
+		"shortName": "1",
+		"longName": "app1-ads-1",
+		"parent": "d42f3b1c-4c78-4c02-a7be-bf6f6455bc24",
+		"dashboardUrl": "https://10.41.50.245:11111/#/pod/default/app1-ads-1?namespace=default",
+		"children": [
+			"9587beb6-ef3c-498a-9539-180c4d8ebdf8",
+			"fe9d43ec-e85d-4284-8dd3-79806a90db72ads"
+		],
+		"connectedTo": [
+			"6cb26dd2-4186-4efd-8470-40b2f83b97bc"
+		],
+		"attributes": {
+			"Phase": "Running",
+			"PodIP": "10.41.50.245"
+		},
+		"events": [
+			{
+				"id": "2020-04-22 22:40:25 +0200 CEST",
+				"Type": "Warning",
+				"Reason": "MissingClusterDNS",
+				"Message": "pod: \"app1-ads-1_default(fe9d43ec-e85d-4284-8dd3-79806a90db72)\". kubelet does not have ClusterDNS IP configured and cannot create Pod using \"ClusterFirst\" policy. Falling back to \"Default\" policy."
+			}
+		]
+	},
+	"fe9d43ec-e85d-4284-8dd3-79806a90db72ads": {
+		"id": "fe9d43ec-e85d-4284-8dd3-79806a90db72ads",
+		"type": "Container",
+		"name": "Container",
+		"shortName": "Container",
+		"longName": "Container",
+		"parent": "fe9d43ec-e85d-4284-8dd3-79806a90db72",
+		"connectedTo": [
+			"9587beb6-ef3c-498a-9539-180c4d8ebdf8"
+		],
+		"attributes": {
+			"memory": "16Mi"
+		}
+	}
+}

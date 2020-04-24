@@ -19,7 +19,8 @@ const Node = props => {
     props.circleProps,
     props[props.keyProp]
   );
-
+  const WIDTH = 40;
+  const leaf = true;
   const wrappedGProps = wrapHandlers(props.gProps, props[props.keyProp]);
 
   const wrappedTextProps = wrapHandlers(props.textProps, props[props.keyProp]);
@@ -31,13 +32,30 @@ const Node = props => {
         transform: `translate(${props.y}px, ${props.x}px)`
       }}
     >
-      <circle {...wrappedCircleProps} r={props.radius} />
-      <text {...wrappedTextProps} dx={props.radius + 0.5} dy={props.offset}>
-        {props[props.labelProp]}
+      <rect width={WIDTH} height={props.radius *2} x={-WIDTH/2} y={-props.radius} {...wrappedCircleProps} />
+      {props.state && <circle r={7} cx={WIDTH/2} cy={-props.radius} fill="red"/>}
+      <text textAnchor="middle" dominantBaseline="central" fontSize="10">{props.letters}</text>
+      <text
+        className={"label"}
+        textAnchor={leaf ? "start" : "end"}
+        {...wrappedTextProps}
+        dx={leaf ? 30 : -30}
+        dy={props.radius/2}
+      >
+        {props[props.labelProp] + (props.closed ? " +" : "") }
       </text>
+      {props.focused && <text
+        className={"close"}
+        textAnchor="start"
+        {...wrappedTextProps}
+        dx={-35}
+        dy={props.radius/2}
+      >+</text>}
     </g>
   );
 };
 
 Node.propTypes = propTypes;
 export default Node;
+
+

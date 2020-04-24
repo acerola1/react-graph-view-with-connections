@@ -39,8 +39,8 @@ const defaultProps = {
   easing: easeQuadOut,
   getChildren: n => n.children,
   steps: 20,
-  keyProp: "name",
-  labelProp: "name",
+  keyProp: "id",
+  labelProp: "shortName",
   margins: {
     bottom: 10,
     left: 20,
@@ -58,10 +58,12 @@ const defaultProps = {
 
 export default class Tree extends React.PureComponent {
   render() {
+    /*
     const contentWidth =
       this.props.width - this.props.margins.left - this.props.margins.right;
     const contentHeight =
       this.props.height - this.props.margins.top - this.props.margins.bottom;
+    */
 
     // data is cloned because d3 will mutate the object passed in
     let data = hierarchy(clone(this.props.data), this.props.getChildren);
@@ -78,6 +80,7 @@ export default class Tree extends React.PureComponent {
 
     nodes.forEach(node => {
       node.y += this.props.margins.top;
+      node.x += this.props.margins.left;
       maxX = Math.max(maxX, node.x);
       maxY = Math.max(maxY, node.y);
       minX = Math.min(minX, node.x);
@@ -88,16 +91,17 @@ export default class Tree extends React.PureComponent {
 
     const nodeMap = {};
     nodes.forEach(node => (nodeMap[node.data.id] = node));
+    const height = Math.max(this.props.height, maxX - minX);   
 
     return (
       <Container
         animated={this.props.animated}
-        viewBox={`${this.props.nodeWidth} ${minX -
-          this.props.nodeHeight / 2} ${maxY} ${maxX -
-          minX +
-          this.props.nodeHeight * 1.5}`}
+        viewBox={`${this.props.nodeWidth -20} 
+          ${minX -this.props.nodeHeight / 2} 
+          ${maxY} 
+          ${Math.max(maxX - minX +this.props.nodeHeight * 1.5, height) + 20}`}
         getChildren={this.props.getChildren}
-        height={Math.max(this.props.height, maxX - minX)}
+        height={height}
         keyProp={this.props.keyProp}
         labelProp={this.props.labelProp}
         links={links.filter(l => l.source.data.id !== this.props.dummyNodeId)}
